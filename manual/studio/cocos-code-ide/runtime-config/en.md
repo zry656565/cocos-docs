@@ -34,37 +34,53 @@ The below shows the general structure of the config.json file and every element 
 ##"init_cfg"##
 
 ####"isLandscape"####
-Screen orientation,if true orientation is "landscape" else is "portrait"
+bool
+
+Screen orientation,if true，orientation is "landscape" else is "portrait"
 
 ####"name"####
-project name
+string
+
+project name，show at window's tile
 
 ####"width"####
+float
+
 window's width
 
-**Note:valid only in desktop system**
+**Note:this argument valid only in desktop system**
 
 ####"height"####
+float
+
 window's height
 
-**Note:valid only in desktop system**
+**Note:this argument valid only in desktop system**
 
 ####"entry"####
+string
+
 "src/main.lua":  entry script file
 
 ---
 ##simulator_screen_size##
-Configure multiple resolution size, you can add or delete item by yourself
+Configure multiple resolution size, you can add or delete item by yourself，those items show in runtime view’s menu
 
-**Note:valid only in desktop system**
+**Note:this section valid only in desktop system**
 
 ####"title"####
+string
+
 "iPhone 3Gs (480x320)", menu tile
 
 ####"width"####
+float
+
 480  resolution of width
 
 ####"height"####
+float
+
 320 resolution of height
 
 
