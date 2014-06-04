@@ -44,29 +44,29 @@ string
 project name，show at window's tile
 
 ####"width"####
-float
+unsigned int
 
 window's width
 
-**Note:this argument valid only in desktop system**
+**Note:This argument valid only in desktop system**
 
 ####"height"####
-float
+unsigned int
 
 window's height
 
-**Note:this argument valid only in desktop system**
+**Note:This argument valid only in desktop system**
 
 ####"entry"####
 string
 
-"src/main.lua":  entry script file
+"src/main.lua" entry script file
 
 ---
 ##simulator_screen_size##
 Configure multiple resolution size, you can add or delete item by yourself，those items show in runtime view’s menu
 
-**Note:this section valid only in desktop system**
+**Note:This section valid only in desktop system**
 
 ####"title"####
 string
@@ -74,12 +74,12 @@ string
 "iPhone 3Gs (480x320)", menu tile
 
 ####"width"####
-float
+unsigned int
 
 480  resolution of width
 
 ####"height"####
-float
+unsigned int
 
 320 resolution of height
 
