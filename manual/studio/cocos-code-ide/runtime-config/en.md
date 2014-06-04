@@ -41,7 +41,7 @@ Screen orientation,if true，orientation is "landscape" else is "portrait"
 ####"entry"####
 string
 
-"src/main.lua" entry script file
+entry script file relative to the project root directory,such as:"src/main.lua"
 
 ####"name"####
 string
