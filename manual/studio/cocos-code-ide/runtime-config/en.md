@@ -1,7 +1,7 @@
-Instructions of project's config.json file
+Instructions of project root directory config.json file
 ===
 ---
-Every new project have a "config.json" file in its root directory.The file presents essential information about your game project,complete config before it run.
+The file presents essential information about your game project,complete config before it run.
 Structure of the config.json file
 ===
 ---
@@ -38,11 +38,17 @@ bool
 
 Screen orientation,if true，orientation is "landscape" else is "portrait"
 
+####"entry"####
+string
+
+"src/main.lua" entry script file
+
 ####"name"####
 string
 
 project name，show at window's tile
 
+**Note:This argument valid only in desktop system**
 ####"width"####
 unsigned int
 
@@ -57,10 +63,7 @@ window's height
 
 **Note:This argument valid only in desktop system**
 
-####"entry"####
-string
 
-"src/main.lua" entry script file
 
 ---
 ##simulator_screen_size##
@@ -71,17 +74,17 @@ Configure multiple resolution size, you can add or delete item by yourself，tho
 ####"title"####
 string
 
-"iPhone 3Gs (480x320)", menu tile
+menu tile. such as: "iPhone 3Gs (480x320)", 
 
 ####"width"####
 unsigned int
 
-480  resolution of width
+window's width
 
 ####"height"####
 unsigned int
 
-320 resolution of height
+window's height
 
 
 ---
