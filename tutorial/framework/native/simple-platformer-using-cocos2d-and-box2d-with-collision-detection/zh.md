@@ -1,8 +1,8 @@
-# 使用cocos2d-x3.0和物理引擎制作简单的platformer游戏
+# 使用Cocos2d-x3.0和物理引擎制作简单的platformer游戏
 
 ## 前言
 
-本教程建立在上一篇教程的基础之上，所以，在继续之前，建议你先看完《使用cocos2d-x3.0和物理引擎制作滚动背景》。
+本教程建立在上一篇教程的基础之上，所以，在继续之前，建议你先看完《使用Cocos2d-x3.0和物理引擎制作滚动背景》。
 
 ## 内容大纲?
 
@@ -22,19 +22,18 @@
 	// GameObject.h
 	#include "cocos2d.h"
 	#include "Constants.h"
-	
+
 	USING_NS_CC;
-	
+
 	class GameObject :public Sprite
 	{
 	public:
 		GameObjectType  type;
-	
+
 		virtual bool init();
-	
+
 		CREATE_FUNC(GameObject);
 	};
-
 	////////////////////////////////////////////////////////
 
 	// GameObject.cpp
@@ -46,7 +45,7 @@
 		{
 			return false;
 		}
-	
+
 		return true;
 	}
 
@@ -56,20 +55,20 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 
 	#include "cocos2d.h"
 	#include "GameObject.h"
-	
+
 	USING_NS_CC;
-	
+
 	class Player :public GameObject 
 	{
 	public:
 		PhysicsBody* body;
-	
+
 		void createdObject();
 		void jump();
 		void moveRight();
-	
+
 		virtual bool init();
-	
+
 		CREATE_FUNC(Player);
 	};
 
@@ -77,14 +76,14 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 
 	#include "Player.h"
 	#include "Constants.h"
-	
+
 	bool Player::init()
 	{
 		if (!GameObject::init())
 		{
 			return false;
 		}
-	
+
 		return true;
 	}
 	
@@ -97,13 +96,13 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 		body->setRotationEnable(false);
 		this->setPhysicsBody(body);
 	}
-	
+
 	void Player::moveRight()
 	{
 		Vect impulse = Vect(50.0f, 0.0f);
 		body->applyImpulse(impulse); 
 	}
-	
+
 	void Player::jump()
 	{
 		Vect impulse = Vect(0.0f, 100.0f);
@@ -117,18 +116,16 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 	void GameScene::onEnter()
 	{
 		Layer::onEnter();
-	
 		auto listener = EventListenerTouchOneByOne::create();
 		listener->setSwallowTouches(true);
-	
+
 		listener->onTouchBegan = CC_CALLBACK_2(GameScene::onTouchBegan, this);
-	
+
 		auto contactListener = EventListenerPhysicsContact::create();
 		contactListener->onContactBegin = CC_CALLBACK_2(GameScene::onContactBegin, this);
-	
-	
+
 		auto dispatcher = Director::getInstance()->getEventDispatcher();
-	
+
 		dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 		dispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 	}
@@ -138,7 +135,7 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 	bool GameScene::onTouchBegan(Touch *touch, Event *event)
 	{
 		Point touchLocation = this->convertToWorldSpace(this->convertTouchToNodeSpace(touch));
-	
+
 		if (touchLocation.x >= screenSize.width / 2) 
 		{
 			player->moveRight();
@@ -149,7 +146,6 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 		}
 		return TRUE;
 	}
-
 ## 给游戏对象施加力，使之移动和跳跃
 
 	void Player::moveRight()
@@ -157,13 +153,13 @@ Player主要负责创建它自己的box2d世界中的body，当你调用createBo
 		Vect impulse = Vect(50.0f, 0.0f);
 		body->applyImpulse(impulse); 
 	}
-	
+
 	void Player::jump()
 	{
 		Vect impulse = Vect(0.0f, 100.0f);
 		body->applyImpulse(impulse);
 	}
-
+	
 ## Wrap-up and Loose Ends
 
 下面是GameScene类的实现。这里面使用的技术大家应该都接触过了，如果不清楚，可以参考我翻译的其它教程，或者在下方留言。可能需要指出来的是碰撞检测的代码，大家可以花点时间看看。
@@ -172,95 +168,77 @@ GameScene.h
 
 	#include "cocos2d.h"
 	#include "Player.h"
-	
+
 	USING_NS_CC;
-	
+
 	class GameScene :public Layer
 	{
 	public:
 		Size screenSize;
-		
 		PhysicsWorld* m_world;
-	
 		Player* player;
-	
 		TMXTiledMap* tileMapNode;
-	
+
 		void setPhyWorld(PhysicsWorld* world){ m_world = world; };
-	
 		void makeBox2dObjAt(Point p, Size size, bool d, float r, float friction, float density, float restitution);
-		
 		void drawCollisionTiles();
-	
 		void addScrollingBackgroundWithTileMap();
-	
 		void virtual update(float dt);
-	
 		static cocos2d::Scene* createScene();
-	
 		virtual bool init();
-	
 		virtual void onEnter();
-	
-		bool onTouchBegan(Touch *touch, Event *event);
-	
 		bool onContactBegin(EventCustom* event, const PhysicsContact& contact);
-	
 		CREATE_FUNC(GameScene);
 	};
 
 GameScene.cpp
 
 	#include "GameScene.h"
-
 	Scene* GameScene::createScene()
 	{
 		// 'scene' is an autorelease object
 		auto scene = Scene::createWithPhysics();
-	
+
 		//scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
 		/*Vect gravity(0.0f, -600.0f);
 		scene->getPhysicsWorld()->setGravity(gravity);*/
-	
+
 		// 'layer' is an autorelease object
 		auto layer = GameScene::create();
-	
+
 		layer->setPhyWorld(scene->getPhysicsWorld());
-	
+
 		// add layer as a child to scene
 		scene->addChild(layer);
-	
+
 		// return the scene
 		return scene;
 	}
-	
+
 	bool GameScene::init()
 	{
 		if(!Layer::init())
 		{
 			return false;
 		}
-		
 		// enable touches
-	
 		screenSize = Director::getInstance()->getWinSize();
-	
 		this->addScrollingBackgroundWithTileMap();
 		this->drawCollisionTiles();
-	
+
 		player = (Player*)Sprite::create("Icon-Small.png");
 		player->retain();
 		player->setPosition(100.0f, 180.0f);
 		player->createdObject();
-	
+
 		this->addChild(player);
-	
+
 		// Start main game loop
 		this->scheduleUpdate();
-	
+
 		return true;
 	}
-	
+
 	void GameScene::makeBox2dObjAt(Point p, Size size, bool d, float r, float friction, float density, float restitution)
 	{
 		auto sprite = Sprite::create();
@@ -273,7 +251,7 @@ GameScene.cpp
 		sprite->setPhysicsBody(body);
 		this->addChild(sprite);
 	}
-	
+
 	void GameScene::drawCollisionTiles()
 	{
 		TMXObjectGroup *objects = tileMapNode->objectGroupNamed("Collision");
@@ -287,55 +265,54 @@ GameScene.cpp
 			y = objPoint.at("y").asFloat();
 			w = objPoint.at("width").asFloat();
 			h = objPoint.at("height").asFloat();
-	
+
 			Point _point = Point(x + w / 2.0f, y + h / 2.0f);
 			Size _size = Size(w, h);
-	
+
 			this->makeBox2dObjAt(_point, _size, false, 0, 0.0f, 0.0f, 0);
 		}
 	}
-	
+
 	void GameScene::addScrollingBackgroundWithTileMap()
 	{
 		tileMapNode = TMXTiledMap::create("scroller.tmx");
 		tileMapNode->setAnchorPoint(Point(0, 0));
 		this->addChild(tileMapNode);
 	}
-	
+
 	void GameScene::update(float dt)
 	{
 		Point pos = player->getPosition();
 		this->setPosition(-1 * pos.x + 100, this->getPositionY());
 	}
-	
+
 	void GameScene::onEnter()
 	{
 		Layer::onEnter();
-	
+
 		auto listener = EventListenerTouchOneByOne::create();
 		listener->setSwallowTouches(true);
-	
+
 		listener->onTouchBegan = CC_CALLBACK_2(GameScene::onTouchBegan, this);
-	
+
 		auto contactListener = EventListenerPhysicsContact::create();
 		contactListener->onContactBegin = CC_CALLBACK_2(GameScene::onContactBegin, this);
-	
-	
+
 		auto dispatcher = Director::getInstance()->getEventDispatcher();
-	
+
 		dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 		dispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 	}
-	
+
 	bool GameScene::onContactBegin(EventCustom* event, const PhysicsContact& contact)
 	{
 		return true;
 	}
-	
+
 	bool GameScene::onTouchBegan(Touch *touch, Event *event)
 	{
 		Point touchLocation = this->convertToWorldSpace(this->convertTouchToNodeSpace(touch));
-	
+
 		if (touchLocation.x >= screenSize.width / 2) 
 		{
 			player->moveRight();

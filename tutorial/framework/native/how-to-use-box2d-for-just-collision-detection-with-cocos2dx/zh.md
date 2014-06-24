@@ -1,4 +1,4 @@
-# 使用cocos2d-x3.0和物理引擎实现碰撞检测
+# 使用Cocos2d-x3.0和物理引擎实现碰撞检测
 
 ## 前言
 
@@ -18,21 +18,21 @@
 	
 	bool HelloWorld::init()
 	{
-	    //////////////////////////////
-	    // 1. super init first
-	    if ( !Layer::init() )
-	    {
-	        return false;
-	    }
-	
+		//////////////////////////////
+		// 1. super init first
+		if ( !Layer::init() )
+		{
+			return false;
+		}
+		
 		_spriteSheet = SpriteBatchNode::create("sprites.png", 2);
 		SpriteFrameCache::getInstance()->addSpriteFramesWithFile("sprites.plist", "sprites.png");
 		this->addChild(_spriteSheet);
 		this->spawnCar();
 		this->schedule(schedule_selector(HelloWorld::secondUpadte), 1.0f);
 		this->scheduleUpdate();
-	
-	    return true;
+		
+		return true;
 	}
 
 第一件事情就是创建一个SpriteBatchNode对象，它是一个可以用来高效地绘制它的所有的Sprite结点的对象。很明显，这些Sprite必须共享相同的纹理（texture）。当我们把车子和猫加入到场景中的时候，我们需要将它们当作SpriteBatchNode的孩子加进去。
@@ -43,7 +43,7 @@
 
 接下来，让我们实现spawnCar方法。我们的做法是让车子永远地在屏幕中间做路径为三角形的运动。在init函数的上面添加下面函数代码：
 
-	void HelloWorld::spawnCar()
+	void HelloWorld::spawnCar()	
 	{
 		SpriteFrame* frame = SpriteFrameCache::getInstance()->spriteFrameByName("car.png");
 		Sprite* car = Sprite::createWithSpriteFrame(frame);
@@ -64,34 +64,34 @@
 	void HelloWorld::spawnCat()
 	{
 		auto winSize = Director::getInstance()->getWinSize();
-	
+		
 		auto cat = Sprite::createWithSpriteFrameName("cat.png");
-	
+		
 		int minY = cat->getContentSize().height / 2;
 		int maxY = winSize.height - (cat->getContentSize().height / 2);
 		int rangeY = maxY - minY;
 		int actualY = CCRANDOM_0_1() * rangeY;
-	
+		
 		int startX = winSize.width + (cat->getContentSize().width / 2);
 		int endX = -(cat->getContentSize().width / 2);
-	
+		
 		Point startPos = Point(startX, actualY);
 		Point endPos = Point(endX, actualY);
-	
+		
 		cat->setPosition(startPos);
 		addBoxBodyForSprite(cat);
 		cat->setTag(1);
 		cat->runAction(Sequence::create(MoveTo::create(1.0, endPos), CallFuncN::create(this, callfuncN_selector(HelloWorld::spriteDone)),NULL));
-	
+
 		_spriteSheet->addChild(cat);
-		
+
 	}
 
 	void HelloWorld::secondUpadte(float dt)
 	{
-		this->spawnCat();
+		this->spawnCat()
 	}
-	
+
 	void HelloWorld::spriteDone(Node* sender)
 	{
 		Sprite *sprite = (Sprite*)sender;
@@ -110,30 +110,30 @@ Cocos2d-x3.0中，事件派发机制做了重构，所有事件均有事件派�
 	void HelloWorld::onEnter()
 	{
 		Layer::onEnter();
-	
+
 		auto contactListener = EventListenerPhysicsContact::create();
 		contactListener->onContactBegin = CC_CALLBACK_2(HelloWorld::onContactBegin, this);
-	
+		
 		auto dispatcher = Director::getInstance()->getEventDispatcher();
-	
+		
 		dispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
 	}
-
+		
 	bool HelloWorld::onContactBegin(EventCustom* event, const PhysicsContact& contact)
 	{
 		auto spriteA = (Sprite*)contact.getShapeA()->getBody()->getNode();
 		auto spriteB = (Sprite*)contact.getShapeB()->getBody()->getNode();
-	
+		
 		if (spriteA->getTag() == 1)
 		{
 			spriteA->removeFromParentAndCleanup(true);
 		}
-	
+		
 		if (spriteB->getTag() == 1)
 		{
 			spriteB->removeFromParentAndCleanup(true);
 		}
-	
+		
 		return true;
 	}
 

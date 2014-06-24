@@ -1,10 +1,10 @@
-# 使用cocos2d-x3.0和物理引擎制作滚动背景
+# 使用Cocos2d-x3.0和物理引擎制作滚动背景
 
 ## 前言
 
-本次教程的内容主要是如何使用cocos2d-x3.0的物理引擎接口来制作一个滚动背景，同时把视角固定在玩家身上。在游戏画面中，玩家几乎总是固定在屏幕的某个地方，但是，背景在移动。所以，你看起来好像就是玩家在游戏世界里面以第一视角在走一样。
+本次教程的内容主要是如何使用Cocos2d-x3.0的物理引擎接口来制作一个滚动背景，同时把视角固定在玩家身上。在游戏画面中，玩家几乎总是固定在屏幕的某个地方，但是，背景在移动。所以，你看起来好像就是玩家在游戏世界里面以第一视角在走一样。
 
-如果您对cocos2d-x3.0的新物理引擎接口的一些基础知识还不了解的话，建议您先看[基础教程](http://www.ityran.com/archives/5531)。
+如果您对Cocos2d-x3.0的新物理引擎接口的一些基础知识还不了解的话，建议您先看[基础教程](http://www.ityran.com/archives/5531)。
 
 ![image](./res/Box2dScroller.jpg)
 
@@ -22,7 +22,7 @@
 	void HelloWorld::drawCollisionTiles()
 	{
 		TMXObjectGroup *objects = tileMapNode->objectGroupNamed("Collision");
-	
+
 		float x, y, w, h;
 		ValueVector objectsPoint = objects->getObjects();
 		Value objPointMap;
@@ -33,10 +33,10 @@
 			y = objPoint.at("y").asFloat();
 			w = objPoint.at("width").asFloat();
 			h = objPoint.at("height").asFloat();
-	
+
 			Point _point = Point(x + w / 2.0f, y + h / 2.0f);
 			Size _size = Size(w, h);
-	
+
 			this->makeBox2dObjAt(_point,_size, false, 0, 0.0f, 0.0f, 0, -1);
 		}
 	}
@@ -65,19 +65,19 @@
 
 	bool HelloWorld::init()
 	{
-	    //////////////////////////////
-	    // 1. super init first
-	    if ( !Layer::init() )
-	    {
-	        return false;
-	    }
-	
+		//////////////////////////////
+		// 1. super init first
+		if ( !Layer::init() )
+		{
+			return false;
+		}
+		
 		auto visibleSize = Director::getInstance()->getVisibleSize();
 		auto origin = Director::getInstance()->getVisibleOrigin();
-	    
+		
 		this->addScrollingBackgroundWithTileMap();
 		this->drawCollisionTiles();
-	
+		
 		auto sprite = Sprite::create("Icon-Small.png");
 		sprite->setPosition(50.0f, 600.0f);
 		playerBody = PhysicsBody::createCircle(1.0f);
@@ -88,7 +88,7 @@
 		playerBody->applyImpulse(impulse);
 		sprite->setPhysicsBody(playerBody);
 		this->addChild(sprite);
-	
+		
 		auto edgeSp = Sprite::create();
 		Size size = Size(tileMapNode->getMapSize().width * 16, visibleSize.height);
 		auto boundBody = PhysicsBody::createEdgeBox(size, PHYSICSBODY_MATERIAL_DEFAULT, 3);
@@ -98,11 +98,11 @@
 		edgeSp->setTag(0);
 		
 		this->scheduleUpdate();
-	    
-	    return true;
+		
+		return true;
 	}
 
-调用addScrollingBackgroundWithTileMap和drawCollisionTiles，用来加载tiledMap及创建相应的物理对象。我们使用cocos2d-x3.0的log来作为我们的主角精灵。前面已经提到了，它只是一个圆形的body。接下来，我们给它一个冲力。你可以把这个力改大一点，那么主角就会走得更快。
+调用addScrollingBackgroundWithTileMap和drawCollisionTiles，用来加载tiledMap及创建相应的物理对象。我们使用Cocos2d-x3.0的log来作为我们的主角精灵。前面已经提到了，它只是一个圆形的body。接下来，我们给它一个冲力。你可以把这个力改大一点，那么主角就会走得更快。
 
 	void HelloWorld::update(float dt)
 	{
