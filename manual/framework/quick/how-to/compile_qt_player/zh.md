@@ -1,4 +1,4 @@
-## quick-cocos2d-x 2.2.3 player 编译方法
+## Quick-Cocos2d-x 2.2.3 player 编译方法
 
 ## 编译
 
@@ -22,7 +22,7 @@ make release or make debug
 
 下载 [ Visual Studio Add-in 1.2.2 for Qt5 ][3], 
 
-** NOTE: Add-in 不支持 vs 的 Express edition **
+**NOTE: Add-in 不支持 vs 的 Express edition**
 
 打开 $QUICK_COCOS2DX_ROOT/player/proj.qt/quick-x.pro & 编译
 
