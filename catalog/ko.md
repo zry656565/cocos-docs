@@ -58,7 +58,7 @@
 	- File Stream
 	- 3rd SDK와의 통합
 	- Cocos2d-html5
-		- [왜 Cocos2d-html5 로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/en.md)
+		- [왜 Cocos2d-html5 로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/ko.md)
 		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/en.md)
 - Studio
 - 튜토리얼
