@@ -24,7 +24,7 @@ An object pool implementation have been proposed in RC0: `cc.pool`, it can helps
 
 Some common use case is :
     - Bullets in game (die very soon, massive creation and recreation, no side effect on other objects)
-    - Blocks in candy crash (massive creation and recreation)
+    - Blocks in Candy Crash (massive creation and recreation)
     - etc...
 
 When you no longer need an object and hope that it can be reused, you can add it to the object pool with `cc.pool.putInPool(obj)`.
@@ -34,7 +34,7 @@ layer.removeChild(sprite);
 cc.pool.putInPool(sprite);
 ```
 
-When you want to retrive an object from object pool, you can use `cc.pool.getFromPool()`.
+When you want to retrieve an object from object pool, you can use `cc.pool.getFromPool()`.
 
 ```
 cc.pool.getFromPool(cc.Sprite, "a.png");
