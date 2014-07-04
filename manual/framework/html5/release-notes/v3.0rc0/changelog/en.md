@@ -1,4 +1,4 @@
-Cocos2d-JS-v3.0 RC0 @ July.1, 2014
+Cocos2d-JS-v3.0 RC0 @ July.4, 2014
 
 * Added Facebook SDK plugin into Pluginx extension.
 * Refactoration of gui system `ccui` for better performance, usage and maintainbility.

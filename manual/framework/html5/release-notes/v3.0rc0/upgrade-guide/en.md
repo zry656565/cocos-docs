@@ -1,5 +1,9 @@
 #Upgrade guide from Cocos2d-JS v3.0 beta to Cocos2d-JS v3.0 RC0
 
+## 0. Upgrade from Cocos2d-JS v2.x to v3.0 beta
+
+If you are still using Cocos2d-html5 or Cocos2d-JSB v2.x, you need to read the previous upgrade guide first : [Upgrade guide from Cocos2d-html5 v2.2.x to Cocos2d-JS v3.0 beta](../../v3.0a/upgrade-guide/en.md)
+
 ## 1. Layer baking
 
 In RC0, you can start to bake a layer to a static cache, so that it can be rendered more efficiently.
@@ -20,7 +24,7 @@ An object pool implementation have been proposed in RC0: `cc.pool`, it can helps
 
 Some common use case is :
     - Bullets in game (die very soon, massive creation and recreation, no side effect on other objects)
-    - Blocks in candy crash (massive creation and recreation)
+    - Blocks in Candy Crash (massive creation and recreation)
     - etc...
 
 When you no longer need an object and hope that it can be reused, you can add it to the object pool with `cc.pool.putInPool(obj)`.
@@ -30,7 +34,7 @@ layer.removeChild(sprite);
 cc.pool.putInPool(sprite);
 ```
 
-When you want to retrive an object from object pool, you can use `cc.pool.getFromPool()`.
+When you want to retrieve an object from object pool, you can use `cc.pool.getFromPool()`.
 
 ```
 cc.pool.getFromPool(cc.Sprite, "a.png");
@@ -116,4 +120,4 @@ cc.log("%s : %d", str, number);
 
 ### 6.3 cc.AssetsManager
 
-In RC0, you can restart failed download with `downloadFailedAssets` function, and other great improvement can be found in upgraded [Assets manager document](../../../v3.0/assets-manager/en.md)
+In RC0, you can restart failed download with `downloadFailedAssets` function, and other great improvement can be found in upgraded [Assets manager document](../../../v3/assets-manager/en.md)

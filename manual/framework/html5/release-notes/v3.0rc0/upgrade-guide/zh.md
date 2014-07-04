@@ -1,48 +1,53 @@
-#Upgrade guide from Cocos2d-JS v3.0 beta to Cocos2d-JS v3.0 RC0
+#从Cocos2d-JS v3.0 beta到Cocos2d-JS v3.0 RC0升级指南
 
-## 1. Layer baking
+## 0. 首先你需要知道如何从Cocos2d-JS v2.x升级到v3.0 beta
 
-In RC0, you can start to bake a layer to a static cache, so that it can be rendered more efficiently.
+如果你还在使用Cocos2d-html5或者JSB v2.x，你将需要首先完成2.x到3.0 beta的升级：请参考这篇的文档：[#从Cocos2d-html5 v2.2.x到Cocos2d-JS v3.0 alpha2升级指南](../../v3.0a/upgrade-guide/zh.md)
+
+## 1. cc.Layer的静态缓存功能
+
+在RC0中，你可以将一个图层静态缓存起来，这将极大得减少该图层的绘制数，使你的游戏更加高效，当然，请只缓存那些不经常更新的图层，否则缓存将消耗更大。
 
 ```
 var layer = new cc.Layer();
+// 启用静态缓存
 layer.bake();
 
-// To disable bake
+// 取消静态缓存
 layer.unbake();
 ```
 
-Detailed informations can be found in [layer baking document](../../../v3.0/bake-layer/en.md)
+详细信息请查看[Bake功能使用说明](../../../v3.0/bake-layer/zh.md)。
 
-## 2. Object pool extension: `cc.pool`
+## 2. 对象缓冲池：`cc.pool`
 
-An object pool implementation have been proposed in RC0: `cc.pool`, it can helps you to improve your game performance for objects which need frequent release and recreate operations
+一个通用的对象缓冲池实现被添加到了RC0中：`cc.pool`，当你的游戏中有需要大规模创建或重用的对象的时候，缓冲池可以帮助你显著改善运行的效率。
 
-Some common use case is :
-    - Bullets in game (die very soon, massive creation and recreation, no side effect on other objects)
-    - Blocks in candy crash (massive creation and recreation)
-    - etc...
+一些常见的应用场景：
+    - 游戏中的子弹（生命周期短，大规模创建和重用，对其他对象没有非常大的影响）
+    - Candy Crash中的方块（大规模创建和重用）
+    - 其他很多情况...
 
-When you no longer need an object and hope that it can be reused, you can add it to the object pool with `cc.pool.putInPool(obj)`.
+当你不再需要一个对象并且希望它可以被复用的时候，你就可以用`cc.pool.putInPool(obj)`将它加到缓冲池中。
 
 ```
 layer.removeChild(sprite);
 cc.pool.putInPool(sprite);
 ```
 
-When you want to retrive an object from object pool, you can use `cc.pool.getFromPool()`.
+当你希望从缓冲池中获取一个对象的时候，你可以使用`cc.pool.getFromPool()`。
 
 ```
 cc.pool.getFromPool(cc.Sprite, "a.png");
 ```
 
-You can check whether there is objects available in the pool for a given class with `cc.pool.hasObj(cc.Sprite)`.
+你可以使用`cc.pool.hasObj(cc.Sprite)`检测缓冲池中是否有`cc.Sprite`类的可用对象。
 
-You can also clean the pool and release all objects with `cc.pool.drainAllPool()`.
+你也可以使用`cc.pool.drainAllPool()`去清空所有缓冲池。
 
-## 3. New easing functions
+## 3. 新的缓动动作
 
-We added a bunch of new easing functions listing below: 
+我们在3.0 RC0中添加了一系列方便的缓动动作供大家使用：
 
 ```
 cc.easeBezierAction(p0, p1, p2, p3)
@@ -63,11 +68,11 @@ cc.easeCubicActionOut()
 cc.easeCubicActionInOut()
 ```
 
-Just for a remindment, the new API for using an easing action is `action.easing(cc.easeQuadraticActionIn())`.
+重提一下缓动动作在3.0中的使用方式，直接调用目标action的`easing`函数：`action.easing(cc.easeQuadraticActionIn())`。
 
-## 4. jsb namespace
+## 4. jsb命名空间
 
-We added jsb namespace to contain all jsb only APIs:
+我们添加了jsb命名空间来包含所有仅限于jsb的API：
 
 ```
 cc.fileUtils        -->     jsb.fileUtils
@@ -75,7 +80,7 @@ cc.Reflection       -->     jsb.Reflection
 cc.AssetsManager    -->     jsb.AssetsManager
 ```
 
-And some new functions have been bound to `jsb.fileUtils`:
+同时也给`jsb.fileUtils`添加了一些新的函数绑定：
 
 ```
 jsb.fileUtils.getSearchPaths()
@@ -87,7 +92,7 @@ jsb.fileUtils.addSearchResolutionsOrder(order)
 
 ## 5. ccui.Widget
 
-ccui.Widget's boundary functions have been renamed.
+ccui.Widget的边界获取函数按照-x的函数名重命名了
 
 ```
 getLeftInParent     -->     getLeftBoundary
@@ -96,9 +101,9 @@ getRightInParent    -->     getRightBoundary
 getTopInParent      -->     getTopBoundary
 ```
 
-We also added `getContentSize` and `setContentSize` to `ccui.Widget`, so that it can share the same usage with `cc.Node`.
+我们还添加了`getContentSize`和`setContentSize`给`ccui.Widget`，这样在大小的存取上`ccui.Widget`就和`cc.Node`共享同样的API了。
 
-## 6. Other API modifications
+## 6. 其他API改动
 
 ### 6.1 cc.FadeIn
 
@@ -106,7 +111,7 @@ We also added `getContentSize` and `setContentSize` to `ccui.Widget`, so that it
 cc.FadeIn.create(duration, toOpacity)   -->     cc.FadeIn.create(duration)
 ```
 
-### 6.2 Formatted string in cc.log
+### 6.2 cc.log支持格式化字符串
 
 ```
 var str = "The number is";
@@ -114,6 +119,6 @@ var number = cc.random0To1() * 10;
 cc.log("%s : %d", str, number);
 ```
 
-### 6.3 cc.AssetsManager
+### 6.3 资源管理器
 
-In RC0, you can restart failed download with `downloadFailedAssets` function, and other great improvement can be found in upgraded [Assets manager document](../../../v3.0/assets-manager/en.md)
+在RC0中，你可以使用`cc.AssetsManager`的`downloadFailedAssets`函数重启未成功下载的资源，3.0 RC0中的资源管理器还支持了非常多优秀的特性，详情请参见新的[资源管理器文档](../../../v3/assets-manager/zh.md)
