@@ -71,11 +71,11 @@ jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "hello", "(Ljava
 
 //call the first sum method
 var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(II)I", 3, 7);
-jsb.log(result); //10
+cc.log(result); //10
 
 //call the second sum method
 var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(I)I", 3);
-jsb.log(result); //5
+cc.log(result); //5
 ```
 
 Now look at your console, there should be correct output. 

@@ -71,11 +71,11 @@ jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "hello", "(Ljava
 
 //调用第一个sum方法
 var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(II)I", 3, 7);
-jsb.log(result); //10
+cc.log(result); //10
 
 //调用第二个sum方法
 var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(I)I", 3);
-jsb.log(result); //5
+cc.log(result); //5
 ```
 
 在你的控制台会有正确的输出的，这很简单吧。
