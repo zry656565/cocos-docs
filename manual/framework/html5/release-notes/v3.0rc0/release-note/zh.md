@@ -37,5 +37,8 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 - iOS平台上的Plugin-x集成文档
 - Facebook插件使用文档
 - 对象缓冲池使用文档
+- 以及更多...
 
-以及更多...
+## 关于Cocos Code IDE
+
+Cocos2d-JS v3.0 RC0将在Cocos Code IDE预计7月11日发布的下一个版本中被支持，当前版本和RC0不兼容，使用时请注意

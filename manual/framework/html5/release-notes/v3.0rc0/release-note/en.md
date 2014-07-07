@@ -36,5 +36,8 @@ Read more about all the new features at [Cocos2d-JS v3.0 RC0 changelog](http://w
 - Plugin-x iOS integration document
 - Facebook plugin usage document
 - cc.pool usage document
+- and more...
 
-and more...
+## Note about Cocos Code IDE
+
+The Cocos2d-JS v3.0 RC0 will be supported by Cocos Code IDE with their next release at July 11, it won't work with the current version, please be noted.
