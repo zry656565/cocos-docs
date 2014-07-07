@@ -16,7 +16,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 - [cocos2d-js-v3.0-rc0.zip](http://www.cocos2d-x.org/filedown/cocos2d-js-v3.0-rc0.zip)
 - [在线API索引](http://www.cocos2d-x.org/reference/html5-js/V3.0rc0/index.html)
 - [可下载版本API索引包](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-rc0-API.zip)
-- [Web游戏专用单引擎文件下载](http://www.cocos2d-x.org/jsbuilder)
+- [Web游戏专用单引擎文件下载](http://cocos2d-x.org/filecenter/jsbuilder/)
 
 ## 核心特性
 
