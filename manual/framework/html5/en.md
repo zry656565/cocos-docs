@@ -27,6 +27,7 @@ Furthermore, javascript friendly API makes your game development experience a br
     * Composable actions: Sequence, Spawn, Repeat, Reverse
     * Ease Actions: Exp, Sin, Cubic, Elastic, etc.
     * Misc actions: CallFunc, OrbitCamera, Follow, Tween
+* Assets manager (hot update)
 * Basic menus and buttons
 * Integrated with physics engines: Chipmunk and Box2d
 * Particle system
@@ -51,13 +52,15 @@ Furthermore, javascript friendly API makes your game development experience a br
    
 ## Documents
 
-- [Highlighted release note of Cocos2d-JS v3.0 beta](./release-notes/v3.0b/release-note/en.md)
-- [Changelog of Cocos2d-JS v3.0 beta](./release-notes/v3.0b/changelog/en.md)
-- [Upgrade guide to Cocos2d-JS v3.0 beta](./release-notes/v3.0a/upgrade-guide/en.md)
+- [Highlighted release note of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/release-note/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/changelog/en.md)
+- [Upgrade guide to Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/upgrade-guide/en.md)
+
 - Startup
     - [Why use Cocos2d-html5 for Game Development](./v2/cocosh5-advantages/en.md)
     - [Resolution Policy Design for Cocos2d-html5](./v2/resolution-policy-design/en.md)
     - [History release notes](./release-notes/en.md)
+    
 - Pakour Game with Cocos2d-JS v3.0
     - [1. Setup Development Environment](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/en.md)
 	- [2. Hello World Cocos2d-JS](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/en.md)
