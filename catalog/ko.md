@@ -51,7 +51,7 @@
 	    - binding-generator 사용법
 		- 루아
 		- 자바스크립트
-		    - [자바스크립트 바인딩 후 원격 디버깅](../manual/framework/native/v3/js-remote-debugger/en.md)
+		    - [파이어폭스로 자바스크립트 원격 디버깅하기](../manual/framework/native/v3/js-remote-debugger/ko.md)
 	- 디버깅
 		- CCLog
 		- CCConsole
