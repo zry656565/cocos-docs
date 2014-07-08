@@ -37,18 +37,18 @@
 		- [CCConsole](../../../manual/framework/native/v3/CCConsole/zh.md)
 
 - ### 基础概念
-	- [导演，场景，层，以及精灵](../../../manual/framework/native/v2/basic-concepts/director-scene-layer-and-sprite/zh.md)
-	- [定时器scheduler和timer](../../../manual/framework/native/v2/basic-concepts/scheduler-and-timer/zh.md)
+	- [导演，场景，层，以及精灵](../../../manual/framework/native/v3/basic-concepts/zh.md)
+	- [调度器scheduler](../../../manual/framework/native/v3/scheduler/zh.md)
 
 - ### 图像渲染和动画
-	- [坐标系详解](../../../manual/framework/native/v2/graphic/coordinate-system/zh.md)
-	- [动作](../../../manual/framework/native/v2/graphic/action/zh.md)
-	- [序列帧动画](../../../manual/framework/native/v2/graphic/flipbook-animation/zh.md)
+	- [坐标系详解](../../../manual/framework/native/v3/coordinate-system/zh.md)
+	- [动作](../../../manual/framework/native/v3/action/zh.md)
+	- [序列帧动画](../../../manual/framework/native/v3/frame-animation/zh.md)
 	- [骨骼动画](../../../manual/framework/native/v3/spine/zh.md)
-	- [场景转换](../../../manual/framework/native/v2/graphic/transition/zh.md)
-	- [粒子效果](../../../manual/framework/native/v2/graphic/particle/zh.md)
-	- [瓦片地图](../../../manual/framework/native/v2/graphic/tiled-map/zh.md)
-	- [多分辨率支持策略和原理](../../../manual/framework/native/v2/graphic/multi-resolution/zh.md)
+	- [场景转换](../../../manual/framework/native/v3/transitions/zh.md)
+	- [粒子系统](../../../manual/framework/native/v3/particle-system/zh.md)
+	- [瓦片地图](../../../manual/framework/native/v3/tiled-map/zh.md)
+	- [多分辨率支持策略和原理](../../../manual/framework/native/v3/multi-resolution/zh.md)
 
 - ### 数据结构
 	- 3.0数据结构
