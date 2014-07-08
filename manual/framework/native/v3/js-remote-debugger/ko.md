@@ -27,7 +27,7 @@ devtools.debugger.remote-port    | 사용자 설정 | 문자열  | 5086
 
 ### 프로젝트 코드 수정하기
 
-JSB 프로젝트를 디버깅하기 전에 당신의 프로젝트에 다음 함수가 유효한지 확인해봐야 합니다. **AppDelegate.cpp**:
+JSB 프로젝트를 디버깅하기 전에 당신의 프로젝트에 다음 함수가 유효한지 확인해봐야 합니다. **AppDelegate.cpp**의 코드를 살펴봅시다:
 
 ```
 bool AppDelegate::applicationDidFinishLaunching()
