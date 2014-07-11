@@ -13,7 +13,6 @@ Cocos2d-JS-v3.0 RC0 @ 2014년 7월 4일
 * `ccui` extension에 `getContentSize`와 `setContentSize` 추가.
 * `cc.Color`의 기본 알파값을 `undefined`에서 255로 수정.
 * `cc.log`가 형식화된 문자열(formatted string)을 지원.
-* [JSB] Improved `cc.AssetsManager` with multi-thread downloading, download resuming support, compressed file support, better progression informations, possibility to retry failed assets.
 * [JSB] `cc.AssetsManager`가 멀티 쓰레드 다운로딩, 다운로드 이어하기, 압축 파일 지원, 개선된 진행 정보, 잘못된 자원들에 대한 재시도의 기능들로 향상.
 * [JSB] CMake compilation을 통한 리눅스 지원.
 * [JSB] JSB에서만 사용하는 API 이동 : 잘못된 사용 방지를 위해서 cc.fileUtils, cc.Reflection, cc.AssetsManager에 `jsb` 네임스페이스(namespace) 적용.
