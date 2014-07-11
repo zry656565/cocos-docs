@@ -27,6 +27,7 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
     * 구성 액션(Composable actions): Sequence, Spawn, Repeat, Reverse
     * 이즈 액션(Ease Actions): Exp, Sin, Cubic, Elastic, etc.
     * 기타 액션: CallFunc, OrbitCamera, Follow, Tween
+* 에셋 매니저
 * 기본 메뉴와 버튼
 * 통합된 물리 엔진: Chipmunk, Box2d
 * 파티클 시스템
@@ -51,13 +52,16 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
 
 ## 관련문서
 
-- [Cocos2d-JS v3.0 베타 릴리스 노트](./release-notes/v3.0b/release-note/en.md)
-- [Cocos2d-JS v3.0 베타 체인지 로그](./release-notes/v3.0b/changelog/en.md)
-- [Cocos2d-JS v3.0 베타 업그레이드 가이드](./release-notes/v3.0a/upgrade-guide/en.md)
+- [Cocos2d-JS v3.0 RC0 릴리스 노트](./release-notes/v3.0rc0/release-note/en.md)
+- [Cocos2d-JS v3.0 RC0 체인지 로그](./release-notes/v3.0rc0/changelog/en.md)
+- [Cocos2d-JS v3.0 RC0 업그레이드 가이드](./release-notes/v3.0rc0/upgrade-guide/en.md)
 - 시작하기
     - [왜 Cocos2d-html5로 게임을 개발해야 하는가?](./v2/cocosh5-advantages/ko.md)
     - [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](./v2/resolution-policy-design/en.md)
     - [릴리스 노트 히스토리](./release-notes/en.md)
+    - [Plugin-x 구조](./v3/plugin-x/plugin-x-architecture/en.md)
+    - [안드로이드에서 plugin-x 사용하기](./v3/plugin-x/how-to-use-plugin-x-on-android/en.md)
+    - [안드로이드에서 당신만의 플러그인을 만들어보세요](./v3/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
 - Cocos2d-JS v3.0로 달리기 게임 만들기
     - [1. 개발환경 세팅](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/en.md)
     - [2. Hello World Cocos2d-JS](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/en.md)
@@ -92,5 +96,5 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
     - [About cc.FileUtils](./v3/cc-fileutils/en.md)
     - [About cc.log](./v3/cc-log/en.md)
     - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
-    - [Bake Layer](./v3/bakeLayer/en.md)
+    - [Bake Layer](./v3/bake-layer/en.md)
     - [Using cc.reflection to call Java methods](./v3/reflection/en.md)
