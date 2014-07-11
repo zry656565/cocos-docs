@@ -61,7 +61,7 @@
 		- [CCString](../../../manual/framework/native/v2/basic-concepts/data-structure/string/zh.md)
 
 - ### 声音
-	- [不同平台上所支持的音频格式](../../../manual/framework/native/v2/audio/audio-formats/zh.md)
+	- [声音和音效](../../../manual/framework/native/v3/audio-and-effect/zh.md)
 
 - ### 内存管理
 	- [Cocos2d-x的引用计数和AutoreleasePool](../../../manual/framework/native/v2/memory/refcount-autoreleasepool/zh.md)
