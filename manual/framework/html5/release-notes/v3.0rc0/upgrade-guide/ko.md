@@ -16,7 +16,7 @@ layer.bake();
 layer.unbake();
 ```
 
-상세한 정보는 다음 문서를 참조해주세요. [레이어 굽기에 대해서(layer baking document)](../../../v3.0/bake-layer/en.md)
+상세한 정보는 다음 문서를 참조해주세요. [레이어 굽기에 대해서(layer baking document)](http://cocos2d-x.org/docs/manual/framework/html5/v3/bake-layer/en)
 
 ## 2. 오브젝트 풀(Object pool) : `cc.pool`
 
