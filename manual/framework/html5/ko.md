@@ -52,9 +52,9 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
 
 ## 관련문서
 
-- [Cocos2d-JS v3.0 RC0 릴리스 노트](./release-notes/v3.0rc0/release-note/en.md)
-- [Cocos2d-JS v3.0 RC0 체인지 로그](./release-notes/v3.0rc0/changelog/en.md)
-- [Cocos2d-JS v3.0 RC0 업그레이드 가이드](./release-notes/v3.0rc0/upgrade-guide/en.md)
+- [Cocos2d-JS v3.0 RC0 릴리스 노트](./release-notes/v3.0rc0/release-note/ko.md)
+- [Cocos2d-JS v3.0 RC0 체인지 로그](./release-notes/v3.0rc0/changelog/ko.md)
+- [Cocos2d-JS v3.0 RC0 업그레이드 가이드](./release-notes/v3.0rc0/upgrade-guide/ko.md)
 - 시작하기
     - [왜 Cocos2d-html5로 게임을 개발해야 하는가?](./v2/cocosh5-advantages/ko.md)
     - [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](./v2/resolution-policy-design/en.md)
