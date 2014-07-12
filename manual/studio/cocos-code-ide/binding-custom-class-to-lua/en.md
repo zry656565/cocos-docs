@@ -2,19 +2,19 @@ How to bind a custom class to lua runtime
 ===
 ---
 
-This document targets to show how to bind a custom cpp class to lua runtime. **Not for details of luabinding**.IF you need more details for luabinding, reference to [Lua binding for custom class][Lua binding for custom class].
+This document targets to show how to bind a custom cpp class to lua runtime. **Not for details of luabinding**.
 
 Processes of all platforms are similar, to facilitate this, let's choose Mac runtime as example.
 
 ### Generate source code for runtime
 This assumes you have a cocos lua project in Cocos Code IDE named CocosLuaGame.
 
-* Source code of runtime is stored in < projectLocation >/frameworks/runtime-src, if this directory exist, skip next step.
+* Source code of runtime is stored in \<projectLocation>/frameworks/runtime-src, if this directory exist, skip next step.
 * Otherwise, you need generate source code for runtime by following steps:
   * Right click CocosLuaGame project
-  * Cocos Tools->Build Runtime...
-  * **Next** and **Next** until Runtime Builder Wizard is shown
-  * Now the source code have been generated, click **Close**
+  * Cocos Tools->Add Native Codes Support...
+  * click **Generate** in **Create Native Source Wizard**
+  * Now the source code have been generated
 
 
 ### Add CustomClass class in project
@@ -75,7 +75,7 @@ std::string CustomClass::helloMsg() {
 
 ```
 
-add CustomClass.h/CustomClass.cpp to Xcode project, Please check **cocos2dx iOS** on the bottom:
+open **frameworks/runtime-src/proj.ios_mac/CocosLuaGame.xcodeproj**, add CustomClass.h/CustomClass.cpp to cocos2d_libs.xcodeproj. Please check **cocos2dx iOS** on the bottom:
 ![](./res/select_files_in_targets.png)
 
 then you will see the new project structure: 
@@ -175,20 +175,6 @@ add .h/.cpp in Xcode project:
 
 ![](./res/addScriptToXcode.png)
 
-### Add CustomClass auto completion for Cocos Code IDE(1.0.1.beta or above)
-zip `CustomClass.lua` to a zip file, such as CustomClass.zip by follow command:
-
-```
-zip CustomClass.zip CustomClass.lua
-```
-
-In Cocos Code IDE:
-
-* Right click CocosLuaGame project
-* Build Path->Configure Build Path...->Libraries->Add ZIPS...
-* ![](./res/add_zips.png)
-* Select the `CustomClass.zip` and **OK**
-
 ### Register it to lua
 
 open `lua_cocos2dx_custom.h`, that is a global function declare --> `register_all_cocos2dx_custom(lua_State* tolua_S);`
@@ -222,6 +208,20 @@ In Cocos Code IDE:
  * Right click CocosLuaGame project
  * Cocos Tools->Build Runtime...
  * Select target platforms then **build**
+ 
+### Add CustomClass auto completion for Cocos Code IDE(1.0.1.beta or above)
+zip `CustomClass.lua` to a zip file, such as CustomClass.zip by follow command:
+
+```
+zip CustomClass.zip CustomClass.lua
+```
+
+In Cocos Code IDE:
+
+* Right click CocosLuaGame project
+* Build Path->Configure Build Path...->Libraries->Add ZIPS...
+* ![](./res/add_zips.png)
+* Select the `CustomClass.zip` and **OK**
 
 ### Using CustomClass in lua
 Edit main.lua, using CustomClass where you want:
@@ -236,8 +236,6 @@ Edit main.lua, using CustomClass where you want:
 Run/Debug this project with new runtime named `CocosLuaGame`, you would see log in console:
 
 `customClass's msg is : Hello from CustomClass::sayHello`
-
-[Lua binding for custom class]: ../../../framework/native/v2/lua/lua-binding-for-custom-class/zh.md
 
 
 

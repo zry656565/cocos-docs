@@ -7,14 +7,14 @@ This document targets to show how to bind a custom cpp class to js runtime. **No
 Processes of all platforms are similar, to facilitate this, let's choose Mac runtime as example.
 
 ### Generate source code for runtime
-This assumes you have a cocos lua project in Cocos Code IDE named CocosJsGame.
+This assumes you have a cocos js project in Cocos Code IDE named CocosJsGame.
 
-* Source code of runtime is stored in < projectLocation >/frameworks/runtime-src, if this directory exist, skip next step.
+* Source code of runtime is stored in \<projectLocation\>/frameworks/runtime-src, if this directory exist, skip next step.
 * Otherwise, you need generate source code for runtime by following steps:
   * Right click CocosJSGame project
-  * Cocos Tools->Build Runtime...
-  * **Next** and **Next** until Runtime Builder Wizard is shown
-  * Now the source code have been generated, click **Close**
+  * Cocos Tools->Add Native Codes Support...
+  * click **Generate** in **Create Native Source Wizard**
+  * Now the source code have been generated
 
 ### Add CustomClass class in project
 ![](./res/custom_class_directory.png)
@@ -74,7 +74,7 @@ std::string CustomClass::helloMsg() {
 
 ```
 
-add CustomClass.h/CustomClass.cpp to Xcode project, Please check **cocos2dx iOS** on the bottom:
+open **frameworks/runtime-src/proj.ios_mac/CocosJSGame.xcodeproj**, add CustomClass.h/CustomClass.cpp to cocos2d_libs.xcodeproj. Please check **cocos2dx iOS** on the bottom:
 ![](./res/select_files_in_targets.png)
 
 then you will see the new project structure: 

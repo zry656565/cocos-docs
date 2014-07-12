@@ -1,3 +1,14 @@
+Cocos Code IDE 1.0.3.beta
+
+	[NEW] More stable when debug on remote device(ios/android)
+	[NEW] Support for variable hover displaying
+	[NEW] Code Auto-complete feature enhancement
+	[NEW] Code Auto-complete performance improving
+	[NEW] Support cocos porject upgrading
+	[NEW] Add some useful button to toolbar
+	
+	[FIX] Lots of bugs
+
 Cocos Code IDE 1.0.2.beta
 
     [NEW] Add a backgroud to runtime's "Wait for debug" page
