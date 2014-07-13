@@ -59,9 +59,9 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
     - [왜 Cocos2d-html5로 게임을 개발해야 하는가?](./v2/cocosh5-advantages/ko.md)
     - [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](./v2/resolution-policy-design/en.md)
     - [릴리스 노트 히스토리](./release-notes/en.md)
-    - [Plugin-x 구조](./v3/plugin-x/plugin-x-architecture/en.md)
-    - [안드로이드에서 plugin-x 사용하기](./v3/plugin-x/how-to-use-plugin-x-on-android/en.md)
-    - [안드로이드에서 당신만의 플러그인을 만들어보세요](./v3/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+    - [Plugin-x 구조](./v3/plugin-x/plugin-x-architecture/ko.md)
+    - [안드로이드에서 plugin-x 사용하기](./v3/plugin-x/how-to-use-plugin-x-on-android/ko.md)
+    - [안드로이드에서 당신만의 플러그인을 만들어보세요](./v3/plugin-x/how-to-write-your-own-plugin-for-android/ko.md)
 - Cocos2d-JS v3.0로 달리기 게임 만들기
     - [1. 개발환경 세팅](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/en.md)
     - [2. Hello World Cocos2d-JS](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/en.md)
