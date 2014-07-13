@@ -11,7 +11,6 @@ Plugin-x의 구조는 다음과 같습니다:
 
 ![](res/plugin-x-architecture.jpg)
 
-The process of loading plugin, invoking interface, uploading plugin is showing below:
 플러그인을 불러오고, 인터페이스를 작동하고, 플러그인을 업로드하는 과정은 다음과 같습니다: 
 
 ![](res/plugin-x-sequence-chart.jpg)
