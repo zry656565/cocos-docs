@@ -51,16 +51,24 @@
 	    - binding-generator 사용법
 		- 루아
 		- 자바스크립트
-		    - [자바스크립트 바인딩 후 원격 디버깅](../manual/framework/native/v3/js-remote-debugger/en.md)
+		    - [파이어폭스로 자바스크립트 원격 디버깅하기](../manual/framework/native/v3/js-remote-debugger/ko.md)
 	- 디버깅
 		- CCLog
 		- CCConsole
 	- File Stream
 	- 3rd SDK와의 통합
 	- Cocos2d-html5
+		- [Cocos2d-JS v3.0 RC0 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc0/release-note/ko.md)
+        - [Cocos2d-JS v3.0 RC0 체인지 로그](../manual/framework/html5/release-notes/v3.0rc0/changelog/ko.md)
+        - [Cocos2d-JS v3.0 RC0 업그레이드 가이드](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko.md)
+	- 시작하기
 		- [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
 		- [왜 Cocos2d-html5로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/ko.md)
 		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/en.md)
+		- [릴리스 노트 히스토리](../manual/framework/html5/release-notes/en.md)
+		- [Plugin-x 구조](../manual/framework/html5/v3/plugin-x/plugin-x-architecture/ko.md)
+		- [안드로이드에서 plugin-x 사용하기](../manual/framework/html5/v3/plugin-x/how-to-use-plugin-x-on-android/ko.md)
+		- [안드로이드에서 당신만의 플러그인을 만들어보세요](../manual/framework/html5/v3/plugin-x/how-to-write-your-own-plugin-for-android/ko.md)
 - Studio
 - 튜토리얼
 	- [CocoStudio로 게임 만들기](../tutorial/studio/parkour-game-with-cocostudio/ko.md)

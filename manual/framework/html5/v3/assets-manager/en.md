@@ -30,7 +30,7 @@ The assets manager in Cocos2d-JS v3.0 RC0 have many useful features to help you 
 
 It's quite simple to use the assets manager, firstly, you need an initial manifest file in JSON format in your app package.
 
-In the manifest file, you can describe the online address of the remote manifest file, the current version and a set of resources, then you will be able to use the `cc.AssetsManager` class to update it during the game process. 
+In the manifest file, you can describe the online address of the remote manifest file, the current version and a set of resources, then you will be able to use the `jsb.AssetsManager` class to update it during the game process. 
 
 ###Manifest files
 
@@ -85,12 +85,12 @@ Here is an example of the manifest file in json format:
 
 The `version.manifest` file should contain exact same informations with the first five fields of manifest file. It is optional, if it can't be found, the assets manager will download directly the complete manifest file. But it can be very useful if your manifest file is very large so that it can greatly save the time for comparaision of version information.
 
-###Usage of cc.AssetsManager
+###Usage of jsb.AssetsManager
 
 Here is an example of usage:
 
 ```
-var manager = new cc.AssetsManager(manifestUrl, storagePath);
+var manager = new jsb.AssetsManager(manifestUrl, storagePath);
 
 manager.update();
 // As the process is asynchronised, you need to retain the assets manager to make sure it won't be released before the process is ended.
@@ -139,7 +139,7 @@ else {
 }
 ```
 
-You can also refer to the test case Extensions/AssetsManagerTest in our js-tests project. Other public APIs of `cc.AssetsManager` is listed below:
+You can also refer to the test case Extensions/AssetsManagerTest in our js-tests project. Other public APIs of `jsb.AssetsManager` is listed below:
 
 - checkUpdate()
 - getState()
