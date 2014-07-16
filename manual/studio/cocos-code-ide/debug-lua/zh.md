@@ -5,8 +5,6 @@
 
 在 Windows 上你可以调试Windows和Android游戏，在 Mac 上你可以调试Mac、iOS和Android游戏。我们以 Mac 作为开发环境来演示 Code IDE 的使用，Windows上的流程和这里所介绍的几乎一样，不再赘述。
 
-{{toc}}
-
 先决条件
 ===
 ---
