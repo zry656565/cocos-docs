@@ -1,11 +1,14 @@
-Cocos Code IDE 1.0.3.beta
+Cocos Code IDE 1.0.3.rc0
 
 	[NEW] More stable when debug on remote device(ios/android)
 	[NEW] Support for variable hover displaying
 	[NEW] Code Auto-complete feature enhancement
 	[NEW] Code Auto-complete performance improving
 	[NEW] Support cocos porject upgrading
-	[NEW] Add some useful button to toolbar
+	[NEW] Add some useful buttons on toolbar
+	[NEW] Custom other ports instead of 6010/6050
+	[NEW] Package an iOS IPA
+	[NEW] Image preview
 	
 	[FIX] Lots of bugs
 
