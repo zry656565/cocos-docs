@@ -27,6 +27,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
     * 组合动作：Sequence, Spawn, Repeat, Reverse
     * 变速动作：Exp, Sin, Cubic, Elastic, etc.
     * 其他动作：CallFunc, OrbitCamera, Follow, Tween
+* 资源管理器（热更新）
 * 菜单与按钮
 * 集成物理引擎：Chipmunk或Box2d
 * 粒子系统
@@ -51,9 +52,10 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
    
 ## 文档
 
-- [Cocos2d-JS v3.0b发布说明](./release-notes/v3.0b/release-note/zh.md)
-- [Cocos2d-JS v3.0b改动列表](./release-notes/v3.0b/changelog/en.md)
-- [Cocos2d-JS v3.0b升级指南](./release-notes/v3.0a/upgrade-guide/zh.md)
+- [Cocos2d-JS v3.0 RC0发布说明](./release-notes/v3.0rc0/release-note/zh.md)
+- [Cocos2d-JS v3.0 RC0改动列表](./release-notes/v3.0rc0/changelog/en.md)
+- [Cocos2d-JS v3.0 RC0升级指南](./release-notes/v3.0rc0/upgrade-guide/zh.md)
+
 - 综述
 	- [Cocos2d-html5新手入门](./v2/getting-started_with-cocos2d-html5/zh.md)
     - [如何在jsb项目中使用extension](./v2/jsb/jsb-extension/zh.md)

@@ -3,7 +3,7 @@
 In cocos2d-js 3.0beta, we have a new feature that we can call Java static methods directly in js. Its usage is very simple:
 
 ```
-var o = cc.reflection.callStaticMethod(className, methodName, methodSignature, parameters...)
+var o = jsb.reflection.callStaticMethod(className, methodName, methodSignature, parameters...)
 ```
 
 In `callStaticMethod` method, we need pass Java class name, method name, method signature and parameters, and we can get the return value from Java. The Java class name and method signature may be a little strange if you didn't have experience in JNI, but that is Java specifications.
@@ -67,14 +67,14 @@ We will call the static methods of `Test` class:
 
 ```
 //call hello method
-cc.reflection.callStaticMethod("/org/cocos2dx/javascript/Test", "hello", "(Ljava/lang/String)V", "this is a message from js");
+jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "hello", "(Ljava/lang/String)V", "this is a message from js");
 
 //call the first sum method
-var result = cc.reflection.callStaticMethod("/org/cocos2dx/javascript/Test", "sum", "(II)I", 3, 7);
+var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(II)I", 3, 7);
 cc.log(result); //10
 
 //call the second sum method
-var result = cc.reflection.callStaticMethod("/org/cocos2dx/javascript/Test", "sum", "(I)I", 3);
+var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(I)I", 3);
 cc.log(result); //5
 ```
 
@@ -118,7 +118,7 @@ public class AppActivity extends Cocos2dxActivity {
 Then we call `showAlertDialog` in js:
 
 ```
-cc.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity", "showAlertDialog", "(Ljava/lang/String;Ljava/lang/String;)V", "title", "hahahahha");
+jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity", "showAlertDialog", "(Ljava/lang/String;Ljava/lang/String;)V", "title", "hahahahha");
 ```
 
 You should see a Android native AlertDialog now.

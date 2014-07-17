@@ -1,9 +1,9 @@
 #如何在android平台上使用js直接调用Java方法
 
-在Cocos2d-js 3.0beta中加入了一个新特征，在android平台上我们可以通过反射直接在js中调用java的静态方法。它的使用方法很简单：
+在cocos2d-js 3.0beta中加入了一个新特性，在android平台上我们可以通过反射直接在js中调用java的静态方法。它的使用方法很简单：
 
 ```
-var o = cc.reflection.callStaticMethod(className, methodName, methodSignature, parameters...)
+var o = jsb.reflection.callStaticMethod(className, methodName, methodSignature, parameters...)
 ```
 
 在`callStaticMethod`方法中，我们通过传入Java的类名，方法名，方法签名，参数就可以直接调用Java的静态方法，并且可以获得Java方法的返回值。下面介绍的类名和方法签名可能会有一点奇怪，但是Java的规范就是如此的。
@@ -67,14 +67,14 @@ public class Test {
 
 ```
 //调用hello方法
-cc.reflection.callStaticMethod("/org/cocos2dx/javascript/Test", "hello", "(Ljava/lang/String)V", "this is a message from js");
+jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "hello", "(Ljava/lang/String)V", "this is a message from js");
 
 //调用第一个sum方法
-var result = cc.reflection.callStaticMethod("/org/cocos2dx/javascript/Test", "sum", "(II)I", 3, 7);
+var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(II)I", 3, 7);
 cc.log(result); //10
 
 //调用第二个sum方法
-var result = cc.reflection.callStaticMethod("/org/cocos2dx/javascript/Test", "sum", "(I)I", 3);
+var result = jsb.reflection.callStaticMethod("org/cocos2dx/javascript/Test", "sum", "(I)I", 3);
 cc.log(result); //5
 ```
 
@@ -117,7 +117,7 @@ public class AppActivity extends Cocos2dxActivity {
 然后我们在js中调用
 
 ```
-cc.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity", "showAlertDialog", "(Ljava/lang/String;Ljava/lang/String;)V", "title", "hahahahha");
+jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity", "showAlertDialog", "(Ljava/lang/String;Ljava/lang/String;)V", "title", "hahahahha");
 ```
 这样调用你就可以看到一个android原生的Alert对话框了。
 
