@@ -3,11 +3,7 @@
 ---
 支持的调试环境：
 
-
-
 在 Windows 上你可以调试Windows和Android游戏，在 Mac 上你可以调试Mac、iOS和Android游戏。我们以 Mac 作为开发环境来演示 Code IDE 的使用，Windows上的流程和这里所介绍的几乎一样，不再赘述。
-
-{{toc}}
 
 先决条件
 ===
@@ -18,7 +14,7 @@ IDE 配置
 ===
 ---
 ## 基础设置
-打开工具的 **Preferences** 页，切换到 **Cocos/JavaScript** 子页面，选择你刚刚下载 Cocos2d-js 作为 JavaScript Framework。
+打开工具的 **Preferences** 页，切换到 **Cocos/JavaScript** 子页面，选择你刚刚下载 Cocos2d-js 3.x 作为 JavaScript Framework。
 ![](./res/PreferencesCocosJS.png)
 
 ## 额外设置

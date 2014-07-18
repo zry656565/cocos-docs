@@ -1,26 +1,6 @@
 Cocos Code IDE入门指南
 =========================
 
-![](./res/cocos-code-splash.png)
-
-{{toc}}
-
-Cocos Code IDE 是一个基于 Eclipse 的跨平台 IDE ，专门为 Cocos2d-x Lua & JavaScript 开发人员准备，通过此工具，你可以方便的创建游戏工程、编写并且调试代码、实时查看代码被改变后的效果，最终直接发布成一个可上架的安装包。当前发布的是 beta 版本，我们有信心将它打造成众多X-man的开发神器。
-
-**已实现的功能（1.0.3.rc0）：**
-
-* 简单地创建 Cocos2d-x Lua & JavaScript 工程
-* 提供 Cocos2d-x Lua & JavaScript 代码提示
-* 可以方便地在iOS/Mac/Android/Windows 平台上调试代码，包括iOS/Android的设备和模拟器
-* 不需要进行耗时巨长的native编译就可以运行游戏代码
-* 保存代码后不需要重启游戏就可以看到改动后的效果
-* 打包并发布apk
-* 打包并发布ipa
-
-**不会支持的特性**
-
-* Code IDE 是为 Lua 和 Javascript 等脚本语言设计的，不支持也不打算做对C++等其他语言的支持
-
 下载 Cocos Code IDE
 ----------
 ### 下载哪个版本的IDE(Windows用户)
@@ -34,7 +14,7 @@ Cocos Code IDE 是一个基于 Eclipse 的跨平台 IDE ，专门为 Cocos2d-x L
 Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存在无法输出日志的bug，请下载并解压[此文件](http://cdn.cocos2d-x.org/cocos2dx-3.1-templates.zip)到指定目录。
 
 ### Cocos2d-js 3.0 rc0 hotfix
-当前已经发布的 Cocos2d-js 3.0 rc0 版本支持 Cocos Code IDE 1.0.3.rc0，但这个版本的引擎在Windows上工作路径比较长时无法正常创建工程，为了提高 Cocos Code IDE 的体验，Cocos2d-js 3.0 团队临时提供了一个基于 Cocos2d-js 3.0 rc0 的 hotfix 版本。我们建议所有 Windows 用户[下载此版本][js engine download link]。
+当前已经发布的 Cocos2d-js 3.0 rc0 版本支持 Cocos Code IDE 1.0.0-rc0，但这个版本的引擎在Windows上工作路径比较长时无法正常创建工程，为了提高 Cocos Code IDE 的体验，Cocos2d-js 3.0 团队临时提供了一个基于 Cocos2d-js 3.0 rc0 的 hotfix 版本。我们建议所有 Windows 用户[下载此版本][js engine download link]。
 
 ### 下载
 
@@ -55,7 +35,7 @@ Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存�
 
 	**Note : **
 	
-	+ **Cocos Code IDE(1.0.3.rc0)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.3.rc0)适用于最新的引擎版本(Cocos2d-x 3.2 rc0 和 Cocos2d-js 3.0 rc0)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
+	+ **Cocos Code IDE(1.0.0-rc0)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.0-rc0)适用于最新的引擎版本(Cocos2d-x 3.2 rc0 和 Cocos2d-js 3.0 rc0)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
 	
 	+ **引擎和所创建的工程所在的路径都不能包含非英文字符，即路径中不能包含中文。**
 	
@@ -76,6 +56,14 @@ Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存�
 	| Mac OS X/iOS      | XCode 5.0或以上版本 		|
 	| Windows       | VS2012 |
 	| Android       | [Android SDK][Android SDK link], [NDK(**r9d版本**)][NDK link], [ANT][ANT link] |
+	
+已有的 Cocos2d 项目如何使用 Code IDE开发
+----------
+
+如果你的项目正在使用 cocos2d-x/cocos2d-js 3.x 引擎进行开发，现在可以很容易的切换到 Cocos Code IDE，你需要做的只是：
+
+* 通过 IDE 创建一个对应的 Cocos Lua/JavaScript 示例工程
+* 用项目资源（脚本、图片等）替换掉示例工程中的资源
 
 如何使用
 ----------
@@ -90,6 +78,6 @@ Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存�
 [Python link]: http://www.python.org/download
 [lua engine download link]: http://www.cocos2d-x.org/download
 [js engine download link]: http://www.cocos2d-x.org/filedown/cocos2d-js-v3.0-rc0-hotfix.zip
-[mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.3.rc0.zip
-[windows ide 64 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.3.rc0.zip
-[windows ide 32 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.3.rc0.zip
+[mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc0.zip
+[windows ide 64 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.zip
+[windows ide 32 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.zip

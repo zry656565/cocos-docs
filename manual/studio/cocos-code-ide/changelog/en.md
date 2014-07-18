@@ -1,4 +1,4 @@
-Cocos Code IDE 1.0.3.rc0
+Cocos Code IDE 1.0.0-rc0
 
 	[NEW] More stable when debug on remote device(ios/android)
 	[NEW] Support for variable hover displaying
