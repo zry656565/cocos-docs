@@ -1,6 +1,10 @@
 Cocos Code IDE入门指南
 =========================
 
+简介
+----------
+你可以通过[这篇文章](../zh.md)了解 Cocos Code IDE 的功能。
+
 下载 Cocos Code IDE
 ----------
 ### 下载哪个版本的IDE(Windows用户)
