@@ -43,9 +43,8 @@
 - 如何实现Javascript和C++的相互调用
 - 如何通过自动绑定把C++接口批量导到Javascript
 - Javascript绑定的远程调试
-- 如何使用iOS游戏内付费IAP
-	- [如何使用iOS游戏内付费IAP(C++篇)](../../../tutorial/framework/html5/jsb-ios-iap/ios-storekit-integration-in-c++/zh.md)
-	- [如何使用iOS游戏内付费IAP(JSB篇)](../../../tutorial/framework//html5/jsb-ios-iap/ios-storekit-integration-in-jsb/zh.md)
+- [如何使用iOS游戏内付费IAP(C++篇)](../../../tutorial/framework/html5/jsb-ios-iap/ios-storekit-integration-in-c++/zh.md)
+- [如何使用iOS游戏内付费IAP(JSB篇)](../../../tutorial/framework//html5/jsb-ios-iap/ios-storekit-integration-in-jsb/zh.md)
 
 
 ### 打包
