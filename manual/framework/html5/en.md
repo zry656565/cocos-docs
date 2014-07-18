@@ -52,8 +52,9 @@ Furthermore, javascript friendly API makes your game development experience a br
    
 ## Documents
 
-- [Highlighted release note of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/release-note/en.md)
+- [Highlighted release note of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/release-note/en.md)
 - [Changelog of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/changelog/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/changelog/en.md)
 - [Upgrade guide to Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/upgrade-guide/en.md)
 
 - Startup
