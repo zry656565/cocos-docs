@@ -131,6 +131,6 @@
         
 - Cocos Code IDE
     - Custom runtime
-        - [How to bind a custom class to lua runtime](../manual/studio/cocos-code-ide/binding-custom-class-to-lua/en.md)
-        - [How to bind a custom class to js runtime](../manual/studio/cocos-code-ide/binding-custom-class-to-js/en.md)
+        - [How to bind a custom class to lua runtime](../manual/code-ide/binding-custom-class-to-lua/en.md)
+        - [How to bind a custom class to js runtime](../manual/code-ide/binding-custom-class-to-js/en.md)
         

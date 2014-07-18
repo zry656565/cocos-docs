@@ -12,9 +12,11 @@
 	- 建立一个跑酷游戏
 
 # Cocos Code IDE
-- [Cocos Code IDE入门指南](../../manual/studio/cocos-code-ide/getting-started/zh.md)
-- [使用Code IDE调试Cocos2d-x Lua游戏](../../manual/studio/cocos-code-ide/debug-lua/zh.md)
-- [使用Code IDE调试Cocos2d-x JavaScript游戏](../../manual/studio/cocos-code-ide/debug-js/zh.md)
+- [Cocos Code IDE入门指南](../../manual/code-ide/getting-started/zh.md)
+- [使用Code IDE调试Cocos2d-x Lua游戏](../../manual/code-ide/debug-lua/zh.md)
+- [使用Code IDE调试Cocos2d-x JavaScript游戏](../../manual/code-ide/debug-js/zh.md)
+- [Lua Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-lua/en.md)
+- [Js Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-js/en.md)
 
 # 其他工具
 - [CocosBuilder](../../manual/framework/native/v2/tools-and-editors/cocosbuilder/zh.md)
