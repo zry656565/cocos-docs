@@ -54,4 +54,4 @@ Cocos Code IDE 填补了 Cocos2d Lua/JavaScript 调试工具的空白，你可�
 开始使用
 ----------
 
-+ [Cocos Code IDE 新手指引](../getting-started/zh.md)
++ [Cocos Code IDE 新手指引](./getting-started/zh.md)
