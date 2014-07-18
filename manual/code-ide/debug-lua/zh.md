@@ -15,34 +15,32 @@ IDE 配置
 ---
 ## 基础设置
 打开工具的 **Preferences** 页，切换到 **Cocos/Lua** 子页面，选择你刚刚下载的 Cocos2d-x 3.x 作为 Lua Framework。
-![](./res/PreferencesCocosLua.png)
 
++ [](./res/PreferencesCocosLua.png)
 ## 额外设置
 假设你发现我们提供给你的预编译的Android runtime不能满足你的要求，你就需要重新定制，那么你就需要提供给 IDE 几个 Android 编译需要用到的工具。这可以通过打开 **Preferences/Cocos** 页面进行配置。
-![](./res/PreferencesCocos.png)
+
++ ![](./res/PreferencesCocos.png)
 
 运行、测试游戏
 ===
 ---
 1. 新建一个名为 CocosLuaGame 的 Cocos Lua 工程
-2. 右击 Cocos Explorer 中的工程
-3. 在弹出菜单中选择 **"Debug As->Cocos Luabinding"**，工具会创建一个与工程名同名的 debug configuration
-4. 通过 ** Run->Debug Configurations ** 菜单打开 **"Debug Configurations"** 界面，我们提供的配置界面如下：
-   ![](./res/mac_lua_debug_config.png)
-5. 默认情况下脚本会运行在我们提供的 mac 版本预编译 runtime 上。为了简单起见，我们不对默认值进行任何改动。如果你想要在其他我们支持的目标平台上调试程序，可参考[在其它目标平台上调试](#在其它目标平台上调试)
+2. 点击工具栏上的 debug 按钮
++ ![](./res/debug_button_lua.png)
+3. 默认情况下脚本会运行在我们提供的 mac 版本预编译 runtime 上。为了简单起见，我们不对默认值进行任何改动。如果你想要在其他我们支持的目标平台上调试程序，可参考[在其它目标平台上调试](#在其它目标平台上调试)
 
 如何调试
 ===
 ---
 ## 断点支持
-+ 可以在 lua 脚本文件中增加断点，比如下在 main.lua 的第73行
-+ 当 spriteDog 到达屏幕右边界的时候，断点就会被触发
-+ 此时选择 “Yes” 打开 **Debug Perspective** 透视图，可以看到很多与调试相关的视图，调用栈、变量和断点等等
-  ![](./res/lua_breakpoint_triggered.png)
++ 可以在 lua 脚本文件中增加断点
++ 当断点被触发时选择 “Yes” 打开 **Debug Perspective** 透视图，可以看到很多与调试相关的视图，调用栈、变量和断点等等
++ ![](./res/lua_breakpoint_triggered.png)
 + 支持 **Step over, Step into, Step out** 等调试方式
 
 ## 代码热更新
-对 spriteDog 的移动路线很不爽？main.lua 中的 tick() 函数是控制每一帧 spriteDog 位置的。
+对 spriteDog 的移动路线很不爽？tick() 函数是控制每一帧 spriteDog 位置的。
 
 ```lua
 -- moving dog at every frame
@@ -62,13 +60,14 @@ end
 你会发现，在没有重启 runtime 的情况下 spriteDog 的移动速度改变了
 
 ## 在其它目标平台上调试
-+ 通过 **Run->Debug Configurations** 菜单打开 Debug Configurations 页面
++ 通过工具栏上的打开 Debug Configurations 打开 Debug Configurations 页面
++ ![](./res/config_button_lua.png)
 + 在页面的左侧，选择之前我们为你创建的名为CocosLuaGame的configuration
 
 ### 在 iOS Simulator 上调试
 + 选择 iOS 单选项
 + 勾选上 **Use iOS Simulator**
-  ![](./res/ios_sim_lua_debug_config.png)
++ ![](./res/ios_sim_lua_debug_config.png)
 +  点击 **Debug** 按钮，预编译的 runtime 会被自动安装到模拟器中
 
 ### 在 iOS 设备上调试
@@ -77,15 +76,22 @@ end
 + 在 "Debug Configuration" 界面选择 iOS 单选项
 + 取消 **Use iOS Simulator** 的勾选
 + 将设备的 ip 地址填写在 **Device IP** 上并在**Host IP**上选择 mac 机器使用的 ip 地址（设备ip和 mac 机器的ip需要在同一网段，并能相互访问）
-  ![](./res/ios_device_lua_debug_config.png)
++ ![](./res/ios_device_lua_debug_config.png)
 + 最后点击 **Debug** 按钮 
 
 ### 在 android 设备上调试
-+ 手动安装 runtime 到你的设备上，直接使用预编译的 runtime apk 是最好的，被存放在 CocosLuaGame/runtime/android 目录中(如果选择了“Use Adb Mode”,IDE 会自动安装runtime apk)
-+ 在 "Debug Configuration" 界面中，将设备的 ip 地址填写在 **Device IP** 上（如果选择了“Use Adb Mode”，可忽略这步）
+#### adb 模式
++ 选择“Use Adb Mode”
++ 选择正确的 runtime apk
++ ![](./res/android_lua_debug_config_adb.png)
++ 点击 **Debug** 按钮
++ IDE 会自动安装配置中的 runtime apk 到你的连接设备上并启动runtime开始调试
+
+#### 纯网络模式
++ 手动安装 runtime 到你的设备上，它被存放在 CocosLuaGame/runtime/android 目录中
++ 手动启动 runtime，停留在 waiting 页面
++ 在 "Debug Configuration" 中取消“Use Adb Mode”的选择
 + 在 **Host IP** 里面选择 mac 机器使用的 ip 地址（设备ip和 mac 机器的ip需要在同一网段，并能相互访问）
-+ 非必要配置：如果系统安装有 adb，可以勾选上 **Use Adb Mode**，在 **Package Name** 和 **Launch Activity** 配置正确的情况下，调试时能通过usb线自动打开设备上的 runtime
-	![](./res/android_lua_debug_config_adb.png)
-+ 如果上一条没有配置，或者没有通过usb线连接，那么请手动打开设备上的 runtime
-  ![](./res/android_lua_debug_config.png)
-+ 最后点击 **Debug** 按钮
++ 将设备的 ip 地址填写在 **Device IP** 上
++ ![](./res/android_lua_debug_config.png)
++ 点击 **Debug** 按钮
