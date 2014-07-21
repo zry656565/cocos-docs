@@ -77,8 +77,8 @@
 		- [달리기 게임을 만들어 보자](../tutorial/studio/parkour-game-with-cocostudio/chapter3/en.md)
 		- [더 알아보기](../tutorial/studio/parkour-game-with-cocostudio/chapter4/en.md)
 	- 자바스크립트로 달리기 게임 만들기
-		- [개발환경 세팅](../tutorial/framework/html5/parkour-game-with-javascript/chapter1/en.md)
-		- [Hello World Cocos2d-html5](../tutorial/framework/html5/parkour-game-with-javascript/chapter2/en.md)
+		- [개발환경 세팅](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/ko.md)
+		- [Hello World Cocos2d-html5](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/ko.md)
 		- [첫 번째 게임 씬 만들기](../tutorial/framework/html5/parkour-game-with-javascript/chapter3/en.md)
 		- [메인 게임 씬을 디자인하고 만들기](../tutorial/framework/html5/parkour-game-with-javascript/chapter4/en.md)
 		- [게임 캐릭터에 애니메이션 적용하기](../tutorial/framework/html5/parkour-game-with-javascript/chapter5/en.md)
