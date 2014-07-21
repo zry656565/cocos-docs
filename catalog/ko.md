@@ -64,7 +64,7 @@
 	- 시작하기
 		- [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
 		- [왜 Cocos2d-html5로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/ko.md)
-		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/en.md)
+		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/ko.md)
 		- [릴리스 노트 히스토리](../manual/framework/html5/release-notes/en.md)
 		- [Plugin-x 구조](../manual/framework/html5/v3/plugin-x/plugin-x-architecture/ko.md)
 		- [안드로이드에서 plugin-x 사용하기](../manual/framework/html5/v3/plugin-x/how-to-use-plugin-x-on-android/ko.md)
