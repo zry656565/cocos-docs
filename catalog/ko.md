@@ -58,8 +58,8 @@
 	- File Stream
 	- 3rd SDK와의 통합
 	- Cocos2d-html5
-		- [Cocos2d-JS v3.0 RC0 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc0/release-note/ko.md)
-        - [Cocos2d-JS v3.0 RC0 체인지 로그](../manual/framework/html5/release-notes/v3.0rc0/changelog/ko.md)
+		- [Cocos2d-JS v3.0 RC1 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc1/release-note/ko.md)
+        - [Cocos2d-JS v3.0 RC1 체인지 로그](../manual/framework/html5/release-notes/v3.0rc1/changelog/ko.md)
         - [Cocos2d-JS v3.0 RC0 업그레이드 가이드](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko.md)
 	- 시작하기
 		- [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
