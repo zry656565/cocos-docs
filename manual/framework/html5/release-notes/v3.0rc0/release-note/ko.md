@@ -29,7 +29,7 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
 
 ## 더 많은 내용이 궁금하시다면
 
-새로운 기능에 대한 모든 내용은 [Cocos2d-JS v3.0 RC0 체인지 로그](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/changelog/ko)와 [Cocos2d-JS v3.0 RC0 업그레이드 가이드](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0a/upgrade-guide/ko)에서 소개합니다.
+새로운 기능에 대한 모든 내용은 [Cocos2d-JS v3.0 RC0 체인지 로그](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/changelog/ko)와 [Cocos2d-JS v3.0 RC0 업그레이드 가이드](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko)에서 소개합니다.
 
 ## 곧 추가될 문서들
 
