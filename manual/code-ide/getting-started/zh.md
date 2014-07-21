@@ -19,7 +19,7 @@ Cocos Code IDE入门指南
 | 平台        | 充分测试版本 | 下载地址 |
 | ----------- |:--------------:| ----------------------:|
 | Mac OS X      | 10.9 		| [Mac OS X 64][mac ide link] 
-| Windows       | Win7/Win8     | [Windows x86 64Bit][windows ide 64 link], [Windows x86 32Bit][windows ide 32 link]|
+| Windows       | Win7/Win8     | [Windows x86 64Bit(.zip)][windows ide 64 zip link], [Windows x86 64Bit(.exe)][windows ide 64 exe link], [Windows x86 32Bit(.zip)][windows ide 32 zip link],[Windows x86 32Bit(.exe)][windows ide 32 exe link]|
 
 如何安装
 ------------
@@ -75,5 +75,7 @@ Cocos Code IDE入门指南
 [Python link]: http://www.python.org/download
 [engine download link]: http://www.cocos2d-x.org/download
 [mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc0.dmg
-[windows ide 64 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.zip
-[windows ide 32 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.zip
+[windows ide 64 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.zip
+[windows ide 32 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.zip
+[windows ide 64 exe link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.exe
+[windows ide 32 exe link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.exe
