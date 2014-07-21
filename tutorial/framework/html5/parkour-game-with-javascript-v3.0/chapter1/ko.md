@@ -16,11 +16,9 @@
 이제 Cocos2d-JS 어플리케이션을 개발하고 디버그하기 위해서 Webstrom을 설정해보겠습니다.
 
 ## 새로운 프로젝트 만들기
-Cocos2d-JS provides a console tool that makes the development of CH5 and JSB application more simpler and much convenient. You can use it to create a new project, publish it to android, iOS, Mac OS or web, and it's very easy to use.
 Cocos2d-JS는 보다 간단하고 보다 편리한 개발을 위한 콘솔 도구를 제공합니다. 이를 통해 새로운 프로젝트를 생성하고 android, iOS, Mac OS, Web 등 각 플랫폼으로 아주 쉽게 배포할 수 있습니다.
 
 ### 콘솔 도구 설정
-First step, you need to setup before using this tool. Please clone Cocos2d-JS repository and update all submodule. Open console in Cocos2d-JS folder, then just run ./setup.py on console. You may need to provide your NDK, Android SDK and ANT's path during the setup. Note that this tool is developed with python, so you will need python (32bit) 2.7.5 or later installed on your machine (but it doesn't support Python3).
 첫번째로, 도구를 사용하기에 앞서 설정이 필요합니다. Cocos2d-JS repository를 clone하고 모든 sub module을 업데이트하세요. 콘솔창에서 Cocos2d-JS 폴더를 열고 ./setup.py를 실행합니다. NDK, Android SDK,ANT의 경로를 설정해야 합니다. 주의사항으로 해당 도구는 파이썬으로 개발되었으며, 파이썬(32비트) 2.7.5나 이후 버전이 설치되어 있어야 합니다(그러나 파이썬3는 지원하지 않습니다). **주의사항:** ~/.bash_profile를 실행하면 바로 환경 설정 효과를 볼 수 있습니다.
 
 ### 새로운 프로젝트 만들기
@@ -173,7 +171,6 @@ WebStorm으로 돌아가서 **MyJSGame/src/myApp.js**를 더블 클릭해서 소
 3. 이제 당신은 step out, step into, step over 등과 같은 디버깅을 할 수 있습니다.
 
 ## 요약
-If you have any questions or suggestion of this tutorials, please let us know. we will appreciate your contribution.
 이 튜토리얼에서, WebStorm과 Cocos2d-html5가 함께 작동하도록 문법자동완성과 디버깅을 포함하는 간단한 설정법을 보여줬습니다. 이 과정은 아주 간단하고 쉽습니다. 이 튜토리얼에 대한 어떠한 질문이나 제안이 있을 때 우리에게 알려준다면 무척이나 감사할 것입니다.
 
 ## 다음은
