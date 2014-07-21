@@ -14,12 +14,6 @@ Cocos Code IDE入门指南
 
 如果已经安装过java, 你可以从控制台的输出中知道java版本是 **32-Bit** 或者 **64-Bit**, 然后选择相应版本的IDE。
 
-### Cocos2d-x 3.1 补丁包
-Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存在无法输出日志的bug，请下载并解压[此文件](http://cdn.cocos2d-x.org/cocos2dx-3.1-templates.zip)到指定目录。
-
-### Cocos2d-js 3.0 rc0 hotfix
-当前已经发布的 Cocos2d-js 3.0 rc0 版本支持 Cocos Code IDE 1.0.0-rc0，但这个版本的引擎在Windows上工作路径比较长时无法正常创建工程，为了提高 Cocos Code IDE 的体验，Cocos2d-js 3.0 团队临时提供了一个基于 Cocos2d-js 3.0 rc0 的 hotfix 版本。我们建议所有 Windows 用户[下载此版本][js engine download link]。
-
 ### 下载
 
 | 平台        | 充分测试版本 | 下载地址 |
@@ -34,11 +28,10 @@ Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存�
 
 + 安装 [JDK][JDK link]，windows用户要下载合适的jdk版本，例如，X64的jdk对于64位版本的Cocos IDE。
 + 安装 [Python 2.7][Python link]。
-+ 开发 Cocos2d-x Lua binding 游戏请下载 [Cocos2d-x 3.2][lua engine download link]
-+ 开发 Cocos2d-x JavaScript binding 游戏请下载 [Cocos2d-js 3.0 rc0 hotfix][js engine download link]
++ 开发 Cocos2d-x Lua binding 游戏请下载 [Cocos2d-x 3.2][engine download link]
++ 开发 Cocos2d-x JavaScript binding 游戏请下载 [Cocos2d-js 3.0 rc1][engine download link]
 
-	**Note : **
-	
+	**Note:**
 	+ **Cocos Code IDE(1.0.0-rc0)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.0-rc0)适用于最新的引擎版本(Cocos2d-x 3.2 rc0 和 Cocos2d-js 3.0 rc0)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
 	
 	+ **引擎和所创建的工程所在的路径都不能包含非英文字符，即路径中不能包含中文。**
@@ -80,8 +73,7 @@ Cocos2d-x 3.1 的 lua-template-runtime/runtime/win32/PrebuiltRuntimeLua.exe 存�
 [NDK link]: https://developer.android.com/tools/sdk/ndk/
 [ANT link]: http://ant.apache.org/
 [Python link]: http://www.python.org/download
-[lua engine download link]: http://www.cocos2d-x.org/download
-[js engine download link]: http://www.cocos2d-x.org/filedown/cocos2d-js-v3.0-rc0-hotfix.zip
-[mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc0.zip
+[engine download link]: http://www.cocos2d-x.org/download
+[mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc0.dmg
 [windows ide 64 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.zip
 [windows ide 32 link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.zip
