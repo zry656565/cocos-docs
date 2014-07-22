@@ -14,10 +14,10 @@
 
 　　然后，你可以使用本教程提供的方法来把mask图和原图结合起来，然后创建如上图所示的效果。
 
-　　你会发现本教程提供的方法非常方便，用它可以完成许多很有意思的效果。比如，把大头贴，或者像框等等。所以这些内容，你都可以从本教程中学到！
+　　你会发现本教程提供的方法非常方便，用它可以完成许多很有意思的效果。比如，大头贴、像框等等。所有这些内容，你都可以从本教程中学到！
 
-　　学习本教程的前提是你要熟悉Cocos2d-x，如果你对cocos2d是何物还不清楚的话，建议你先学习一下其它Cocos2d-x教程。
-　　
+　　学习本教程的前提是你要熟悉Cocos2d-x，如果你对Cocos2d是何物都还不清楚的话，建议你先学习一下其它Cocos2d-x教程。
+
 ##Getting Started
 
 　　启动terminal，运行"python /Cocos/Cocos2d-x-3.0beta2/tools/project-creator/create_project.py"。把工程命名为MaskedCal，然后选择一个文件夹来保存，最后点Create。
@@ -26,8 +26,7 @@
 
 　　在开始编码之前，让我们先来一点爵士音乐。同时，由于这里给的图片是480x320的，为了适应各个分辨率，这里需要setDesignResolutionSize，方便在不同的设备上显示。就是告诉游戏引擎，我是针对480x320像素设计的，遇到其他分辨率的设备，劳驾你帮我自动调整。打开AppDelegate.cpp，然后做如下修改：
 
-
-```cpp
+```
 // Add to top of file
 #include "SimpleAudioEngine.h"
  
@@ -48,8 +47,7 @@ return true;
 
 　　接下来，打开HelloWorldScene.h 并作下面修改：
 
-
-```cpp
+```
 // Add new instance variable
 static int calendarNum;
 
@@ -58,14 +56,11 @@ static cocos2d::Scene* sceneWithLastCalendar(int lastCalendar);
 // Add an another create methond
 static cocos2d::Layer* layerWithLastCalendar(int lastCalendar);
 ```
-
-
 　　在这个场景中，我们将随机显示一张日历图片（从三张里面选择）。在这个类里，我们保存了当前显示的日历图片的序号，然后添加了HelloWorld这个layer的另一个create函数同时替换了createScene函数。layerWithLastCalendar接收一个int型参数来标识将要显示的日历图片。后面，你会看到这个数字会随机从1-3中选择。
 
 　　然后，回到HelloWorldScene.cpp，并且作如下修改：
 
-
-```cpp
+```
 //place it after USING_NS_CC;
 
 //init static variable
@@ -126,7 +121,7 @@ Layer* HelloWorld::layerWithLastCalendar(int lastCalendar)
 　　我们在init函数里添加触摸事件响应，同时添加三个回调函数：
 
 
-```cpp
+```
 // Replace init with the following
 bool HelloWorld::init()
 {
@@ -169,7 +164,7 @@ void HelloWorld::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_even
 
 　　这里只是一些基本的Cocos2d-x代码，用来在屏幕中间随机显示一张日历图片。它同时也包含了一些逻辑，当你点击屏幕的时候，可以比较平滑地切换到另一张图片。
 
-　　编译并运行，现在你每次点击屏幕就可以看到一些随机的日历图片啦，它们全部都是由原作者[可爱的妻子](http://www.vickiwenderlich.com/)完成的：）
+　　编译并运行，现在你每次点击屏幕就可以看到一些随机的日历图片啦，它们全部都是由原作者[可爱的妻子](http://www.vickiwenderlich.com/)完成：）
 
 　　现在，我们把程序框架搭好了，接下来，让我们来实现遮罩效果吧！
  
@@ -205,15 +200,12 @@ void HelloWorld::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_even
 
 　　为了使用RenderTexture，你需要采取以下4步：
 
-1. 创建RenderTexture类，以像素为单位，指定你想要绘制的纹理的宽度和高度.
-
+1. 创建RenderTexture类，以像素为单位，指定你想要绘制的纹理的宽度和高度。
 2. 调用RenderTexture的begin方法来初始化渲染操作。
-
 3. 调用OpenGL函数来绘制实际的内容--但是，这些OpenGL调用最终都会绘制到屏幕之外去，而不会影响游戏中现在渲染的图像。
-
 4. 调用RenderTexture的end方法来结束绘制操作。一旦你完成之后，RenderTexture有一个sprite属性，你可以把它当用Sprite来用。
 
-　　不要觉得第3步很奇怪---因为你正在使用cocos2d，90％的情况你是不需要手动直接调用OpenGL函数的。但是，如果你想渲染一个节点的话，你可以直接调用某一个节点的visit方法，如sprite->visit，然后这个函数会自动为你发射一些OpenGL函数指针给图形硬件去显示。
+　　不要觉得第3步很奇怪---因为你正在使用Cocos2d，90％的情况你是不需要手动直接调用OpenGL函数的。但是，如果你想渲染一个节点的话，你可以直接调用某一个节点的visit方法，如sprite->visit，然后这个函数会自动为你发射一些OpenGL函数指针给图形硬件去显示。
 
 　　这里有一点需要注意的就是坐标问题。（0，0）点是渲染的纹理的左下角位置，所以，你在使用RenderTexture的时候，一定要把坐标设置对。
 
@@ -224,7 +216,7 @@ void HelloWorld::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_even
 　　打开HelloWorldScene.m，然后在init方法上面添加下面的方法，注意这个方法是静态的，在头文件声明时需要注意：
     
 
-```cpp
+```
 //a static method
 Sprite* HelloWorld::maskedSpriteWithSprite(Sprite* textureSprite, Sprite* maskSprite)
 {
@@ -267,7 +259,7 @@ Sprite* HelloWorld::maskedSpriteWithSprite(Sprite* textureSprite, Sprite* maskSp
     好了，接下来，我们可以使用上面的函数来制作遮罩的效果了：
 
 
-```cpp
+```
 //cal->setPosition(visibleSize.width/2, visibleSize.height/2);
 
 Sprite * mask = Sprite::create("CalendarMask.png");
@@ -307,7 +299,7 @@ pRet->addChild(maskedCal);
 
 
 
-[1]: wating "如何使用CCRenderTexture来动态创建纹理"
+[1]: http://www.cnblogs.com/zilongshanren/archive/2011/07/01/2095479.html "如何使用CCRenderTexture来动态创建纹理"
 [2]: ./MaskedCal.zip "完整源代码"
 
 

@@ -1,4 +1,4 @@
-# 在Cocos2d-x里如何制作各种按钮
+# 在cocos2d-x里如何制作各种按钮
  
 **程序截图**：
  
@@ -44,11 +44,11 @@ starMenu->setPosition(Point::ZERO);
 this->addChild(starMenu, 1);
 ```
 
-首先，为了调试方便，我们创建了一个label。这个看起来很熟悉对不对？---我们在上一篇教程中有提到过。然而，这一次我们使用了一个新的创建函数，它可以让我们指定label的大小和文字对齐方式。在这里，我把label的位置设置在窗口中上方，而且文本设置为居中对齐。这是一种广为人知的技术了，特别是当你想实现一些左对齐或者右对齐的文本的时候。   
+首先，为了调试方便，我们创建了一个label。这个看起来很熟悉对不对？---我们在之前的教程中有提到过。然而，这一次我们使用了一个新的创建函数，它可以让我们指定label的大小和文字对齐方式。在这里，我把label的位置设置在窗口中上方，而且文本设置为居中对齐。这是一种广为人知的技术了，特别是当你想实现一些左对齐或者右对齐的文本的时候。   
 
 接下来的代码是创建按钮。首先使用类 **MenuItemImage** 来创建一个菜单项，并为这个按钮指定一张被选中的图片和没有被选中的图片。（也就是单击时被显示的图片和没有被单击时被显示的图片）当创建完菜单项之后，我们为按钮的点击事件指定了一个回调函数（这个函数后面会给出代码）。最后一步，就是创建一个 **Menu** 来包含这个按钮（或者一系列的按钮，以NULL结尾）。   
 
-注意，我们在原点的位置创建了按钮。这里实际上指定了菜单的中心点的位置。然后，我们指定菜单项的位置相对于菜单的位置偏移（160，220）--这样的话，在屏幕上面显示的时候，菜单项就会显示在（160，220）的位置了。（因为菜单项的position是相对于菜单的中心点来的，把菜单的中心点设置为（0, 0），与屏幕坐标原点重合后，可以方便为每个菜单项指定坐标点，因为这时候，只要按钮实际屏幕出现的位置设置菜单项的坐标点就行了）。 
+注意，我们在原点的位置创建了按钮。这里实际上指定了菜单的中心点的位置。然后，我们指定菜单项的位置相对于菜单的位置偏移（160，220）--这样的话，在屏幕上面显示的时候，菜单项就会显示在（160，220）的位置了。（因为菜单项的position是相对于菜单的中心点来的，把菜单的中心点（也就是锚点）设置为（0, 0），与屏幕坐标原点重合后，可以方便为每个菜单项指定坐标点，因为这时候，只要按钮实际屏幕出现的位置设置菜单项的坐标点就行了）。 
 
 好了，还有一些代码需要补充。在init方法后面，添加我们的按钮回调函数： 
 
@@ -67,7 +67,7 @@ void HelloWorld::starMenuCallback(Object* pSender)
 
 另外一种在游戏里面常用的按钮类型就是--开关按钮。这种类型的按钮一次只有一个图片显示出来，当你单击它的时候，它就会切换到另外一张图片。这个可以用来制作一个控制面板的可见性的控制器，这样可以最大限度地利用设备上面有限的屏幕大小。 
 
-非常幸运的是，cocos2d里面就内置了一种特殊的menu item叫做**MenuItemToggle**，它可以使事情变得更加简单。让我们来体验一下吧！首先，在HelloWorldScene.h里面添加２个成员变量： 
+非常幸运的是，cocos2d里面就内置了一种特殊的menu item叫做**MenuItemToggle**，它可以使事情变得更加简单。让我们来体验一下吧！首先，在HelloWorldScene.h里面添加２个成员变量：
 
 ```
 MenuItemImage *_plusItem;
@@ -83,9 +83,8 @@ MenuItemImage *_minusItem;
 	_minusItem = MenuItemImage::create(
 		"ButtonMinus.png",
 		"ButtonMinusSel.png");
-
 	MenuItemToggle *toggleItem = MenuItemToggle::createWithCallback(CC_CALLBACK_1(HelloWorld::plusMinusButtonCallback, this), _plusItem, _minusItem, NULL);
-
+	
 	auto toggleMenu = Menu::create(toggleItem, NULL);
 	toggleMenu->setPosition(Point(160, 290));
 	this->addChild(toggleMenu, 1);
@@ -109,7 +108,6 @@ void HelloWorld::plusMinusButtonCallback(Object* pSender)
 	}
 }
 ```
-
 因此，正如你所见，MenuItemToggle里有一个**selectedItem()**方法，它可以告诉我们它的哪一个子菜单项当前可见（注意，当前可见的不等于被单击的） 
 
 好了，让我们运行一下吧！你会看到如下结果：
@@ -120,7 +118,7 @@ void HelloWorld::plusMinusButtonCallback(Object* pSender)
 
 第三种常用的按钮类型就是单选按钮（radio button）。我在做一个游戏的时候，发现自己需要一些单选按钮，但是，cocos2d的源代码里面并没有任何有关单选按钮的实现。因此，我们自己实现一个单选按钮。
 
-但是，目前cocos2d里面还是没有，因此，在这期间，你可以免费地使用我上面提到的一些实现。这篇教程使用的是我自己写的单选按钮的实现。首先，下载[RadioMenu.h和RadioMenu.cpp](radiomenu.zip)，然后把它们拖到你的Classes文件夹下。然后在HelloWorldScene.cpp的顶部添加下面代码： 
+但是，目前cocos2d里面还是没有，因此，在这期间，你可以免费地使用我上面提到的一些实现。这篇教程使用的是我自己写的单选按钮的实现。首先，下载[RadioMenu.h和RadioMenu.cpp](./radiomenu.zip)，然后把它们拖到你的Classes文件夹下。然后在HelloWorldScene.cpp的顶部添加下面代码：
 
 ```
 #include "RadioMenu.h"
@@ -132,15 +130,14 @@ void HelloWorld::plusMinusButtonCallback(Object* pSender)
 	auto *menuItem1 = MenuItemImage::create("Button1.png", "Button1Sel.png", this, menu_selector(HelloWorld::but1Callback));
 	auto *menuItem2 = MenuItemImage::create("Button2.png", "Button2Sel.png", this, menu_selector(HelloWorld::but2Callback));
 	auto *menuItem3 = MenuItemImage::create("Button3.png", "Button3Sel.png", this, menu_selector(HelloWorld::but3Callback));
-
+	
 	auto *radioMenu = RadioMenu::create(menuItem1, menuItem2, menuItem3, NULL);
 	radioMenu->setPosition(Point(220, 360));
 	radioMenu->alignItemsHorizontally();
 	radioMenu->setSelectedItem_(menuItem1);
-	menuItem1->selected();	
+	menuItem1->selected();
 	this->addChild(radioMenu, 10);
 ```
-
 首先，像之前一样，创建MenuItemImage，但是我们不是把它加到CCMenu类中，而是把它们加到RadioMenu类中。这个类确保一次只有一个菜单项被选中。这里，我们设置默认情况下，第一个菜单项被选中。 这里有一个新的知识点：我们利用cocos2d里面的自己布局功能，调用menu的 **alignItemsHorizontally()** 来水平对齐menu中的所有菜单项。注意，菜单项是相对于菜单的中心点来布局的。因此，我们不再需要把菜单的中心点设置为（０，０）了--取而代之的是，我们需要把菜单往中间靠右挪动一些，这样我们就可以让菜单项都完整地显示出来。 最后一件事情--像之前一样添加回调函数：
 
 ```
@@ -148,12 +145,10 @@ void HelloWorld::but1Callback(Object* pSender)
 {
 	label->setString("Last button: button1 ");
 }
-
 void HelloWorld::but2Callback(Object* pSender)
 {
 	label->setString("Last button: button2 ");
 }
-
 void HelloWorld::but3Callback(Object* pSender)
 {
 	label->setString("Last button: button3 ");

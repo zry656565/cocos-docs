@@ -12,11 +12,12 @@
 
 - 使用touch事件拖拽精灵的基本方法
 - 如何通过touch事件来滚动视图本身
-- 如何方便地计算坐标
+=1- 如何方便地计算坐标
 
-　　为了使事件变得有趣，你将要移动一些非常可爱的动画图片，它是原文作者的[可爱的妻子](http://www.vmwstudios.com/)创作的，背景则是由 [gwebstock](http://www.gwebstock.net/2010/11/06/blue-shotting-stars-vector-background/)创建。
+　　为了使事件变得有趣，你将要移动一些非常可爱的动画图片，它是由原文作者[可爱的妻子](http://www.vmwstudios.com/)创作的，背景则是由 [gwebstock](http://www.gwebstock.net/2010/11/06/blue-shotting-stars-vector-background/)创建。
 
-　　这个教程假设你已经有一些基本的Cocos2d-x的知识，同时已经安装了一份Cocos2d-x的版本。如果你对Cocos2d-x还不熟悉，你可能需要先学习一下编者改编的[《如何使用Cocos2d-x3.0来制作一个简单的iphone游戏：第一部分》][1]
+　　这个教程假设你已经有一些基本的cocos2d-x的知识，同时已经安装了一份cocos2d-x的版本。如果你对cocos2d-x还不熟悉，你可能需要先去学习一下基础教程。
+
 
 　　好了，不多说，准备好键盘，开始吧！
 
@@ -38,7 +39,7 @@ public:
     cocos2d::Vector<cocos2d::Sprite *> movableSprites;
 ```
 
-　　你将使用这些变量才追踪你的背景图片、当前选中的精灵以及一个在处理touch事件时需要移动的精灵的数组。
+　　你将使用这些变量来追踪你的背景图片、当前选中的精灵以及一个在处理touch事件时需要移动的精灵的数组。
 
 　　现在，回到HelloWorldScene.cpp，找到init方法，把它替换成下面的代码：
 

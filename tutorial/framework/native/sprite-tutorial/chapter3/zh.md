@@ -88,7 +88,6 @@ PlayLayer.cpp：
 
 ```
 #include "PlayLayer.h"
-
 enum {ktagSpriteSheet = 1,};
 
 bool PlayLayer::init()
