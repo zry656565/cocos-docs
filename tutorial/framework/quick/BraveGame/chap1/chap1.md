@@ -62,6 +62,18 @@
 
 ![](./res/background.png)
 
+在上一篇文章中我们讲到过Quick框架中的display文件，里面放的是与显示相关的部分接口。比如我们想要新建一个精灵，我们会调用`display.newSprite`，类似的接口还有`display.newLayer`。基本的格式都是`display.newXXX`，"XXX"包括sprite、layer、node、scene等，详细的可以查看display文件。另外在display中还提供了很多实用的、方便的配置属性。比如：
+
+- `display.width`和`display.height`表示屏幕宽度
+- `display.cx`和`display.cy`表示屏幕的x轴中间位置和y轴中间位置
+- `display.left`和`display.right`表示屏幕的最左边和最右边(x轴坐标为0和display.width的点)
+- `display.top`和`display.bottom`表示屏幕的顶部和底部(y轴坐标为0和display.height的点)
+- `display.CENTER、display.LEFT_TOP、display.CENTER_TOP`等分别表示node的锚点位置。
+
+另外还有scene切换的效果、游戏的暂停和恢复等等一系列我们经常使用，代码重复量较多的方法，都在Quick中进行了一定程度的封装，大大方便了我们在开发过程中的使用。
+
+**在Quick中使用图片有个规则，如果使用的图片是以`#`开头的话表示是从SpriteFrameCache中读取，如果没有使用`#`开头的话表示是直接从文件读取。**
+
 ### 添加玩家角色
 
 作为一个横版过关游戏，玩家和敌人当然都是必不可少的。在scripts/app下添加一个文件夹，取名roles,在roles下添加一个Player.lua文件。添加后的文件结构是这样的：
@@ -82,6 +94,13 @@
     return Player
     
 上面的代码中添加了一个以CCSprite为基类的Player类。在Quick中添加新的类的方式就是这么简单。是不是有点小激动呢。好了，添加完玩家类之后，我们要把玩家添加到当前场景中了。
+
+在Quick中创建一个类很简单，廖大已经给我们留好了一个class方法，只需要使用这个方法就能轻松的创建一个类。我们来看下具体的创建方式：
+首先第一句:
+
+	local Player = class("Player", function()
+    
+如果有同学对实现比较感兴趣的话可以打开Quick的functions.lua文件，里面有class方法的具体实现。我们这里只做使用的讲解。class方法有两个参数，第一个参数是类名。第二参数可以通过两种形式传递参数，一种是传入一个函数，另一种方式是传入一个Quick的类或者是Lua对象。当传入函数时，新创建的类会以传入的函数作为构造函数。当传入的是一个对象时，会以传入的对象为父类派生下来。
 
 #### 添加玩家角色到场景中
 
