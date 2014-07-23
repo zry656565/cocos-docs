@@ -17,12 +17,19 @@ HttpClient的使用一般包含下面6个步骤：
 
 ## 如何使用
 
+### 引入头文件和命名空间
+
+```
+#include "network/HttpClient.h"
+using namespace cocos2d::network;
+```
+
 ### HttpRequest 实例
 
 我们将使用HttpRequest无参数的构造函数，它为大多数情况提供了一个很好的默认设置，所以我们使用它。
 
 ```
-cocos2d::extension::HttpRequest* request = new cocos2d::extension::HttpRequest();
+HttpRequest* request = new HttpRequest();
 ```
 
 ### 设置连接方法的类型和待连接的地址
@@ -41,7 +48,7 @@ request->setUrl("http://www.httpbin.org/get");
 无论服务器返回怎样的状态，响应主体response body总是可读的，这至关重要。
 
 ```
-request->setResponseCallback(this,httpresponse_selector(HelloWorld::onHttpComplete));
+request->setResponseCallback(CC_CALLBACK_2(HelloWorld::onHttpComplete,this));
 ```
 
 在onHttpComplete里读取响应数据：
@@ -89,13 +96,13 @@ printf("\n");
 下面是一个通过HttpClient的HTTP GET请求的例子。
 
 ```
-HttpRequest* request = new HttpRequest();
-request->setUrl("http://just-make-this-request-failed.com");
-request->setRequestType(HttpRequest::Type::GET);
-request->setResponseCallback(this, httpresponse_selector(HelloWorld::onHttpRequestCompleted));
-request->setTag("GET test111");
-cocos2d::network::HttpClient::getInstance()->send(request);
-request->release();
+    HttpRequest* request = new HttpRequest();
+    request->setUrl("http://www.baidu.com");
+    request->setRequestType(HttpRequest::Type::GET);
+    request->setResponseCallback(CC_CALLBACK_2(HelloWorld::onHttpRequestCompleted,this));
+    request->setTag("GET test");
+    cocos2d::network::HttpClient::getInstance()->send(request);
+    request->release();
 ```
 
 ### POST请求示例
@@ -103,17 +110,17 @@ request->release();
 下面将发送一个POST请求到URL“http://httpbin.org/post”。
 
 ```
-HttpRequest* request = new HttpRequest();
-request->setUrl("http://httpbin.org/post");
-request->setRequestType(HttpRequest::Type::POST);
-request->setResponseCallback(this, httpresponse_selector(HelloWorld::onHttpRequestCompleted));
-
-// write the post data
-const char* postData = "visitor=cocos2d&TestSuite=Extensions Test/NetworkTest";
-request->setRequestData(postData, strlen(postData));
-request->setTag("POST test1");
-cocos2d::network::HttpClient::getInstance()->send(request);
-request->release();
+    HttpRequest* request = new HttpRequest();
+    request->setUrl("http://httpbin.org/post");
+    request->setRequestType(HttpRequest::Type::POST);
+    request->setResponseCallback(CC_CALLBACK_2(HelloWorld::onHttpRequestCompleted,this));
+    
+    // write the post data
+    const char* postData = "visitor=cocos2d&TestSuite=Extensions Test/NetworkTest";
+    request->setRequestData(postData, strlen(postData));
+    request->setTag("POST test");
+    cocos2d::network::HttpClient::getInstance()->send(request);
+    request->release();
 ```
 
 ### 处理网络回调函数
@@ -162,4 +169,4 @@ void HelloWorld::onHttpRequestCompleted(HttpClient *sender, HttpResponse *respon
 <uses-permission android:name=”android.permission.INTERNET” />
 ```
 
-详细代码可参照..\samples\Cpp\TestCpp\Classes\ExtensionsTest\NetworkTest\HttpClientTest.cpp
+详细代码可参照..\tests\Cpp\TestCpp\Classes\ExtensionsTest\NetworkTest\HttpClientTest.cpp
