@@ -52,8 +52,9 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
    
 ## 文档
 
-- [Cocos2d-JS v3.0 RC0发布说明](./release-notes/v3.0rc0/release-note/zh.md)
+- [Cocos2d-JS v3.0 RC1发布说明](./release-notes/v3.0rc1/release-note/zh.md)
 - [Cocos2d-JS v3.0 RC0改动列表](./release-notes/v3.0rc0/changelog/en.md)
+- [Cocos2d-JS v3.0 RC1改动列表](./release-notes/v3.0rc1/changelog/en.md)
 - [Cocos2d-JS v3.0 RC0升级指南](./release-notes/v3.0rc0/upgrade-guide/zh.md)
 
 - 综述
@@ -101,6 +102,6 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
     - [cc.FileUtils的移除](./v3/cc-fileutils/zh.md)
     - [cc.log的改造](./v3/cc-log/zh.md)
     - [其他3.0版的API改动](./v3/more-change-from-v2-to-v3/zh.md)
-    - [Bake Layer](./v3/bakeLayer/zh.md)
+    - [Bake Layer](./v3/bake-layer/zh.md)
     - [使用cc.reflection调用Java方法](./v3/reflection/zh.md)
     

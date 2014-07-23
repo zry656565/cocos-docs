@@ -62,8 +62,9 @@
 		- [use webbroswer to integrate Alipay on Windows Phone 8](../manual/framework/native/v2/sdk-integration/wp8-webbrowser/en.md)
 		- [integrate third SDK in Windows Phone 8](../manual/framework/native/v2/sdk-integration/wp8-thirdSDK/en.md)
 	- Cocos2d-html5
-        - [Highlighted release note of Cocos2d-JS v3.0 RC0](../manual/framework/html5/release-notes/v3.0rc0/release-note/en.md)
+        - [Highlighted release note of Cocos2d-JS v3.0 RC1](../manual/framework/html5/release-notes/v3.0rc1/release-note/en.md)
         - [Changelog of Cocos2d-JS v3.0 RC0](../manual/framework/html5/release-notes/v3.0rc0/changelog/en.md)
+        - [Changelog of Cocos2d-JS v3.0 RC1](../manual/framework/html5/release-notes/v3.0rc1/changelog/en.md)
         - [Upgrade guide to Cocos2d-JS v3.0 RC0](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/en.md)
         
 		- Startup
@@ -131,6 +132,6 @@
         
 - Cocos Code IDE
     - Custom runtime
-        - [How to bind a custom class to lua runtime](../manual/studio/cocos-code-ide/binding-custom-class-to-lua/en.md)
-        - [How to bind a custom class to js runtime](../manual/studio/cocos-code-ide/binding-custom-class-to-js/en.md)
+        - [How to bind a custom class to lua runtime](../manual/code-ide/binding-custom-class-to-lua/en.md)
+        - [How to bind a custom class to js runtime](../manual/code-ide/binding-custom-class-to-js/en.md)
         

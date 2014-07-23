@@ -52,8 +52,9 @@ Furthermore, javascript friendly API makes your game development experience a br
    
 ## Documents
 
-- [Highlighted release note of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/release-note/en.md)
+- [Highlighted release note of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/release-note/en.md)
 - [Changelog of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/changelog/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/changelog/en.md)
 - [Upgrade guide to Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/upgrade-guide/en.md)
 
 - Startup
@@ -95,5 +96,5 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [About cc.FileUtils](./v3/cc-fileutils/en.md)
     - [About cc.log](./v3/cc-log/en.md)
     - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
-    - [Bake Layer](./v3/bakeLayer/en.md)
+    - [Bake Layer](./v3/bake-layer/en.md)
     - [Using cc.reflection to call Java methods](./v3/reflection/en.md)
