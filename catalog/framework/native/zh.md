@@ -69,6 +69,10 @@
 - 如何开启多点触摸
 - 如何获得并响应重力传感
 
+## 网络
+- [如何使用HttpClient](../../../manual/framework/native/v3/httpclient/zh.md)
+
+
 ## 各系统平台上的语言转换
 - [从Objective-C转战C++](../../../manual/framework/native/v2/scripting-and-translating-between-programming-languages/for-c++-programmers/moving-from-objective-c-to-c++/zh.md)
 - [Android平台开发实践（C++/Java）](../../../manual/framework/native/v2/scripting-and-translating-between-programming-languages/easy-ndk/how-to-work-on-android-C++-Java/zh.md)
