@@ -1,4 +1,4 @@
-# Cocos2d-JS v3.0 RC0 릴리스 노트
+# Cocos2d-JS v3.0 RC1 릴리스 노트
 
 <img src="http://www.cocos2d-x.org/attachments/download/1508" height=180> 
 
@@ -12,7 +12,7 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
 
 ## 다운로드
 
-- [cocos2d-js-v3.0-rc0.zip](http://www.cocos2d-x.org/filedown/cocos2d-js-v3.0-rc0.zip)
+- [cocos2d-js-v3.0-rc1.zip](http://www.cocos2d-x.org/filedown/cocos2d-js-v3.0-rc1.zip)
 - [온라인 API 레퍼런스](http://www.cocos2d-x.org/reference/html5-js/V3.0rc0/index.html)
 - [API 레퍼런스 다운로드](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-rc0-API.zip)
 - [웹 개발자를 위한 다운로드 빌더](http://cocos2d-x.org/filecenter/jsbuilder)
@@ -29,7 +29,11 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
 
 ## 더 많은 내용이 궁금하시다면
 
-새로운 기능에 대한 모든 내용은 [Cocos2d-JS v3.0 RC0 체인지 로그](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/changelog/ko)와 [Cocos2d-JS v3.0 RC0 업그레이드 가이드](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko)에서 소개합니다.
+새로운 기능에 대해 알고 싶으시다면 다음 문서를 참조해주세요.
+
+- [Cocos2d-JS v3.0 RC0 changelog](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/changelog/ko)
+- [Cocos2d-JS v3.0 RC1 changelog](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc1/changelog/ko)
+- [Cocos2d-JS v3.0 RC0 upgrade guide](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko)
 
 ## 곧 추가될 문서들
 
@@ -38,6 +42,7 @@ Cocos2d-JS는 웹과 네이티브, 어떤 플랫폼으로 배포하는가에 상
 - cc.pool 사용법
 - 그리고...
 
-## Cocos Code IDE에 대해서
+## Cocos Code IDE와 Cocos Studio에 대해서
 
-Cocos2d-JS v3.0 RC0은 7월 11일에 릴리스될 Cocos Code IDE를 지원할 것이고, 현재 버전은 지원하지 않으니 기억해주세요.
+- Cocos2d-JS v3.0 RC1은 Cocos Code IDE v1.0.0 RC0와 호환성을 가집니다.
+- Cocos2d-JS v3.0 RC1은 Cocos Studio v1.3와 호환성을 가집니다.
