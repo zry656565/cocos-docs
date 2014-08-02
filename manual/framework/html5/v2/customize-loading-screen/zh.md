@@ -52,9 +52,9 @@ jsloader.js 里面设置了一堆需要加载的可执行脚本，保存在 engi
 在 cocos2dApp 的构造函数中，初始化了一些必要信息，并调用了`cc.AppController.shareAppController().didFinishLaunchingWithOptions();`，这会间接的调用 Application 的 run 方法，从而导致`applicationDidFinishLaunching `方法被触发。它运行了`cc.LoaderScene`的 preLoad 方法，这内中就是 Loading 界面的实现了，它传入了一个回调函数，用于确定在资源加载完毕之后启动第一个场景（Loading 其本身也是一个场景）。
 
 ##怎样自定义 Loading 界面
-前面我们了解了 Cocos2d-html5 的大致加载流程，而现在我们关注的是 **cc.LoaderScene** 所在的文件 CCLoader.js 的内部实现。里面定义了 **cc.Loader** 和 **cc.LoaderScene** 类型，Loader 内部完成了，对资源加载的所有操作步骤实现，而 LoaderScene 则是对 Loader 的进一步封装，将加载的过程，用一个界面来可视化的实现出，如用一个加载场景，上面一个 Logo 显示，同事显示了当前加载资源的进度百分比。我们要自定义实现 **Loading** 界面，那就是重新实现 LoaderScene 即可。对于 LoaderScene 的实现比较简单，我们参考其实现，自定义一个 Loader.js 文件，实现 Loader 类，完成自定义Loading 界面的具体实现，其中大多参考（实际是copy）了 LoaderScene 的实现，在其上修改扩充，它完成了修改 Logo 图片，并添加了一个简单的精度条，是加载过程更为一目了然，这里并没有多么炫的效果，但足以让你了解，你该如何自定义一个 Loading 界面（只贴出了相比较 LoaderScene 所修改的部分，但你可以在 [【这里】](https://github.com/iTyran/Tutorials/blob/master/html5/CustomLoading/src/Loading.js) 获取到源码）：
+前面我们了解了 Cocos2d-html5 的大致加载流程，而现在我们关注的是 **cc.LoaderScene** 所在的文件 CCLoader.js 的内部实现。里面定义了 **cc.Loader** 和 **cc.LoaderScene** 类型，Loader 内部完成了，对资源加载的所有操作步骤实现，而 LoaderScene 则是对 Loader 的进一步封装，将加载的过程，用一个界面来可视化的实现出，如用一个加载场景，上面一个 Logo 显示，同时显示了当前加载资源的进度百分比。我们要自定义实现 **Loading** 界面，那就是重新实现 LoaderScene 即可。对于 LoaderScene 的实现比较简单，我们参考其实现，自定义一个 Loader.js 文件，实现 Loader 类，完成自定义Loading 界面的具体实现，其中大多参考（实际是copy）了 LoaderScene 的实现，在其上修改扩充，它完成了修改 Logo 图片，并添加了一个简单的进度条，是加载过程更为一目了然，这里并没有多么炫的效果，但足以让你了解，你该如何自定义一个 Loading 界面（只贴出了相比较 LoaderScene 所修改的部分，但你可以在 [【这里】](https://github.com/iTyran/Tutorials/blob/master/html5/CustomLoading/src/Loading.js) 获取到源码）：
 
-	// 这里定义了 Logo 图片的 Base64 编码，至于为什么，后面将会说明，这里的编码内容挺多，固做简写
+	// 这里定义了 Logo 图片的 Base64 编码，至于为什么，后面将会说明，这里的编码内容挺多，故做简写
 	logoData = "data:image/png;base64,...";
 	 
 	Loading = cc.Scene.extend(
