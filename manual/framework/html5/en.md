@@ -82,7 +82,7 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [Game creation](./v3/cc-game/en.md)
     - [Construction and inheritance](./v3/inheritance/en.md)
     - [Simplified action APIs](./v3/cc-actions/en.md)
-    - [Object Pool](./v3/cc-pool/en.md)
+    - [Objects Pool](./v3/cc-pool/en.md)
     - [Bake Layer](./v3/bake-layer/en.md)
     - [Reflection from Javascript to JAVA](./v3/reflection/en.md)
     - [Reflection from Javascript to Objective-C](./v3/reflection-oc/en.md)
@@ -90,7 +90,6 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [Pure configuration file](./v3/project-json/en.md)
     - [Basic data refactoration](./v3/basic-data/en.md)
     - [Singleton objects refactoration](./v3/singleton-objs/en.md)
-    - [Unified create functions](./v3/create-api/en.md)
     - [Loading resource with cc.loader](./v3/cc-loader/en.md)
     - [System information in cc.sys](./v3/cc-sys/en.md)
     - [Path management with cc.path](./v3/cc-path/en.md)
@@ -101,9 +100,9 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [About cc.log](./v3/cc-log/en.md)
     - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
     
-    - Advanced topics
-        - [How to use extensions in JSB(Chinese version)](./jsb/jsb-extension/zh.md)
-        - [How to use Plugin-x on Android](./jsb/plugin-x/how-to-use-plugin-x-on-android/en.md)
-        - [Plugin-x architecture](./jsb/plugin-x/plugin-x-architecture/en.md)
-        - [How to write your own Plugin for Android](./jsb/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
-        - [Use iOS IAP Plugin](./jsb/plugin-x/ios-iap/en.md)
+- Advanced topics
+    - [How to use extensions in JSB(Chinese version)](./jsb/jsb-extension/zh.md)
+    - [How to use Plugin-x on Android](./jsb/plugin-x/how-to-use-plugin-x-on-android/en.md)
+    - [Plugin-x architecture](./jsb/plugin-x/plugin-x-architecture/en.md)
+    - [How to write your own Plugin for Android](./jsb/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+    - [Use iOS IAP Plugin](./jsb/plugin-x/ios-iap/en.md)
