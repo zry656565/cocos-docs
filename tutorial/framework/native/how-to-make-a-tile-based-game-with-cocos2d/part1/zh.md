@@ -314,7 +314,7 @@ void HelloWorld::onTouchEnded(Touch *touch, Event *unused_event)
 
 　　接下，期待[第二部分教程][3]吧！在那里，我将教大家如何在地图中添加碰撞检测，如果使我们的忍者沿着墙壁快乐的奔跑！
 
-[r1]: ./res/TileGameResources.zip  "游戏资源文件"
+[r1]: ./res/TileGameResources.rar  "游戏资源文件"
 
 [p1]: ./res/course_screenshot1.png "教程截图"
 [p2]: ./res/course_screenshot2.jpg "教程截图"
@@ -332,6 +332,6 @@ void HelloWorld::onTouchEnded(Touch *touch, Event *unused_event)
 [p14]: ./res/course_screenshot14.jpg "教程截图"
 
 
-[1]: wating "如何用Cocos2d-x3.0制作一款简单的游戏"
+[1]: ../../how-to-make-a-simple-cocos2dx-game/chapter-1/zh.md
 [2]: ./TileGame1.zip "完整源代码"
 [3]: ../part2/zh.md "第二部分教程"

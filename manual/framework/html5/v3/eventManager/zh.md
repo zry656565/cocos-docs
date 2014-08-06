@@ -304,6 +304,7 @@ _注意_: 第二个参数为可选参数，默认值为false, 表示是否递归
 
 ### cc.EventMouse (鼠标事件)
 `cc.EventMouse` 继承自 `cc.Event`
+
 | 属性/方法 | 类型 | 参数说明 | 用法说明 |
 |:------:|:--:|:----------:|:-------|
 | setScrollData | void | scrollX， scrollY | 设置滚轮数据 |
@@ -317,10 +318,10 @@ _注意_: 第二个参数为可选参数，默认值为false, 表示是否递归
 | getButton | Number | no | 获取鼠标按键 |
 
 ### cc.EventTouch ()
-
 `cc.EventTouch` 继承自 `cc.Event`
+
 | 属性/方法 | 类型 | 参数说明 | 用法说明 |
-|:------:|:--:|:----------:|:-------:|
+|:------:|:--:|:----------:|:-------|
 | getEventCode | Number | no | 获取触摸事件类型代码: BEGAN, MOVED, ENDED, CANCELLED |
 | getTouches | Array | no | 获取触摸事件中所有点信息 |
 

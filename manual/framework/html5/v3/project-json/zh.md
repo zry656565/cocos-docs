@@ -55,4 +55,4 @@
 "modules" : ["extensions", "pluginx", "box2d", "chipmunk"]
 ```
 
-如果想知道引擎中具体提供了哪些模块，可以参见`moduleCofing.json`文件中的`module`字段。
+如果想知道引擎中具体提供了哪些模块，可以参见`moduleConfig.json`文件中的`module`字段。
