@@ -21,6 +21,7 @@
 - [Cocos2d-JS v3.0 beta更新日志](v3.0b/changelog/en.md)
 - [Cocos2d-JS v3.0 RC0更新日志](v3.0rc0/changelog/en.md)
 - [Cocos2d-JS v3.0 RC1更新日志](v3.0rc1/changelog/en.md)
+- [Cocos2d-JS v3.0 RC2更新日志](v3.0rc2/changelog/en.md)
 
 
 #Cocos2d-JS 升级指南

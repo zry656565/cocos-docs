@@ -20,6 +20,7 @@
 - [Cocos2d-JS v3.0 beta change log](v3.0b/changelog/en.md)
 - [Cocos2d-JS v3.0 RC0 change log](v3.0rc0/changelog/en.md)
 - [Cocos2d-JS v3.0 RC1 change log](v3.0rc1/changelog/en.md)
+- [Cocos2d-JS v3.0 RC2 change log](v3.0rc2/changelog/en.md)
 
 #Cocos2d-JS upgrade guides
 
