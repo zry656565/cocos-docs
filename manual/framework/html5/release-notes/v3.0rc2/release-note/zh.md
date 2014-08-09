@@ -1,4 +1,4 @@
-# Cocos2d-JS v3.0 RC1发布说明
+# Cocos2d-JS v3.0 RC2发布说明
 
 <img src="http://www.cocos2d-x.org/attachments/download/1508" height=180> 
 

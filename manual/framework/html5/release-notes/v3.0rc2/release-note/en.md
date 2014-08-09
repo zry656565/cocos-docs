@@ -1,4 +1,4 @@
-# Cocos2d-JS v3.0 RC1 release note
+# Cocos2d-JS v3.0 RC2 release note
 
 <img src="http://www.cocos2d-x.org/attachments/download/1508" height=180> 
 
