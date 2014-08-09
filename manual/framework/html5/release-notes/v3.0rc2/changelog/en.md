@@ -54,3 +54,8 @@ Cocos2d-JS-v3.0 RC2 @ Aug.11, 2014
     30. [JSB] Fixed stencil buffer disabled issue on some Android devices.
     31. [JSB] Added defaultPixelFormat property definition.
     32. [JSB] Fixed typo of cc.radiansToDegrees.
+    
+* Known issues:
+    1. [JSB] cc.ActionInterval's setSpeed and getSpeed function doesn't exist in JSB.
+    2. [JSB] `cc.easeBezierAction` function is not supported in JSB.
+    3. [JSB] jsb.AssetsManager have issues on Windows platform and iOS simulator.
