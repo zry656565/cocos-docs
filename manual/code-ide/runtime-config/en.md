@@ -14,7 +14,12 @@ The below shows the general structure of the config.json file and every element 
        "name": "HelloLua",
        "width": 960,
        "height": 640,
-       "entry": "src/main.lua"
+       "entry": "src/main.lua",
+	   "consolePort": 6010,
+       "debugPort": 5086,
+       "forwardConsolePort": 10088,
+       "forwardUploadPort": 10090,
+       "forwardDebugPort": 10086
     },
     "simulator_screen_size": [
         {
@@ -63,7 +68,21 @@ window's height
 
 **Note:This argument valid only in desktop system**
 
+####"consolePort"####
+unsigned int
 
+console's port
+
+**Note:This argument valid only in desktop system**
+
+####"debugPort"####
+unsigned int
+
+port for debug
+
+**Note:This argument valid only in desktop system**
+
+###Note: All port configurations are only available for desktop systems###
 
 ---
 ##simulator_screen_size##

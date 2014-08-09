@@ -15,7 +15,12 @@ config.json文件结构
        "name": "HelloLua",
        "width": 960,
        "height": 640,
-       "entry": "src/main.lua"
+       "entry": "src/main.lua",
+	   "consolePort": 6010,
+       "debugPort": 5086,
+       "forwardConsolePort": 10088,
+       "forwardUploadPort": 10090,
+       "forwardDebugPort": 10086
     },
     "simulator_screen_size": [
         {
@@ -63,6 +68,22 @@ config.json文件结构
 窗口高
 
 **注:这个参数只在桌面系统下生效**
+
+####"consolePort"####
+正整型
+
+console端口
+
+**注:这个参数只在桌面系统下生效**
+
+####"debugPort"####
+正整型
+
+调试端口
+
+**注:这个参数只在桌面系统下生效**
+
+###注:所有的端口配置都只在桌面平台下生效###
 
 ---
 ##simulator_screen_size##
