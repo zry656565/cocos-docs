@@ -40,8 +40,9 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 - [Javascript到Objective-C反射使用文档](http://www.cocos2d-x.org/docs/manual/framework/html5/v3/reflection-oc/en)
 - [iOS应用内支付插件文档](http://www.cocos2d-x.org/docs/manual/framework/html5/jsb/plugin-x/ios-iap/en)
 
-## 关于Cocos Code IDE和Cocos Studio
+## 关于Cocos2d家族
 
+- Cocos2d-JS v3.0 RC2使用Cocos2d-x 3.2正式版作为JSB的底层实现
 - Cocos2d-JS v3.0 RC2兼容联合发布的Cocos Code IDE v1.0.0 RC1
 - Cocos2d-JS v3.0 RC2兼容Cocos Studio v1.2 - v1.5.0.1
 
@@ -51,3 +52,9 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 
 - [官方论坛](http://discuss.cocos2d-x.org/category/javascript)
 - [文档目录](http://cocos2d-x.org/docs/manual/framework/html5/zh)
+
+关于JSB编译环境，还有一些限制条件需要满足：
+
+- [Android编译] NDK版本必须使用r9b - r9d
+- [Android编译] Android SDK必须包含platform-19+
+- [iOS编译] Xcode版本必须在5.1到5.1.1
