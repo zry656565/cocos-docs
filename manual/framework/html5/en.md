@@ -27,6 +27,7 @@ Furthermore, javascript friendly API makes your game development experience a br
     * Composable actions: Sequence, Spawn, Repeat, Reverse
     * Ease Actions: Exp, Sin, Cubic, Elastic, etc.
     * Misc actions: CallFunc, OrbitCamera, Follow, Tween
+* Assets manager (hot update)
 * Basic menus and buttons
 * Integrated with physics engines: Chipmunk and Box2d
 * Particle system
@@ -51,24 +52,27 @@ Furthermore, javascript friendly API makes your game development experience a br
    
 ## Documents
 
-- [Highlighted release note of Cocos2d-JS v3.0 beta](./release-notes/v3.0b/release-note/en.md)
-- [Changelog of Cocos2d-JS v3.0 beta](./release-notes/v3.0b/changelog/en.md)
-- [Upgrade guide to Cocos2d-JS v3.0 beta](./release-notes/v3.0a/upgrade-guide/en.md)
+- [Highlighted release note of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/release-note/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/changelog/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/changelog/en.md)
+- [Upgrade guide to Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/upgrade-guide/en.md)
+
 - Startup
     - [Why use Cocos2d-html5 for Game Development](./v2/cocosh5-advantages/en.md)
-    - [Resolution Policy Design for Cocos2d-html5](./v2/resolution-policy-design/en.md)
+    - [Resolution Policy Design for Cocos2d-JS](./v2/resolution-policy-design/en.md)
     - [History release notes](./release-notes/en.md)
+    
 - Pakour Game with Cocos2d-JS v3.0
-    - [1. Setup Development Environment](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/en.md)
-	- [2. Hello World Cocos2d-JS](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/en.md)
-	- [3. Make your First Game Scene](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter3/en.md)
-	- [4. Design and Make Main Game Scene](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter4/en.md)
-	- [5. Let Player Run Animations](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter5/en.md)
-	- [6. Add Chipmunk Physics to Our Game](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter6/en.md)
-	- [7. Explorer with TiledMap and Camera](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter7/en.md)
-	- [8. Add Coin and Obstacles](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter8/en.md)
-	- [9. Add Game Over Logic And More](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter9/en.md)
-    - [10. Add Audio Effect into Parkour Game](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter10/en.md)
+    - [1. Setup Development Environment](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/en.md)
+	- [2. Hello World Cocos2d-JS](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/en.md)
+	- [3. Make your First Game Scene](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter3/en.md)
+	- [4. Design and Make Main Game Scene](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter4/en.md)
+	- [5. Let Player Run Animations](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter5/en.md)
+	- [6. Add Chipmunk Physics to Our Game](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter6/en.md)
+	- [7. Explorer with TiledMap and Camera](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter7/en.md)
+	- [8. Add Coin and Obstacles](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter8/en.md)
+	- [9. Add Game Over Logic And More](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter9/en.md)
+    - [10. Add Audio Effect into Parkour Game](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter10/en.md)
         
 - New features and API changes in version 3.0:
     - [New workflow with cocos console](./v2/cocos-console/en.md)
@@ -77,11 +81,15 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [New property API](./v3/getter-setter-api/en.md)
     - [Game creation](./v3/cc-game/en.md)
     - [Construction and inheritance](./v3/inheritance/en.md)
+    - [Simplified action APIs](./v3/cc-actions/en.md)
+    - [Objects Pool](./v3/cc-pool/en.md)
+    - [Bake Layer](./v3/bake-layer/en.md)
+    - [Reflection from Javascript to JAVA](./v3/reflection/en.md)
+    - [Reflection from Javascript to Objective-C](./v3/reflection-oc/en.md)
     - [Cocos2d-html5 modulization](./v3/moduleconfig-json/en.md)
     - [Pure configuration file](./v3/project-json/en.md)
     - [Basic data refactoration](./v3/basic-data/en.md)
     - [Singleton objects refactoration](./v3/singleton-objs/en.md)
-    - [Unified create functions](./v3/create-api/en.md)
     - [Loading resource with cc.loader](./v3/cc-loader/en.md)
     - [System information in cc.sys](./v3/cc-sys/en.md)
     - [Path management with cc.path](./v3/cc-path/en.md)
@@ -91,5 +99,10 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [About cc.FileUtils](./v3/cc-fileutils/en.md)
     - [About cc.log](./v3/cc-log/en.md)
     - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
-    - Bake Node (In progress)
-    - [Simplified action APIs](http://cocos2d-x.org/docs/manual/framework/html5/v3/cc-actions/en) 
+    
+- Advanced topics
+    - [How to use extensions in JSB(Chinese version)](./jsb/jsb-extension/zh.md)
+    - [How to use Plugin-x on Android](./jsb/plugin-x/how-to-use-plugin-x-on-android/en.md)
+    - [Plugin-x architecture](./jsb/plugin-x/plugin-x-architecture/en.md)
+    - [How to write your own Plugin for Android](./jsb/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+    - [Use iOS IAP Plugin](./jsb/plugin-x/ios-iap/en.md)

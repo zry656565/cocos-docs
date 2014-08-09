@@ -4,50 +4,13 @@ Object creation in Cocos2d-JS have always been the same way as in Cocos2d-x, tha
 
 In this document, we will introduce not only how to use them, but also some implementation explaination in brief.
 
-##1. How to create an object in Cocos2d-js##
+##1. Deprecated create functions##
 
-We will take the most useful class as an example: Sprite.
+As we supported an easier way to create objects, all `create` and `createWithXXX` functions have been deprecated. `new` construction supports all parameter combinasions for old `create` functions.
 
-Developers have two ways to create a Sprite object: Unified create function and the `new` operator, both takes exactly the same parameters. They are supported in html5 and jsb, but the implementations of them are quiet different.
+##2. Constructor##
 
-###1.1 Unified create function###
-
-In Cocos2d-html5 2.x, we need to use different create functions to create a sprite, such as:
-
-	var sprite = cc.Sprite.create(filename, rect);
-	var sprite = cc.Sprite.createWithTexture(texture, rect);
-	var sprite = cc.Sprite.createWithSpriteFrameName(spriteFrameName);
-    
-It's really painful, but in Cocos2d-js 3.0 alpha, we only need a unified create function:
-	
-	var sprite = cc.Sprite.create(filename, rect);
-	var sprite = cc.Sprite.create(texture, rect);
-	var sprite = cc.Sprite.create(spriteFrameName);
-
-To make it work in JSB, we made some js level wrapper for cc.Sprite.create, so if we use cc.Sprite.create function we will call the correspond C++ level create function according to the length and type of arguments:
-
-| Javascript | JSB | cocos2d-x |
-| ---------- |-----|-----------|              
-| cc.Sprite._create | js_cocos2dx_Sprite_create | cocos2d::Sprite::create |
-| cc.Sprite.createWithSpriteFrame | js_cocos2dx_Sprite_createWithSpriteFrameName | cocos2d::Sprite::createWithSpriteFrameName |
-| cc.Sprite.createWithTexture | js_cocos2dx_Sprite_createWithTexture | cocos2d::Sprite::createWithTexture |
-
-So if we use:
-    
-    var sprite = cc.Sprite.create(texture,cc.rect(0,0,480,320));
-
-we actually call:
-
-	cocos2d::Sprite* ret = cocos2d::Sprite::createWithTexture(arg0, arg1);
-
-The sequence dialog of the process is showing below:
-
-![](res/1.PNG)
-
-
-###2.constructor###
-
-Another improvement is that we can use the `new` operator to call class' constructor now. For example, we can use constructor to make a Sprite object by:
+In Cocos2d-JS 3.0, we can use the `new` operator to call classes' constructor now. For example, developers should create a Sprite object with the `new` operator, it's supported both in html5 and jsb, but the implementations of them are quiet different.
 
 	var sprite = new cc.Sprite(filename, rect);
 	var sprite = new cc.Sprite(texture, rect);
@@ -57,7 +20,7 @@ In html5 engine, we have refactored all in engine classes' `ctor` functions to s
 
 In JSB, we actually call js\_cocos2dx\_Sprite\_constructor in C++ level by using `new` operator of cc.Sprite. In this C++ function we allocate memory for this sprite and add it to autorelease pool, and then execute `_ctor` function in js level for initialization using initWithXXX functions, they are also supported in js bindings:
 
-| Javascript | JSB | cocos2d-x |
+| Javascript | JSB | Cocos2d-x |
 | ---------- |-----|-----------|              
 | cc.Sprite.initWithSpriteFrameName | js_cocos2dx_Sprite_initWithSpriteFrameName | cocos2d::Sprite::initWithSpriteFrameName |
 | cc.Sprite.initWithSpriteFrame | js_cocos2dx_Sprite_initWithSpriteFrame | cocos2d::Sprite::initWithSpriteFrame |
@@ -69,7 +32,7 @@ The sequence dialog of the process is showing below:
 ![](res/2.PNG)
 
 
-##Inheritance##
+##3. Inheritance##
 
 In Cocos2d-html5 2.x, we need to use different init functions in `create` function when extending a class, such as:
 

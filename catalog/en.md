@@ -62,9 +62,11 @@
 		- [use webbroswer to integrate Alipay on Windows Phone 8](../manual/framework/native/v2/sdk-integration/wp8-webbrowser/en.md)
 		- [integrate third SDK in Windows Phone 8](../manual/framework/native/v2/sdk-integration/wp8-thirdSDK/en.md)
 	- Cocos2d-html5
-        - [Highlighted release note of Cocos2d-JS v3.0 beta](../manual/framework/html5/release-notes/v3.0b/release-note/en.md)
-        - [Changelog of Cocos2d-JS v3.0 beta](../manual/framework/html5/release-notes/v3.0b/changelog/en.md)
-        - [Upgrade guide to Cocos2d-JS v3.0 beta](../manual/framework/html5/release-notes/v3.0a/upgrade-guide/en.md)
+        - [Highlighted release note of Cocos2d-JS v3.0 RC1](../manual/framework/html5/release-notes/v3.0rc1/release-note/en.md)
+        - [Changelog of Cocos2d-JS v3.0 RC0](../manual/framework/html5/release-notes/v3.0rc0/changelog/en.md)
+        - [Changelog of Cocos2d-JS v3.0 RC1](../manual/framework/html5/release-notes/v3.0rc1/changelog/en.md)
+        - [Upgrade guide to Cocos2d-JS v3.0 RC0](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/en.md)
+        
 		- Startup
             - [About Cocos2d-html5](../manual/framework/html5/en.md)
 			- [Why use Cocos2d-html5 for Game Development](../manual/framework/html5/v2/cocosh5-advantages/en.md)
@@ -73,30 +75,41 @@
             - [Plugin-x architecture](../manual/framework/html5/v3/plugin-x/plugin-x-architecture/en.md)
             - [How to use plugin-x on android](../manual/framework/html5/v3/plugin-x/how-to-use-plugin-x-on-android/en.md)
             - [How to write your own plugin](../manual/framework/html5/v3/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+            
         - New features and API changes in version 3.0:
-            - [New Actions API](../manual/framework/html5/v3/cc-actions/en.md)
-            - [New workflow with cocos console](../manual/framework/html5/v2/cocos-console/en.md)
-            - [Assets manager](../manual/framework/html5/v3/assets-manager/en.md)
-            - [New event manager](../manual/framework/html5/v3/eventManager/en.md)
-            - [New property API](../manual/framework/html5/v3/getter-setter-api/en.md)
-            - [Game creation](../manual/framework/html5/v3/cc-game/en.md)
-            - [Construction and inheritance](../manual/framework/html5/v3/inheritance/en.md)
-            - [Cocos2d-html5 modulization](../manual/framework/html5/v3/moduleconfig-json/en.md)
-            - [Pure configuration file](../manual/framework/html5/v3/project-json/en.md)
-            - [Basic data refactoration](../manual/framework/html5/v3/basic-data/en.md)
-            - [Singleton objects refactoration](../manual/framework/html5/v3/singleton-objs/en.md)
-            - [Unified create functions](../manual/framework/html5/v3/create-api/en.md)
-            - [Loading resource with cc.loader](../manual/framework/html5/v3/cc-loader/en.md)
-            - [System information in cc.sys](../manual/framework/html5/v3/cc-sys/en.md)
-            - [Path management with cc.path](../manual/framework/html5/v3/cc-path/en.md)
-            - [Asynchronised process with cc.async](../manual/framework/html5/v3/cc-async/en.md)
-            - [Modification to cc.saxParser](../manual/framework/html5/v3/cc-saxparser/en.md)
-            - [Modification to cc.spriteFrameCache](../manual/framework/html5/v3/cc-spriteframecache/en.md)
-            - [About cc.FileUtils](../manual/framework/html5/v3/cc-fileutils/en.md)
-            - [About cc.log](../manual/framework/html5/v3/cc-log/en.md)
-            - [Other change from v2.2.2 to v3.0](../manual/framework/html5/v3/more-change-from-v2-to-v3/en.md)
-            - Bake Node (In progress)
-            - [Simplified action APIs](http://cocos2d-x.org/docs/manual/framework/html5/v3/cc-actions/en)
+            - [New workflow with cocos console](./v2/cocos-console/en.md)
+            - [Assets manager](./v3/assets-manager/en.md)
+            - [New event manager](./v3/eventManager/en.md)
+            - [New property API](./v3/getter-setter-api/en.md)
+            - [Game creation](./v3/cc-game/en.md)
+            - [Construction and inheritance](./v3/inheritance/en.md)
+            - [Simplified action APIs](./v3/cc-actions/en.md)
+            - [Object Pool](./v3/cc-pool/en.md)
+            - [Bake Layer](./v3/bake-layer/en.md)
+            - [Reflection from Javascript to JAVA](./v3/reflection/en.md)
+            - [Reflection from Javascript to Objective-C](./v3/reflection-oc/en.md)
+            - [Cocos2d-html5 modulization](./v3/moduleconfig-json/en.md)
+            - [Pure configuration file](./v3/project-json/en.md)
+            - [Basic data refactoration](./v3/basic-data/en.md)
+            - [Singleton objects refactoration](./v3/singleton-objs/en.md)
+            - [Unified create functions](./v3/create-api/en.md)
+            - [Loading resource with cc.loader](./v3/cc-loader/en.md)
+            - [System information in cc.sys](./v3/cc-sys/en.md)
+            - [Path management with cc.path](./v3/cc-path/en.md)
+            - [Asynchronised process with cc.async](./v3/cc-async/en.md)
+            - [Modification to cc.saxParser](./v3/cc-saxparser/en.md)
+            - [Modification to cc.spriteFrameCache](./v3/cc-spriteframecache/en.md)
+            - [About cc.FileUtils](./v3/cc-fileutils/en.md)
+            - [About cc.log](./v3/cc-log/en.md)
+            - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
+    
+        - Advanced topics
+            - [How to use extensions in JSB(Chinese version)](./jsb/jsb-extension/zh.md)
+            - [How to use Plugin-x on Android](./jsb/plugin-x/how-to-use-plugin-x-on-android/en.md)
+            - [Plugin-x architecture](./jsb/plugin-x/plugin-x-architecture/en.md)
+            - [How to write your own Plugin for Android](./jsb/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+            - [Use iOS IAP Plugin](./jsb/plugin-x/ios-iap/en.md)
+
 - Studio
 - Tutorials
 	- [Build a Game with CocoStudio](../tutorial/studio/parkour-game-with-cocostudio/en.md)
@@ -129,6 +142,6 @@
         
 - Cocos Code IDE
     - Custom runtime
-        - [How to bind a custom class to lua runtime](../manual/studio/cocos-code-ide/binding-custom-class-to-lua/en.md)
-        - [How to bind a custom class to js runtime](../manual/studio/cocos-code-ide/binding-custom-class-to-js/en.md)
+        - [How to bind a custom class to lua runtime](../manual/code-ide/binding-custom-class-to-lua/en.md)
+        - [How to bind a custom class to js runtime](../manual/code-ide/binding-custom-class-to-js/en.md)
         

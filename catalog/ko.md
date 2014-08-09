@@ -6,12 +6,15 @@
 	- [Cocos2d-x v3.0 beta & v2.2, CocoStudio v1.2, Cocos2d-html5 v2.2.2 on 2014-01-07](../release-notes/summary-release-20140107.md)
 - 프레임워크 
 	- 시작하기	 
-		- 개발 환경 세팅
-			- [윈도우7에서 Cocos2d-x 안드로이드 환경 세팅하기(v2.x)](../manual/framework/native/v2/installation/android-on-win7/en.md)
-			- Mac OS X에서 Cocos2d-x 개발 환경 세팅하기
-		- Cocos2d-x 개발에 앞서 알아둬야 할 것
-			- 레퍼런스 카운트와 Auto Release Pool
-			- 코코스 API 스타일
+		- [Android에서 cpp-tests 실행하기](../manual/framework/native/v3/getting-started/how-to-run-cpp-tests-on-android/en.md)
+        - [Mac OS X에서 cpp-tests 실행하](../manual/framework/native/v3/getting-started/how-to-run-cpp-tests-on-mac-osx/en.md)
+        - [iOS에서 cpp-tests 실행하기](../manual/framework/native/v3/getting-started/how-to-run-cpp-tests-on-ios/en.md)
+        - [Linux에서 cpp-tests 실행하기](../manual/framework/native/v3/getting-started/how-to-run-cpp-tests-on-linux/en.md)
+        - [Win32에서 cpp-tests 실행하기](../manual/framework/native/v3/getting-started/how-to-run-cpp-tests-on-win32/en.md)
+        - [WP8에서 cpp-tests 실행하기](../manual/framework/native/v3/getting-started/how-to-run-cpp-tests-on-wp8/en.md)
+        - [새로운 게임 만들어보기](../manual/framework/native/v3/getting-started/how-to-start-a-new-game/en.md)
+        - [이클립스에서 안드로이드 프로젝트 빌드하고 실행하기](../manual/framework/native/v3/getting-started/how-to-build-android-project-with-eclipse/en.md)
+		- [윈도우7에서 Cocos2d-x 안드로이드 환경 세팅하기(v2.x)](../manual/framework/native/v2/installation/android-on-win7/en.md)
 	- 그래픽 & 애니메이션
 		- Cocos2d의 좌표 시스템
 		- 스프라이트, 레이어 및 씬
@@ -51,15 +54,50 @@
 	    - binding-generator 사용법
 		- 루아
 		- 자바스크립트
-		    - [자바스크립트 바인딩 후 원격 디버깅](../manual/framework/native/v3/js-remote-debugger/en.md)
+		    - [파이어폭스로 자바스크립트 원격 디버깅하기](../manual/framework/native/v3/js-remote-debugger/ko.md)
 	- 디버깅
 		- CCLog
 		- CCConsole
 	- File Stream
 	- 3rd SDK와의 통합
+		- [Windows Phone 8에서 웹브라우져를 사용해서 Alipay 통합](../manual/framework/native/v2/sdk-integration/wp8-webbrowser/en.md)
+    	- [Windows Phone 8에서 써드파티 SDK 통합](../manual/framework/native/v2/sdk-integration/wp8-thirdSDK/en.md)
 	- Cocos2d-html5
-		- [왜 Cocos2d-html5 로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/en.md)
-		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/en.md)
+		- [Cocos2d-JS v3.0 RC1 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc1/release-note/ko.md)
+        - [Cocos2d-JS v3.0 RC1 체인지 로그](../manual/framework/html5/release-notes/v3.0rc1/changelog/ko.md)
+        - [Cocos2d-JS v3.0 RC0 업그레이드 가이드](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko.md)
+	- 시작하기
+		- [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
+		- [왜 Cocos2d-html5로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/ko.md)
+		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/ko.md)
+		- [릴리스 노트 히스토리](../manual/framework/html5/release-notes/en.md)
+		- [Plugin-x 구조](../manual/framework/html5/v3/plugin-x/plugin-x-architecture/en.md)
+		- [안드로이드에서 plugin-x 사용하기](../manual/framework/html5/v3/plugin-x/how-to-use-plugin-x-on-android/en.md)
+		- [안드로이드에서 당신만의 플러그인을 만들어보세요](../manual/framework/html5/v3/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+        - 버전 3.0에서의 새로운 기능과 API 변화:
+            - [New Actions API](../manual/framework/html5/v3/cc-actions/en.md)
+            - [New workflow with cocos console](../manual/framework/html5/v2/cocos-console/en.md)
+            - [Assets manager](../manual/framework/html5/v3/assets-manager/en.md)
+            - [New event manager](../manual/framework/html5/v3/eventManager/en.md)
+            - [New property API](../manual/framework/html5/v3/getter-setter-api/en.md)
+            - [Game creation](../manual/framework/html5/v3/cc-game/en.md)
+            - [Construction and inheritance](../manual/framework/html5/v3/inheritance/en.md)
+            - [Cocos2d-html5 modulization](../manual/framework/html5/v3/moduleconfig-json/en.md)
+            - [Pure configuration file](../manual/framework/html5/v3/project-json/en.md)
+            - [Basic data refactoration](../manual/framework/html5/v3/basic-data/en.md)
+            - [Singleton objects refactoration](../manual/framework/html5/v3/singleton-objs/en.md)
+            - [Unified create functions](../manual/framework/html5/v3/create-api/en.md)
+            - [Loading resource with cc.loader](../manual/framework/html5/v3/cc-loader/en.md)
+            - [System information in cc.sys](../manual/framework/html5/v3/cc-sys/en.md)
+            - [Path management with cc.path](../manual/framework/html5/v3/cc-path/en.md)
+            - [Asynchronised process with cc.async](../manual/framework/html5/v3/cc-async/en.md)
+            - [Modification to cc.saxParser](../manual/framework/html5/v3/cc-saxparser/en.md)
+            - [Modification to cc.spriteFrameCache](../manual/framework/html5/v3/cc-spriteframecache/en.md)
+            - [About cc.FileUtils](../manual/framework/html5/v3/cc-fileutils/en.md)
+            - [About cc.log](../manual/framework/html5/v3/cc-log/en.md)
+            - [Other change from v2.2.2 to v3.0](../manual/framework/html5/v3/more-change-from-v2-to-v3/en.md)
+            - [Bake Layer](../manual/framework/html5/v3/bake-layer/en.md)
+            - [Simplified action APIs](http://cocos2d-x.org/docs/manual/framework/html5/v3/cc-actions/en)		
 - Studio
 - 튜토리얼
 	- [CocoStudio로 게임 만들기](../tutorial/studio/parkour-game-with-cocostudio/ko.md)
@@ -67,7 +105,18 @@
 		- [시작하기](../tutorial/studio/parkour-game-with-cocostudio/chapter2/ko.md)
 		- [달리기 게임을 만들어 보자](../tutorial/studio/parkour-game-with-cocostudio/chapter3/en.md)
 		- [더 알아보기](../tutorial/studio/parkour-game-with-cocostudio/chapter4/en.md)
-	- 자바스크립트로 달리기 게임 만들기
+	- 자바스크립트로 달리기 게임 만들기(Cocos2d-JS V3.0)
+		- [개발환경 세팅](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter1/ko.md)
+		- [Hello World Cocos2d-html5](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter2/ko.md)
+		- [첫 번째 게임 씬 만들기](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter3/en.md)
+		- [메인 게임 씬을 디자인하고 만들기](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter4/en.md)
+		- [게임 캐릭터에 애니메이션 적용하기](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter5/en.md)
+		- [Chipmunk 물리 엔진 적용하기](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter6/en.md)
+		- [타일맵과 카메라 시스템](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter7/en.md)
+		- [동전과 장애물들을 추가해보자](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter8/en.md)
+		- [게임오버 로직 및 기타등등](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter9/en.md)
+        - [오디오 효과 추가하기](../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter10/en.md)
+	- 자바스크립트로 달리기 게임 만들기(Cocos2d-JS V2.2.2)
 		- [개발환경 세팅](../tutorial/framework/html5/parkour-game-with-javascript/chapter1/en.md)
 		- [Hello World Cocos2d-html5](../tutorial/framework/html5/parkour-game-with-javascript/chapter2/en.md)
 		- [첫 번째 게임 씬 만들기](../tutorial/framework/html5/parkour-game-with-javascript/chapter3/en.md)
@@ -78,4 +127,7 @@
 		- [동전과 장애물들을 추가해보자](../tutorial/framework/html5/parkour-game-with-javascript/chapter8/en.md)
 		- [게임오버 로직 및 기타등등](../tutorial/framework/html5/parkour-game-with-javascript/chapter9/en.md)
         - [오디오 효과 추가하기](../tutorial/framework/html5/parkour-game-with-javascript/chapter10/en.md)
-		
+- Cocos Code IDE
+    - Custom runtime
+        - [How to bind a custom class to lua runtime](../manual/code-ide/binding-custom-class-to-lua/en.md)
+        - [How to bind a custom class to js runtime](../manual/code-ide/binding-custom-class-to-js/en.md)		
