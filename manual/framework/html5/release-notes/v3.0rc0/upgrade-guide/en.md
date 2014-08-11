@@ -1,4 +1,4 @@
-#Upgrade guide from Cocos2d-JS v3.0 beta to Cocos2d-JS v3.0 RC0
+#Upgrade guide from Cocos2d-JS v3.0 beta to Cocos2d-JS v3.0 RC2
 
 ## 0. Upgrade from Cocos2d-JS v2.x to v3.0 beta
 
@@ -49,7 +49,7 @@ You can also clean the pool and release all objects with `cc.pool.drainAllPool()
 We added a bunch of new easing functions listing below: 
 
 ```
-cc.easeBezierAction(p0, p1, p2, p3)
+cc.easeBezierAction(p0, p1, p2, p3) // Have issues in JSB
 cc.easeQuadraticActionIn()
 cc.easeQuadraticActionOut()
 cc.easeQuadraticActionInOut()
@@ -121,3 +121,40 @@ cc.log("%s : %d", str, number);
 ### 6.3 cc.AssetsManager
 
 In RC0, you can restart failed download with `downloadFailedAssets` function, and other great improvement can be found in upgraded [Assets manager document](../../../v3/assets-manager/en.md)
+
+### 6.4 Affine transform util functions **[New in RC2]**
+
+To adapte our naming protocole, we have renamed all affine transform functions, here is the list:
+
+```
+cc.AffineTransformMake              ->  cc.affineTransformMake
+cc.PointApplyAffineTransform        ->  cc.pointApplyAffineTransform
+cc._PointApplyAffineTransform       ->  cc._pointApplyAffineTransform
+cc.SizeApplyAffineTransform         ->  cc.sizeApplyAffineTransform
+cc.AffineTransformMakeIdentity      ->  cc.affineTransformMakeIdentity
+cc.AffineTransformIdentity          ->  cc.affineTransformIdentity
+cc.RectApplyAffineTransform	        ->  cc.rectApplyAffineTransform
+cc._RectApplyAffineTransformIn      ->  cc._rectApplyAffineTransformIn
+cc.AffineTransformTranslate         ->  cc.affineTransformTranslate
+cc.AffineTransformScale             ->  cc.affineTransformScale
+cc.AffineTransformRotate            ->  cc.affineTransformRotate
+cc.AffineTransformConcat            ->  cc.affineTransformConcat
+cc.AffineTransformEqualToTransform  ->  cc.affineTransformEqualToTransform
+cc.AffineTransformInvert            ->  cc.affineTransformInvert
+```
+
+### 6.5 cc.RenderTexture **[New in RC2]**
+
+```
+cc.RenderTexture.beginWithClear(r, g, b, a, depthValue, stencilValue)
+```
+
+`cc.RenderTexture`'s `beginWithClear` function now start to accept color value from 0-255 for `r`, `g`, `b`, `a` parameters, please stop to use float value parameters.
+
+### 6.6 cc.sys.platform **[New in RC2]**
+
+Added `cc.sys.platform` for detecting target platform.
+
+### 6.7 [JSB]console.log **[New in RC2]**
+
+Bound `console.log` function for JSB.

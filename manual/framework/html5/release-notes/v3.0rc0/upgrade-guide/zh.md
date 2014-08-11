@@ -1,4 +1,4 @@
-#从Cocos2d-JS v3.0 beta到Cocos2d-JS v3.0 RC0升级指南
+#从Cocos2d-JS v3.0 beta到Cocos2d-JS v3.0 RC2升级指南
 
 ## 0. 首先你需要知道如何从Cocos2d-JS v2.x升级到v3.0 beta
 
@@ -50,7 +50,7 @@ cc.pool.getFromPool(cc.Sprite, "a.png");
 我们在3.0 RC0中添加了一系列方便的缓动动作供大家使用：
 
 ```
-cc.easeBezierAction(p0, p1, p2, p3)
+cc.easeBezierAction(p0, p1, p2, p3) // JSB暂不支持
 cc.easeQuadraticActionIn()
 cc.easeQuadraticActionOut()
 cc.easeQuadraticActionInOut()
@@ -122,3 +122,40 @@ cc.log("%s : %d", str, number);
 ### 6.3 资源管理器
 
 在RC0中，你可以使用`cc.AssetsManager`的`downloadFailedAssets`函数重启未成功下载的资源，3.0 RC0中的资源管理器还支持了非常多优秀的特性，详情请参见新的[资源管理器文档](../../../v3/assets-manager/zh.md)
+
+### 6.4 仿射变换工具函数 **[RC2新改动]**
+
+为了符合引擎整体的命名风格，所有函数都必须小写字母开头，我们将放射变换函数重命名为这种形式，下面是API改动列表：
+
+```
+cc.AffineTransformMake              ->  cc.affineTransformMake
+cc.PointApplyAffineTransform        ->  cc.pointApplyAffineTransform
+cc._PointApplyAffineTransform       ->  cc._pointApplyAffineTransform
+cc.SizeApplyAffineTransform         ->  cc.sizeApplyAffineTransform
+cc.AffineTransformMakeIdentity      ->  cc.affineTransformMakeIdentity
+cc.AffineTransformIdentity          ->  cc.affineTransformIdentity
+cc.RectApplyAffineTransform	        ->  cc.rectApplyAffineTransform
+cc._RectApplyAffineTransformIn      ->  cc._rectApplyAffineTransformIn
+cc.AffineTransformTranslate         ->  cc.affineTransformTranslate
+cc.AffineTransformScale             ->  cc.affineTransformScale
+cc.AffineTransformRotate            ->  cc.affineTransformRotate
+cc.AffineTransformConcat            ->  cc.affineTransformConcat
+cc.AffineTransformEqualToTransform  ->  cc.affineTransformEqualToTransform
+cc.AffineTransformInvert            ->  cc.affineTransformInvert
+```
+
+### 6.5 cc.RenderTexture **[RC2新改动]**
+
+```
+cc.RenderTexture.beginWithClear(r, g, b, a, depthValue, stencilValue)
+```
+
+`cc.RenderTexture`的`beginWithClear`函数不再支持浮点颜色值作为参数，与引擎中其他API一样接受0-255的整型颜色值作为`r`, `g`, `b`, `a`的参数值。
+
+### 6.6 cc.sys.platform **[RC2新改动]**
+
+添加获取平台的API：`cc.sys.platform`。
+
+### 6.7 [JSB]console.log **[RC2新改动]**
+
+绑定`console.log`。

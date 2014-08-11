@@ -14,6 +14,7 @@ Furthermore, javascript friendly API makes your game development experience a br
 - [Cocos2d-JS release](http://www.cocos2d-x.org/download)
 - [Online API reference](http://www.cocos2d-x.org/wiki/Reference)
 - [Downloadable API reference](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-beta-API.zip)
+- [Online test cases](http://cocos2d-x.org/js-tests/)
 
 ## Main features
 
@@ -52,10 +53,9 @@ Furthermore, javascript friendly API makes your game development experience a br
    
 ## Documents
 
-- [Highlighted release note of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/release-note/en.md)
-- [Changelog of Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/changelog/en.md)
-- [Changelog of Cocos2d-JS v3.0 RC1](./release-notes/v3.0rc1/changelog/en.md)
-- [Upgrade guide to Cocos2d-JS v3.0 RC0](./release-notes/v3.0rc0/upgrade-guide/en.md)
+- [Highlighted release note of Cocos2d-JS v3.0 RC2](./release-notes/v3.0rc2/release-note/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC2](./release-notes/v3.0rc2/changelog/en.md)
+- [Upgrade guide to Cocos2d-JS v3.0 RC2](./release-notes/v3.0rc0/upgrade-guide/en.md)
 
 - Startup
     - [Why use Cocos2d-html5 for Game Development](./v2/cocosh5-advantages/en.md)
