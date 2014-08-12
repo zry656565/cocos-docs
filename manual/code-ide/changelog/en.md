@@ -1,3 +1,14 @@
+Cocos Code IDE 1.0.0-rc1
+
+	[NEW] Support remote debug
+	[NEW] Framecache preview
+	[NEW] Add marketplace
+	[NEW] Create project with existing code and resource
+	[NEW] Code Auto-complete feature enhancement
+	
+	[FIX] "Run in browser" display
+	[FIX] Some other bugs
+
 Cocos Code IDE 1.0.0-rc0
 
 	[NEW] More stable when debug on remote device(ios/android)

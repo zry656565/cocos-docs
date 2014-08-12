@@ -29,10 +29,10 @@ Cocos Code IDE入门指南
 + 安装 [JDK][JDK link]，windows用户要下载合适的jdk版本，例如，X64的jdk对于64位版本的Cocos IDE。
 + 安装 [Python 2.7][Python link]。
 + 开发 Cocos2d-x Lua binding 游戏请下载 [Cocos2d-x 3.2][engine download link]
-+ 开发 Cocos2d-x JavaScript binding 游戏请下载 [Cocos2d-js 3.0 rc1][engine download link]
++ 开发 Cocos2d-x JavaScript binding 游戏请下载 [Cocos2d-js 3.0 rc2][engine download link]
 
 	**Note:**
-	+ **Cocos Code IDE(1.0.0-rc0)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.0-rc0)适用于最新的引擎版本(Cocos2d-x 3.2 rc0 和 Cocos2d-js 3.0 rc0)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
+	+ **Cocos Code IDE(1.0.0-rc1)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.0-rc1)适用于最新的引擎版本(Cocos2d-x 3.2 rc1 和 Cocos2d-js 3.0 rc1)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
 	
 	+ **引擎和所创建的工程所在的路径都不能包含非英文字符，即路径中不能包含中文。**
 	
@@ -74,8 +74,8 @@ Cocos Code IDE入门指南
 [ANT link]: http://ant.apache.org/
 [Python link]: http://www.python.org/download
 [engine download link]: http://www.cocos2d-x.org/download
-[mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc0.dmg
-[windows ide 64 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.zip
-[windows ide 32 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.zip
-[windows ide 64 exe link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc0.exe
-[windows ide 32 exe link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc0.exe
+[mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc1.dmg
+[windows ide 64 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc1.zip
+[windows ide 32 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc1.zip
+[windows ide 64 exe link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc1.exe
+[windows ide 32 exe link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc1.exe
