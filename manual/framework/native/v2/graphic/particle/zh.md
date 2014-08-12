@@ -121,18 +121,19 @@ CCParticleBatchNode可以引用且只可以引用1个texture(一个图片文件�
 
 
 
-- Cocos2d-x里内置的预制粒子是可以在运行时自定义的.内置粒子列表:
-- CCParticleFire: Point particle system. 使用重力模式.
-- CCParticleFireworks: Point particle system. 使用重力模式.
-- CCParticleSun: Point particle system. 使用重力模式.
-- CCParticleGalaxy: Point particle system. 使用重力模式.
-- CCParticleFlower: Point particle system. 使用重力模式.
-- CCParticleMeteor: Point particle system. 使用重力模式.
-- CCParticleSpiral: Point particle system. 使用重力模式.
-- CCParticleExplosion: Point particle system. 使用重力模式.
-- CCParticleSmoke: Point particle system. 使用重力模式.
-- CCParticleSnow: Point particle system. 使用重力模式.
-- CCParticleRain: Point particle system. 使用重力模式.
+Cocos2d-x里内置的预制粒子是可以在运行时自定义的.内置粒子列表:
+
+- [CCParticleFire](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga0c25de7132eb9286ec9e8433463f1c47)
+- [CCParticleFireworks](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga99b180055ae3ec6c87cd1cbea2b90678) 
+- [CCParticleSun](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#gac72f5099792174cf47c1a0cf42bd9093) 
+- [CCParticleGalaxy](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#gaae839fd8206086234df910ba5794ee07) 
+- [CCParticleFlower](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga65b04048211848c7a68e76b957901dcd) 
+- [CCParticleMeteor](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga51f54feca8ed561d0385edda5f89a028) 
+- [CCParticleSpiral](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga3ef527c11d8ea083ab138ee1c3583db7) 
+- [CCParticleExplosion](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga1efc569841bd9297b021b6f3828c4e4a) 
+- [CCParticleSmoke](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#ga596adad1cb065524a6093db93eb3e102) 
+- [CCParticleSnow](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#gaef0c413abb660a47260e9414ee96a425) 
+- [CCParticleRain](http://cn.cocos2d-x.org/doc/cocos2d-x-3.0/df/db3/group__data__structures.html#gac0877e6ac719c35551115dca39232d68) 
 
 ## 参考 ##
 
