@@ -14,6 +14,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 - [Cocos2d-JS官方下载链接](http://www.cocos2d-x.org/download)
 - [在线API索引](http://www.cocos2d-x.org/wiki/Reference)
 - [下载API索引](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-beta-API.zip)
+- [在线测试例](http://cocos2d-x.org/js-tests/)
 
 ## 主要特性
 
@@ -52,10 +53,9 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
    
 ## 文档
 
-- [Cocos2d-JS v3.0 RC1发布说明](./release-notes/v3.0rc1/release-note/zh.md)
-- [Cocos2d-JS v3.0 RC0改动列表](./release-notes/v3.0rc0/changelog/en.md)
-- [Cocos2d-JS v3.0 RC1改动列表](./release-notes/v3.0rc1/changelog/en.md)
-- [Cocos2d-JS v3.0 RC0升级指南](./release-notes/v3.0rc0/upgrade-guide/zh.md)
+- [Cocos2d-JS v3.0 RC2发布说明](./release-notes/v3.0rc2/release-note/zh.md)
+- [Cocos2d-JS v3.0 RC2改动列表](./release-notes/v3.0rc2/changelog/en.md)
+- [Cocos2d-JS v3.0 RC2升级指南](./release-notes/v3.0rc0/upgrade-guide/zh.md)
 
 - 综述
 	- [Cocos2d-JS 2.x新手入门](./v2/getting-started_with-cocos2d-html5/zh.md)
