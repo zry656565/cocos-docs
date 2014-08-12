@@ -10,14 +10,13 @@
 
 [点此进入](framework/native/zh.md)
 
-## 2. HTML5与Javascript游戏开发指南
+## 2. Cocos2d-JS游戏开发指南
 本章适合使用Javascript或者HTML5开发游戏的程序员参考和学习。包含以下内容：
 
-- Javascript所有接口介绍
-- HTML5所有接口介绍
-- Cocos2d-x HTML5方面的演变过程
-- Cocos2d-x JS和HTML5制作游戏教程
-- 使用Cocos2d-x JS和HTML5开发后期和第三方集成方式
+- Cocos2d-JS接口介绍
+- Cocos2d-JS的演变过程
+- Cocos2d-JS制作游戏教程
+- 使用Cocos2d-JS开发后期和第三方集成方式
 
 [点此进入](framework/html5/zh.md)
 

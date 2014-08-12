@@ -13,7 +13,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 - [Cocos2d-JS github仓库](http://github.com/cocos2d/cocos2d-js/)
 - [Cocos2d-JS官方下载链接](http://www.cocos2d-x.org/download)
 - [在线API索引](http://www.cocos2d-x.org/wiki/Reference)
-- [下载API索引](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-beta-API.zip)
+- [下载API索引](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3rc2-API.zip)
 - [在线测试例](http://cocos2d-x.org/js-tests/)
 
 ## 主要特性
