@@ -63,8 +63,8 @@
 		- [Windows Phone 8에서 웹브라우져를 사용해서 Alipay 통합](../manual/framework/native/v2/sdk-integration/wp8-webbrowser/en.md)
     	- [Windows Phone 8에서 써드파티 SDK 통합](../manual/framework/native/v2/sdk-integration/wp8-thirdSDK/en.md)
 	- Cocos2d-html5
-		- [Cocos2d-JS v3.0 RC1 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc1/release-note/ko.md)
-        - [Cocos2d-JS v3.0 RC1 체인지 로그](../manual/framework/html5/release-notes/v3.0rc1/changelog/ko.md)
+		- [Cocos2d-JS v3.0 RC2 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc2/release-note/ko.md)
+        - [Cocos2d-JS v3.0 RC2 체인지 로그](../manual/framework/html5/release-notes/v3.0rc2/changelog/ko.md)
         - [Cocos2d-JS v3.0 RC0 업그레이드 가이드](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko.md)
 	- 시작하기
 		- [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
