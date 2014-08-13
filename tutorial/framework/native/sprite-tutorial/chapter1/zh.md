@@ -2,7 +2,7 @@
 
 ## 前言
 
-朋友们，欢迎回来！今天，我们将要征服cocos2d里面的精灵。这个过程并不会像你想像中那么难，接下来的教程，我就会证明给你看。首先，我们有N种方法在屏幕上显示一张图片。。。其实，我们在《coco2d-x 菜单教程：第三部分》就已经知道一种显示图片的方式了。
+朋友们，欢迎回来！今天，我们将要征服Cocos2d里面的精灵。这个过程并不会像你想像中那么难，接下来的教程，我就会证明给你看。首先，我们有N种方法在屏幕上显示一张图片。。。其实，我们在《Cocos2d-x 菜单教程：第三部分》就已经知道一种显示图片的方式了。
 
 那么，我们今天将学习哪些内容呢？我们将学习有关 “Sprite”, “SpriteSheets”, “SpriteFrame”，以及“Texture2d” 和 “TextureCache”的一切！在这篇教程的最后，我们将有一条龙在一个简单的背景地形上面飞，路径由用户的手指滑动touch决定。很酷吧？
 
@@ -28,7 +28,7 @@
 
 ![image](./res/sprite3.png)
 
-我们的工程将包含两个类（delegate类除外）： SceneManager 和 PlayLayer。我们已经知道SceneManger是如何工作的了，这里就不再啰嗦了。（可以参考《cocos2d菜单教程：第一部分》），但是，下面是我移除掉一些菜单选项后的SceneManager类。
+我们的工程将包含两个类（delegate类除外）： SceneManager 和 PlayLayer。我们已经知道SceneManger是如何工作的了，这里就不再啰嗦了。（可以参考《Cocos2d菜单教程：第一部分》），但是，下面是我移除掉一些菜单选项后的SceneManager类。
 
 SceneManager.h
 

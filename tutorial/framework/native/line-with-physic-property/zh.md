@@ -107,7 +107,6 @@ void PhysicWorld::onTouchMoved(Touch *touch, Event *unused_event){
     }
 }
 ```
-
 - **onTouchEnded** : 同上。
 
 最后我们在析构函数中删除触摸监听：

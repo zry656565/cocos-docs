@@ -22,7 +22,7 @@
 	void HelloWorld::drawCollisionTiles()
 	{
 		TMXObjectGroup *objects = tileMapNode->objectGroupNamed("Collision");
-	
+
 		float x, y, w, h;
 		ValueVector objectsPoint = objects->getObjects();
 		Value objPointMap;
@@ -33,10 +33,10 @@
 			y = objPoint.at("y").asFloat();
 			w = objPoint.at("width").asFloat();
 			h = objPoint.at("height").asFloat();
-	
+
 			Point _point = Point(x + w / 2.0f, y + h / 2.0f);
 			Size _size = Size(w, h);
-	
+
 			this->makeBox2dObjAt(_point,_size, false, 0, 0.0f, 0.0f, 0, -1);
 		}
 	}
@@ -65,19 +65,19 @@
 
 	bool HelloWorld::init()
 	{
-	    //////////////////////////////
-	    // 1. super init first
-	    if ( !Layer::init() )
-	    {
-	        return false;
-	    }
-	
+		//////////////////////////////
+		// 1. super init first
+		if ( !Layer::init() )
+		{
+			return false;
+		}
+		
 		auto visibleSize = Director::getInstance()->getVisibleSize();
 		auto origin = Director::getInstance()->getVisibleOrigin();
-	    
+		
 		this->addScrollingBackgroundWithTileMap();
 		this->drawCollisionTiles();
-	
+		
 		auto sprite = Sprite::create("Icon-Small.png");
 		sprite->setPosition(50.0f, 600.0f);
 		playerBody = PhysicsBody::createCircle(1.0f);
@@ -88,7 +88,7 @@
 		playerBody->applyImpulse(impulse);
 		sprite->setPhysicsBody(playerBody);
 		this->addChild(sprite);
-	
+		
 		auto edgeSp = Sprite::create();
 		Size size = Size(tileMapNode->getMapSize().width * 16, visibleSize.height);
 		auto boundBody = PhysicsBody::createEdgeBox(size, PHYSICSBODY_MATERIAL_DEFAULT, 3);
@@ -98,8 +98,8 @@
 		edgeSp->setTag(0);
 		
 		this->scheduleUpdate();
-	    
-	    return true;
+		
+		return true;
 	}
 
 调用addScrollingBackgroundWithTileMap和drawCollisionTiles，用来加载tiledMap及创建相应的物理对象。我们使用Cocos2d-x3.0的log来作为我们的主角精灵。前面已经提到了，它只是一个圆形的body。接下来，我们给它一个冲力。你可以把这个力改大一点，那么主角就会走得更快。

@@ -24,10 +24,9 @@ void PlayLayer::onEnter()
 	
 	auto dispatcher = Director::getInstance()->getEventDispatcher();
 	dispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-}
 ```
 
-这里我们将要声明 “onTouchBegan” 和“onTouchEnded” --第一个方法当第一个touch事件开始的时候被调用，另外一个是touch结束的时候被调用。还有一个 “onTouchMoved”方法，它是你的手一直按在屏幕上面的时候被调用的，在coco2d-x 3.0 中，响应者三种事件的函数可以自己绑定自己写好的函数。代码如下，
+这里我们将要声明 “onTouchBegan” 和“onTouchEnded” --第一个方法当第一个touch事件开始的时候被调用，另外一个是touch结束的时候被调用。还有一个 “onTouchMoved”方法，它是你的手一直按在屏幕上面的时候被调用的，在Cocos2d-x 3.0 中，响应者三种事件的函数可以自己绑定自己写好的函数。代码如下，
 
 ```
 listener->onTouchBegan = CC_CALLBACK_2(PlayLayer::onTouchBegan, this);

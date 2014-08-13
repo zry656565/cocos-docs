@@ -1,6 +1,6 @@
 #动作 Actions
 
-Actions 继承了Node的属性。actions通常会修改对象的一些属性，如位置，旋转，缩放等。如果这些熟悉在一段时间内被修改，它们是`IntervalAction` actions，相反则是 `InstantAction` actions.
+Actions 继承了Node的属性。actions通常会修改对象的一些属性，如位置，旋转，缩放等。如果这些属性在一段时间内被修改，它们是`IntervalAction` actions，相反则是 `InstantAction` actions.
 
 例如，`MoveBy` action是在一段时间内修改了位置属性，因此，它是`IntervalAction`的子类.
 
