@@ -16,7 +16,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 - [cocos2d-js-v3.0-rc2.zip](http://www.cocos2d-x.org/filedown/cocos2d-js-v3.0-rc2.zip)
 - [Web游戏专用单引擎文件下载](http://cocos2d-x.org/filecenter/jsbuilder/)
 - [在线API索引](http://www.cocos2d-x.org/reference/html5-js/V3.0rc2/index.html)
-- [可下载版本API索引包](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-rc2-API.zip)
+- [可下载版本API索引包](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3rc2-API.zip)
 - [在线测试例](http://cocos2d-x.org/js-tests/)
 
 ## 核心特性
@@ -56,5 +56,4 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 关于JSB编译环境，还有一些限制条件需要满足：
 
 - [Android编译] NDK版本必须使用r9b - r9d
-- [Android编译] Android SDK必须包含platform-19+
 - [iOS编译] Xcode版本必须在5.1到5.1.1

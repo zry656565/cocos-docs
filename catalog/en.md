@@ -67,13 +67,10 @@
         - [Upgrade guide to Cocos2d-JS v3.0 RC2](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/en.md)
         
 		- Startup
-            - [About Cocos2d-html5](../manual/framework/html5/en.md)
-			- [Why use Cocos2d-html5 for Game Development](../manual/framework/html5/v2/cocosh5-advantages/en.md)
-			- [Resolution Policy Design for Cocos2d-html5](../manual/framework/html5/v2/resolution-policy-design/en.md)
+            - [About Cocos2d-JS](../manual/framework/html5/en.md)
+			- [Why use Cocos2d-JS for Game Development](../manual/framework/html5/v2/cocosh5-advantages/en.md)
+			- [Resolution Policy Design for Cocos2d-JS](../manual/framework/html5/v2/resolution-policy-design/en.md)
             - [History release notes](../manual/framework/html5/release-notes/en.md)
-            - [Plugin-x architecture](../manual/framework/html5/v3/plugin-x/plugin-x-architecture/en.md)
-            - [How to use plugin-x on android](../manual/framework/html5/v3/plugin-x/how-to-use-plugin-x-on-android/en.md)
-            - [How to write your own plugin](../manual/framework/html5/v3/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
             
         - New features and API changes in version 3.0:
             - [New workflow with cocos console](./v2/cocos-console/en.md)
