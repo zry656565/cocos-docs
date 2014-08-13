@@ -56,5 +56,4 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 关于JSB编译环境，还有一些限制条件需要满足：
 
 - [Android编译] NDK版本必须使用r9b - r9d
-- [Android编译] Android SDK必须包含platform-19+
 - [iOS编译] Xcode版本必须在5.1到5.1.1

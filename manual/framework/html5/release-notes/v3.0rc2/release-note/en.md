@@ -55,5 +55,4 @@ If you met any problems, please ask for help from the community :
 For JSB build, there are some restrictions :
 
 - [Android build] NDK version must be between r9b - r9d
-- [Android build] Android SDK must contain platform-19+
 - [iOS build] Xcode version must be 5.1 or 5.1.1
