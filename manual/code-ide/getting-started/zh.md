@@ -32,7 +32,7 @@ Cocos Code IDE入门指南
 + 开发 Cocos2d-x JavaScript binding 游戏请下载 [Cocos2d-js 3.0 rc2][engine download link]
 
 	**Note:**
-	+ **Cocos Code IDE(1.0.0-rc1)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.0-rc1)适用于最新的引擎版本(Cocos2d-x 3.2 rc1 和 Cocos2d-js 3.0 rc1)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
+	+ **Cocos Code IDE(1.0.0-rc1)是基于Cocos2d-x 3.x/Cocos2d-js 3.x的引擎版本做的开发，其他版本的引擎在该版本的IDE上可能无法正常工作。当前IDE的版本(1.0.0-rc1)适用于最新的引擎版本(Cocos2d-x 3.2 和 Cocos2d-js 3.0 rc2)，并且向后兼容3.x的老版本引擎，所以为了更好的体验和使用IDE的新特性，请下载相应版本的引擎。**
 	
 	+ **引擎和所创建的工程所在的路径都不能包含非英文字符，即路径中不能包含中文。**
 	
