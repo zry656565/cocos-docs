@@ -20,58 +20,42 @@
 
 	#ifndef __HELLOWORLD_SCENE_H__
 	#define __HELLOWORLD_SCENE_H__
-	
+
 	#include "cocos2d.h"
-	
+
 	USING_NS_CC;
-	
+
 	class HelloWorld : public cocos2d::Layer
 	{
 	public:
-	
 		Sprite* _ball;
-	
 		PhysicsWorld* m_world;
-	
 		void setPhyWorld(PhysicsWorld* world){ m_world = world; };
-	
-	    static cocos2d::Scene* createScene();
-	
-	    virtual bool init();  
-
-	    CREATE_FUNC(HelloWorld);
+		static cocos2d::Scene* createScene();
+		virtual bool init();
+		CREATE_FUNC(HelloWorld);
 	};
-	
 	#endif // __HELLOWORLD_SCENE_H__
 
 同时修改HelloWorldScene.cpp文件:
 
 	#include "HelloWorldScene.h"
-	
+
 	Scene* HelloWorld::createScene()
 	{
-	    auto scene = Scene::createWithPhysics();
-	
+		auto scene = Scene::createWithPhysics();
 		scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
-	
-	    auto layer = HelloWorld::create();
-	
+		auto layer = HelloWorld::create();
 		layer->setPhyWorld(scene->getPhysicsWorld());
-	
-	    scene->addChild(layer);
-	
-	    return scene;
+		scene->addChild(layer);
+		return scene;	
 	}
-	
 	bool HelloWorld::init()
 	{
-	    
-	    if ( !Layer::init() )
-	    {
-	        return false;
-	    }
-	
-
+		if ( !Layer::init() )
+		{
+			return false;
+		}
 		return true;
 	}
 
@@ -110,25 +94,23 @@ DebugDraw对需要使用物理系统的我们来说是个很有用的方法。�
 
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto origin = Director::getInstance()->getVisibleOrigin();
-
+	
 	_ball = Sprite::create("Ball.jpg", Rect(0, 0, 52, 52));
 	_ball->setPosition(Point(400,600));
 	auto ballBody = PhysicsBody::createCircle(_ball->getContentSize().width / 2);
 	_ball->setPhysicsBody(ballBody);
 	this->addChild(_ball);
-
+	
 	auto edgeSp = Sprite::create();
 	auto boundBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
 	edgeSp->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
 	edgeSp->setPhysicsBody(boundBody); this->addChild(edgeSp); edgeSp->setTag(0);
-
-	return true;
 	
-
+	return true;
 与Box2d是不是有很大的不同？3.0新的物理引擎接口为我们省去了许多麻烦。使得我们一点点来解释一下。下面，我会一段段地重复上面的代码，那样可以解释地更加清楚一些。
 
 	auto winSize = Director::getInstance()->getWinSize();
-
+	
 	_ball = Sprite::create("Ball.jpg", Rect(0, 0, 52, 52));
 	_ball->setPosition(Point(100, 100));
 	this->addChild(_ball);
@@ -146,8 +128,7 @@ DebugDraw对需要使用物理系统的我们来说是个很有用的方法。�
 	auto boundBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
 	edgeSp->setPosition(Point(visibleSize.width / 2, visibleSize.height / 2));
 	edgeSp->setPhysicsBody(boundBody); this->addChild(edgeSp); edgeSp->setTag(0);
-
-
+	
 编译并运行，你应该可以看到球会往下掉，碰到边界会有弹性效果。
 
 # 完成加速计控制

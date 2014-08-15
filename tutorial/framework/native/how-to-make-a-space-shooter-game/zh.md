@@ -65,13 +65,13 @@
 	_ship->setPosition(Point(winSize.width *0.1, winSize.height *0.5)); // 6
 	_batchNode->addChild(_ship,1); // 7
 
-注意这些代码与你过去使用的Objective-C版的cocos2d 非常类似。API是有很多相同的地方的，仅仅是有一些与C++的语法不同。
+注意这些代码与你过去使用的Objective-C版的Cocos2d 非常类似。API是有很多相同的地方的，仅仅是有一些与C++的语法不同。
 
-编译运行，你应该可以看到你的船出现在屏幕上
+编译运行，你应该可以看到你的船出现在屏幕上。
 
 ![image](./res/SpaceGame3.jpg)
 
-#增加视差滚动
+#增加视差滚动 
 
 接下来，我们会加入宇宙背景，使它以视差滚动这种很酷的方式来滚动。
 
@@ -81,6 +81,7 @@ USING_NS_CC;
 
 接着在HelloWorld的private部分加入一些新的变量（注意我们不再需要加cocos2d前缀）:
 
+```
 ParallaxNodeExtras *_backgroundNode;
 Sprite *_spacedust1;
 Sprite *_spacedust2;
@@ -88,7 +89,7 @@ Sprite *_planetsunrise;
 Sprite *_galaxy;
 Sprite *_spacialanomaly;
 Sprite *_spacialanomaly2;
-
+```
 然后，在HelloWorldScene.cpp的init方法中，return语句前加入下面代码：
 
 	// 1) Create the ParallaxNodeExtras
@@ -141,17 +142,11 @@ Sprite *_spacialanomaly2;
 
 #连续地滚动
 
-这时，你应该注意到了背景滚出屏幕后没有循环，那么我们来修这个bug
-
-在我们的[《如何使用cocos2d制作一个太空射击游戏》](http://www.cnblogs.com/zilongshanren/archive/2011/06/09/2074962.html)教程中，我们通过
-
-Objective-c的分类(category)扩展了CCParallaxNode类来实现。
+这时，你应该注意到了背景滚出屏幕后没有循环，那么我们来修这个bug在我们的[《如何使用cocos2d制作一个太空射击游戏》](http://www.cnblogs.com/zilongshanren/archive/2011/06/09/2074962.html)教程中，我们通过Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 
 不幸的是，C++中是不存在分类的，所以我们需要借助继承来实现之。
 
-我们将去定义一个CCParallaxNode扩展类来扩展标准的CCParallaNode。这样做虽然不如Objective-C优雅，但是有时我们需要为软件可移植性做一些
-
-牺牲。
+我们将去定义一个CCParallaxNode扩展类来扩展标准的CCParallaNode。这样做虽然不如Objective-C优雅，但是有时我们需要为软件可移植性做一些牺牲。
 
 在Xcode中，在Glasses group上单击右键，选择New File。选择iOS\C and C++\C++文件末尾，点击Next，为他命名为ParallaxNodeExtras.cpp存储到$PROJECT_HOME\Classes，然后点击创建。然后重复上述过程，但要选择iOS\C and C++\Header文件模板，来创建ParallaxNodeExtras.h
 
@@ -159,16 +154,16 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 
 	#ifndef Cocos2DxFirstIosSample_CCParallaxNodeExtras_h 
 	#define Cocos2DxFirstIosSample_CCParallaxNodeExtras_h 
-	#include "cocos2d.h" 
-	
+	#include "cocos2d.h"
+
 	USING_NS_CC; 
-	
+
 	class ParallaxNodeExtras : public ParallaxNode
 	{
-	public: // Need to provide our own constructor 
+	public: // Need to provide our own constructor
 		ParallaxNodeExtras() ; // just to avoid ugly later cast and also for safety
-	
-		static ParallaxNodeExtras * node(); // Facility method (we expect to have it soon in COCOS2DX) 
+
+		static ParallaxNodeExtras * node(); // Facility method (we expect to have it soon in COCOS2DX)
 		void incrementOffset(CCPoint offset, Node* node);
 	}; 
 	#endif
@@ -180,7 +175,7 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 	#include "ParallaxNodeExtras.h"
 
 	// Hack to access CCPointObject (which is not a public class)
-	
+
 	class PointObject : Object
 	{
 	public:
@@ -191,7 +186,7 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 			ret->autorelease();
 			return ret;
 		}
-	
+
 		bool initWithPoint(Point ratio, Point offset)
 		{
 			_ratio = ratio;
@@ -199,38 +194,38 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 			_child = nullptr;
 			return true;
 		}
-	
+
 		inline const Point& getRatio() const { return _ratio; };
 		inline void setRatio(const Point& ratio) { _ratio = ratio; };
-	
+
 		inline const Point& getOffset() const { return _offset; };
 		inline void setOffset(const Point& offset) { _offset = offset; };
-	
+
 		inline Node* getChild() const { return _child; };
 		inline void setChild(Node* child) { _child = child; };
-	
+
 	private:
 		Point _ratio;
 		Point _offset;
 		Node *_child; // weak ref
 	};
-	
+
 	// Need to provide our own constructor
 	ParallaxNodeExtras::ParallaxNodeExtras() {
 		ParallaxNode::create(); // call parent constructor
 	}
-	
+
 	ParallaxNodeExtras* ParallaxNodeExtras::node() {
 		return new ParallaxNodeExtras();
 	}
-	
+
 	void ParallaxNodeExtras::incrementOffset(CCPoint offset, CCNode* node)
 	{
 		for (unsigned int i = 0; i < _parallaxArray->num; i++)
 		{
 			PointObject *point = (PointObject*)_parallaxArray->arr[i];
 			Node* curNode = point->getChild();
-			if (curNode->isEqual(node)) 
+			if (curNode->isEqual(node))
 			{
 				point->setOffset(point->getOffset()+offset);
 				break;
@@ -240,12 +235,12 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 
 注意，很不幸的是PointObject在Cocos2d-x3.0中并不是公共的类，所以我们需要借住一些小手段来hack。(重定义它为我们的类，并具有相同的签名)。
 
-虽然它能工作的很好，但是他的缺点是，如果PointObject改动了，你这里也要跟着改动，否则程序会崩溃。
+虽然它能工作的很好，但是它的缺点是，如果PointObject改动了，你这里也要跟着改动，否则程序会崩溃。
 
 代码的重点是incrementOffset方法，他和 [《如何使用cocos2d制作一个太空射击游戏》](http://www.cnblogs.com/zilongshanren/archive/2011/06/09/2074962.html)中的实现相同，只是用了不同的语言。
 
 下一步，选择HelloWorldScene.h，在文件顶部的#include 语句之后添加这些代码：
-	
+
 	#include "ParallaxNodeExtras.h"
 
 然后像下面的代码一样，将private区域中_backgroundNode定义由CCParallaNode改为ParallaxNodeExtras
@@ -305,16 +300,9 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 ![image](./res/SpaceGame7.jpg)
 
 #使用加速计来移动飞船
+在之前的Cocos2D space shooter tutorial里面，我们使用ios的加速计api来检测加速计输入。很明显，ios下面的加速计api是不可以跨平台的，那么我们怎么办呢？
 
-使用加速计来移动飞船
-
-在之前的Cocos2D space shooter tutorial里面，我们使用ios的加速计api来检测加速计输入。很明显，ios下面的加速计api是不可以跨平台的，那
-
-么我们怎么办呢？
-
-幸运的是，Cocos2d-x3.0对加速计进行了封装，我们可以不用关心具体平台api，直接使用抽象后的加速计api就可以了。让我们看看它是怎么工作的吧
-
-。
+幸运的是，Cocos2d-x3.0对加速计进行了封装，我们可以不用关心具体平台api，直接使用抽象后的加速计api就可以了。让我们看看它是怎么工作的吧。
 
 首先，在HelloWorldScnee.H头文件里面添加一个新的私有成员变量：
 
@@ -336,9 +324,9 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 		#define KRESTACCELX -0.6
 		#define KSHIPMAXPOINTSPERSEC (winSize.height*0.5)
 		#define KMAXDIFFX 0.2
-	
+
 		double rollingX;
-	
+
 		// Cocos2DX inverts X and Y accelerometer depending on device orientation
 		// in landscape mode right x=-y and y=x !!! (Strange and confusing choice)
 		acc->x = acc->y;
@@ -361,19 +349,12 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 	newY = MIN(MAX(newY, minY), maxY);
 	_ship->setPosition(ccp(_ship->getPosition().x, newY));
 
-这里的onAcceleration回调函数包含一个Acceleration对象，它包含加速计的x、y和z三个方向的数据。我们目前只需要使用x方向的加速计数据就
-
-行了，因为我们是沿着设备的x轴进行运动的。
+这里的onAcceleration回调函数包含一个Acceleration对象，它包含加速计的x、y和z三个方向的数据。我们目前只需要使用x方向的加速计数据就行了，因为我们是沿着设备的x轴进行运动的。
 
 注意: Cocos2d-x3.0会根据你的设备是处于portait模式还是landscape模式来切换加速计的x和y方向的值。
 
-如果是Landscape right（也就是我们目前的情况），接收到的x值其实是-y，而y值是x。如果是Landscape left那么接收到的x值是y，而y值是-x。
-
-有点头晕了？呵呵
-
-编译，然后在你的iphone和android设备上测试一下吧，现在你可以倾斜你的设备来移动飞船啦！当然，此时，你不能在模拟器上进行测试，必须使
-
-用真机。
+如果是Landscape right（也就是我们目前的情况），接收到的x值其实是-y，而y值是x。如果是Landscape left那么接收到的x值是y，而y值是-x。有点头晕了？呵呵
+编译，然后在你的iphone和android设备上测试一下吧，现在你可以倾斜你的设备来移动飞船啦！当然，此时，你不能在模拟器上进行测试，必须使用真机。
 
 ![image](./res/SpaceGame8.jpg)
 
@@ -396,7 +377,7 @@ Objective-c的分类(category)扩展了CCParallaxNode类来实现。
 	float HelloWorld::randomValueBetween(float low, float high) {
 	return ((float)CCRANDOM_0_1() * (high - low)) + low;
 	}
-	
+
 	float HelloWorld::getTimeTick() {
 		timeval* time = new timeval();
 		cocos2d::timezone* z = new cocos2d::timezone();
@@ -424,9 +405,8 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 最后，在update方法底部添加下列代码：
 
 	float curTimeMillis = getTimeTick();
-	if (curTimeMillis > _nextAsteroidSpawn) 
+	if (curTimeMillis > _nextAsteroidSpawn)
 	{
-
 		float randMillisecs = randomValueBetween(0.20, 1.0) * 1000;
 		_nextAsteroidSpawn = randMillisecs + curTimeMillis;
 
@@ -453,15 +433,19 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 
 注意：由于Sequence::create方法的参数列表采用的是变长参数，你其实可以忽略掉最后一个NULL参数，因为对于c++来讲，这个参数没有意义。
 
+<<<<<<< HEAD
 但是，考虑到兼容性的原因，因为Cocos2d-x开发者想保持跟cocos2d的高度一致，所以，这里需要一个NULL终止符。如果你在你的代码里面不提供的
 
 话，那么你的程序将会崩溃。
 
 最后一步就是添加setInvisible回调函数的实现：
+=======
+但是，考虑到兼容性的原因，因为cocos2d-x开发者想保持跟cocos2d的高度一致，所以，这里需要一个NULL终止符。如果你在你的代码里面不提供的话，那么你的程序将会崩溃。最后一步就是添加setInvisible回调函数的实现：
+>>>>>>> 2584ede7440193312293c4ae723de743ee1c35e8
 
-	void HelloWorld::setInvisible(CCNode * node) 
+	void HelloWorld::setInvisible(CCNode * node)
 	{
-	node->setVisible(false);
+		node->setVisible(false);
 	}
 
 编译并运行，有陨石！下面是效果截图：
@@ -482,7 +466,7 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 然后，在HelloWorldScene.cpp的init方法的return语句之前添加下列代码：
 
 	#define KNUMLASERS 5
-	for (int i = 0; i < KNUMLASERS; ++i) 
+	for (int i = 0; i < KNUMLASERS; ++i)
 	{
 		auto *shipLaser = Sprite::createWithSpriteFrameName("laserbeam_blue.png");
 
@@ -496,9 +480,9 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 	bool HelloWorld::onTouchBegan(Touch *touch, Event *event)
 	{
 		auto winSize = Director::getInstance()->getWinSize();
-	
+		
 		auto *shipLaser = _shipLasers.at(_nextShipLaser++);
-	
+
 		SimpleAudioEngine::getInstance()->playEffect("laser_ship.wav");
 		if (_nextShipLaser >= _shipLasers.size())
 			_nextShipLaser = 0;
@@ -510,7 +494,7 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 			CCCallFuncN::create(this, callfuncN_selector(HelloWorld::setInvisible)),
 			NULL  // DO NOT FORGET TO TERMINATE WITH NULL
 			));
-	
+		
 		return true;
 	}
 
@@ -521,9 +505,7 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 
 #基本的碰撞检测
 
-恩，到目前为止，这看起来有点像一个游戏了，但是，还不够完整，因为没有爆炸！
-
-而且我天性不听话，喜欢搞破坏，所以是时候往游戏里面添加一些破坏啦！：）
+恩，到目前为止，这看起来有点像一个游戏了，但是，还不够完整，因为没有爆炸！而且我天性不听话，喜欢搞破坏，所以是时候往游戏里面添加一些破坏啦！：）
 
 打开HelloWorldLayer.h，然后添加下面的实例变量：
 
@@ -593,7 +575,7 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 	}
 	else if (curTimeMillis >= _gameOverTime) 
 	{
-	 this->endScene(KENDREASONWIN);
+		this->endScene(KENDREASONWIN);
 	}
 
 最后，在文件的结尾添加新方法的实现：
@@ -601,15 +583,15 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 	void HelloWorld::restartTapped(Object* sender)
 	{
 		Director::getInstance()->replaceScene(TransitionZoomFlipX::create(0.5, HelloWorld::createScene()));
-		this->scheduleUpdate();
+		this->scheduleUpdate();		
 	}
-	
-	void HelloWorld::endScene(EndReason endReason) 
+
+	void HelloWorld::endScene(EndReason endReason)
 	{
 		if (_gameOver)
 			return;
 		_gameOver = true;
-	
+
 		auto winSize = Director::getInstance()->getWinSize();
 		char message[10] = "You Win";
 		if (endReason == KENDREASONLOSE)
@@ -619,17 +601,17 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 		label->setScale(0.1);
 		label->setPosition(Point(winSize.width / 2, winSize.height*0.6));
 		this->addChild(label);
-	
+
 		LabelBMFont * restartLabel;
 		restartLabel = LabelBMFont::create("Restart", "fonts/Arial.fnt");
 		auto *restartItem = MenuItemLabel::create(restartLabel,CC_CALLBACK_1(HelloWorld::restartTapped,this));
 		restartItem->setScale(0.1);
 		restartItem->setPosition(Point(winSize.width / 2, winSize.height*0.4));
-	
+
 		Menu *menu = Menu::create(restartItem, NULL);
 		menu->setPosition(Point::ZERO);
 		this->addChild(menu);
-	
+
 		// clear label and menu
 		restartItem->runAction(ScaleTo::create(0.5, 1.0));
 		label->runAction(ScaleTo::create(0.5, 1.0));
@@ -658,9 +640,7 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 
 就像你可能猜到的那样，上面的命令将把文件从CAF格式转换为WAV格式。
 
-一旦你转换完文件，回到你的Xcode项目并将转化好的文件添加到你的Resources文件夹（从Android目录中）——同你之前添加图片和其他资源一样
-
-。
+一旦你转换完文件，回到你的Xcode项目并将转化好的文件添加到你的Resources文件夹（从Android目录中）——同你之前添加图片和其他资源一样。
 
 困难的部分已经完成，现在播放这些声音吧！在HelloWorldScene.cpp的顶部添加如下代码：
 
@@ -675,9 +655,7 @@ randomValueBetween 是一个可以获得指定范围内的随机浮点数的辅�
 	SimpleAudioEngine::getInstance()->preloadEffect("explosion_large.wav");
 	SimpleAudioEngine::getInstance()->preloadEffect("laser_ship.wav");
 
-接下来，在update行星部分用CGRectIntersectsRect检测是否一束激光和行星相撞的地方添加如下代码
-
-（当飞船和激光碰撞你也应该添加一种音效，这将在相同的模块进行下个intersectsRect测试，但飞船不能爆炸，你可能想要设置另一种声音)
+接下来，在update行星部分用CGRectIntersectsRect检测是否一束激光和行星相撞的地方添加如下代码（当飞船和激光碰撞你也应该添加一种音效，这将在相同的模块进行下个intersectsRect测试，但飞船不能爆炸，你可能想要设置另一种声音)
 
 	SimpleAudioEngine::getInstance()->playEffect("explosion_large.wav");
 
