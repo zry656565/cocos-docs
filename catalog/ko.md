@@ -128,6 +128,6 @@
 		- [게임오버 로직 및 기타등등](../tutorial/framework/html5/parkour-game-with-javascript/chapter9/en.md)
         - [오디오 효과 추가하기](../tutorial/framework/html5/parkour-game-with-javascript/chapter10/en.md)
 - Cocos Code IDE
-    - Custom runtime
-        - [How to bind a custom class to lua runtime](../manual/code-ide/binding-custom-class-to-lua/en.md)
-        - [How to bind a custom class to js runtime](../manual/code-ide/binding-custom-class-to-js/en.md)		
+    - 커스텀 클래스 바인딩
+        - [LUA 런타임에 C++ 커스텀 클래스를 바인딩하는 법](../manual/code-ide/binding-custom-class-to-lua/ko.md)
+        - [자바스크립트 런타임에 C++ 커스텀 클래스를 바인딩하는 법](../manual/code-ide/binding-custom-class-to-js/ko.md)		
