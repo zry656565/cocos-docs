@@ -15,7 +15,7 @@ Facebook SDK for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础�
 1. 添加Facebook iOS SDK：我们需要将`myProject/frameworks/js-bindings/cocos2d-x/plugin/plugins/proj.ios/sdk/`路径下的FacebookSDK.framework加入到`Link Binary With Libraries`中：点击工程，`target`->`myProject IOS`->`Build Phases`->`Link Binary With Libraries`。点击`+`将FacebookSDK.framework加入其中。
 
 2. 按照Facebook官方文档的要求，在Xcode工程下ios的Info.plist文件中添加你的Facebook应用的`FacebookAppID` `FacebookDisplayName` `URL types`，具体格式参考图片。<br/><br/>
-![](images/info.PNG)
+![](images/info.png)
 
 3. 在Info.plist中添加`PluginShare`->`ShareFacebook`与`PluginUser`->`UserFacebook`两个条目，效果参考上图。
 
@@ -83,4 +83,4 @@ Facebook SDK for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础�
 
 ## 如何使用FacebookSDK
 
-- 如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](link)
+- 如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)

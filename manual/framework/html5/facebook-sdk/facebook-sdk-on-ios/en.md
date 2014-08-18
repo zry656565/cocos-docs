@@ -15,7 +15,7 @@ Open your project's Xcode project file (assuming the project is named `myProject
 1. Add Facebook iOS SDK: Find `FacebookSDK.framework` under `myProject/frameworks/js-bindings/cocos2d-x/plugin/plugins/proj.ios/sdk/`, add it to `Link Binary With Libraries`: Click on the project root, then `target`->`myProject IOS`->`Build Phases`->`Link Binary With Libraries`. At last click `+` button to add `FacebookSDK.framework` into the list.
 
 2. According to Facebook official iOS startup guide, add `FacebookAppID` `FacebookDisplayName` `URL types` informations of your Facebook application into the `Info.plist` file. You can find this file under `ios` folder of your Xcode project. You can see the result in this image:<br/><br/>
-![](images/info.PNG)
+![](images/info.png)
 
 3. Add two more items into the Info.plist file: `PluginShare`->`ShareFacebook` and `PluginUser`->`UserFacebook`, you can see the result in the image above.
 
@@ -83,4 +83,4 @@ Our PluginFacebook project is now ready for use in C++, if you want to know more
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](link)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)

@@ -173,7 +173,7 @@ And now we are finished with the project configuration and ready to use the Face
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](link)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)
 
 ## Package your project into apk
 
