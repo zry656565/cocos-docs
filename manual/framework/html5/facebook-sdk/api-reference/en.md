@@ -121,28 +121,29 @@
 
 		- **dialog** type:
 		
-		1. share_link:			Share a link to Facebook using Facebook app
-		2. share_open_graph:	Share Open Graph story to Facebook using Facebook app
-		3. share_photo:			Share an image to Facebook using Facebook app
-		4. message_link:		Send a link to a friend using Facebook Messenger app
-		5. share_open_graph:	Send a Open Graph story to a friend using Facebook Messenger app
-		6. share_photo:			Send an image to a friend using Facebook Messenger app
+			1. share_link:			Share a link to Facebook using Facebook app
+			2. share_open_graph:		Share Open Graph story to Facebook using Facebook app
+			3. share_photo:			Share an image to Facebook using Facebook app
+			4. message_link:		Send a link to a friend using Facebook Messenger app
+			5. share_open_graph:		Send a Open Graph story to a friend using Facebook Messenger app
+			6. share_photo:			Send an image to a friend using Facebook Messenger app
 
 		- Link type parameters:
 		
-		1. description: Link description
-		2. title:       Link title
-		3. link:        Link url
-		4. imageUrl:    Image for the link
+			1. description: Link description
+			2. title:       Link title
+			3. link:        Link url
+			4. imageUrl:    Image for the link
 
 		- Open Graph type parameters:
 		
-		1. action_type:         Open Graph Action type
-		2. preview_property:    Open Graph Object type
-		3. other parameters:    Other parameters for this Open Graph story
+			1. action_type:         Open Graph Action type
+			2. preview_property:    Open Graph Object type
+			3. other parameters:    Other parameters for this Open Graph story
 
 		- Photo type parameters:
-		1. photo:   The path or url for the photo
+
+			1. photo:   The path or url for the photo
 
 4. Open Graph APIs
 
@@ -229,7 +230,8 @@ facebook.getAccessToken(function(errCode, token){
         cc.log("AccessToken : " + token);
 });
 
-// Share , share a simple message on Facebook
+// Share API
+// Share a simple message on Facebook
 var info = {
     "description": "Cocos2d-x is a great game engine",
     "title": "Cocos2d-x",
@@ -240,8 +242,11 @@ facebook.share(info, function (errCode, result) {
     cc.log(result);
 });
 
-// Dialog , similar to fb.ui in Facebook Javascript SDK
-// There are in total seven type of dialog listed before, some of them require Facebook app or Messenger app installed on user’s device. Otherwise it will open web dialog or do nothing
+// Dialog API
+// similar to fb.ui in Facebook Javascript SDK
+// There are in total seven type of dialog listed before, 
+// some of them require Facebook app or Messenger app installed on user’s device. 
+// Otherwise it will open web dialog or do nothing
 var info = {
     "dialog": "share_photo", // Open a dialog to share photo
     "photo": imgpath // The path of photo to share, can be used with screen caption feature
@@ -250,11 +255,13 @@ facebook.dialog(info, function (errCode, result) {
     cc.log(result);
 });
 
-// Request , Send a request to Facebook OpenGraph api, equivalent to fb.api in Facebook Javascript SDK, take the same parameters
+// Request API
+// Send a request to Facebook OpenGraph api, equivalent to fb.api in Facebook Javascript SDK, 
+// take the same parameters
 facebook.request("/me", plugin.FacebookAgent.HttpMethod.Get, {}, function(errCode, result){
     // msg is a string of encoded json object which contains the request result
-    // User need to parse it manully, but it’s not fixed yet, we may parse it in Cocos2d-JS and return directly the object to user, need to be discussed.
-
+    // User need to parse it manully, but it’s not fixed yet, 
+    // we may parse it in Cocos2d-JS and return directly the object to user.
     if(errCode == plugin.FacebookAgent.CodeSucceed) {
         var response = JSON.parse(result);
         cc.log("User ID : " + response["id"]);
