@@ -60,109 +60,117 @@
 
 3. Share APIs
 
-    - **.share(info, callback)**
+	- **.share(info, callback)**
 
-    Share a message to your Facebook, on iOS or Android, if user have installed Facebook app on his device, this function will open Facebook app to finish the share process, otherwise it will open a web view dialog to share a message. If anything goes wrong, the callback will be invoked with error.
+	Share a message to your Facebook, on iOS or Android, if user have installed Facebook app on his device, this function will open Facebook app to finish the share process, otherwise it will open a web view dialog to share a message. If anything goes wrong, the callback will be invoked with error.
 
-    Parameters and return value:
+	Parameters and return value:
+	
 		- **info**:	The content to share<br/>
-            type:	Object
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-            type:	function(errorCode, message)
-        - return:	none
+		    type:	Object
+		- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+		    type:	function(errorCode, message)
+		- return:	none
 
-    Details of parameter:
+	Details of parameter:
+        
 		- **info** sample:
 			
 		```
 		{
-    		"description": "Cocos2d-x is a great game engine",
-    		"title": "Cocos2d-x",
-    		"link": "http://www.cocos2d-x.org",
-    		"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
+			"description": "Cocos2d-x is a great game engine",
+			"title": "Cocos2d-x",
+			"link": "http://www.cocos2d-x.org",
+			"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
 		}
 		```
-        
+		
         - **info** contents:
-            1. description: The description of the link
-            2. title:       The title of the link
-            3. link:        The url of the link
-            4. imageUrl:    The image of the link
+        
+		1. description: The description of the link
+		2. title:       The title of the link
+		3. link:        The url of the link
+		4. imageUrl:    The image of the link
 
 	- **.dialog(info, callback)**
 	
-    Share something or send something as message to your friend, if user have installed Facebook app or Facebook Messenger app on his device, this function will open the application to finish the share process, otherwise it will try to open a web view dialog to share or send the message. If anything goes wrong, the callback will be invoked with error.
+	Share something or send something as message to your friend, if user have installed Facebook app or Facebook Messenger app on his device, this function will open the application to finish the share process, otherwise it will try to open a web view dialog to share or send the message. If anything goes wrong, the callback will be invoked with error.
 
-    Parameters and return value:
+	Parameters and return value:
+	
 		- **info**:	The content to share or to send<br/>
-            type:	Object
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-            type:	function(errorCode, message)
-        - return:	none
+		    type:	Object
+		- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+		    type:	function(errorCode, message)
+		- return:	none
 
-    Details of the parameter:
+    	Details of the parameter:
+    	
 		- **info** sample:
 			
 		```
 		{
 			// dialog代表分享的类型
-		    "dialog": "share_link",
-    		"description": "Cocos2d-x is a great game engine",
-    		"title": "Cocos2d-x",
-    		"link": "http://www.cocos2d-x.org",
-    		"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
+			"dialog": "share_link",	
+			"description": "Cocos2d-x is a great game engine",
+			"title": "Cocos2d-x",
+			"link": "http://www.cocos2d-x.org",
+			"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
 		}
 		```
         
-        - **dialog** type:
-            1. share_link:			Share a link to Facebook using Facebook app
-            2. share_open_graph:	Share Open Graph story to Facebook using Facebook app
-            3. share_photo:			Share an image to Facebook using Facebook app
-            4. message_link:		Send a link to a friend using Facebook Messenger app
-            5. share_open_graph:	Send a Open Graph story to a friend using Facebook Messenger app
-            6. share_photo:			Send an image to a friend using Facebook Messenger app
+		- **dialog** type:
+		
+		1. share_link:			Share a link to Facebook using Facebook app
+		2. share_open_graph:	Share Open Graph story to Facebook using Facebook app
+		3. share_photo:			Share an image to Facebook using Facebook app
+		4. message_link:		Send a link to a friend using Facebook Messenger app
+		5. share_open_graph:	Send a Open Graph story to a friend using Facebook Messenger app
+		6. share_photo:			Send an image to a friend using Facebook Messenger app
         
-        - Link type parameters:
-            1. description: Link description
-            2. title:       Link title
-            3. link:        Link url
-            4. imageUrl:    Image for the link
-            
-        - Open Graph type parameters:
-            1. action_type:         Open Graph Action type
-            2. preview_property:    Open Graph Object type
-            3. other parameters:    Other parameters for this Open Graph story
-        
-        - Photo type parameters:
-            1. photo:   The path or url for the photo
+		- Link type parameters:
+		
+		1. description: Link description
+		2. title:       Link title
+		3. link:        Link url
+		4. imageUrl:    Image for the link
+
+		- Open Graph type parameters:
+		
+		1. action_type:         Open Graph Action type
+		2. preview_property:    Open Graph Object type
+		3. other parameters:    Other parameters for this Open Graph story
+
+		- Photo type parameters:
+		1. photo:   The path or url for the photo
 
 4. Open Graph APIs
 
-    - **.request(path, method, params, callback)**
+	- **.request(path, method, params, callback)**
     
-    Send an Open Graph API request, more details about Open Graph API can be found in [Facebook Official Open Graph Document](https://developers.facebook.com/docs/opengraph)
+	Send an Open Graph API request, more details about Open Graph API can be found in [Facebook Official Open Graph Document](https://developers.facebook.com/docs/opengraph)
     
-    Parameters and return value:
+	Parameters and return value:
 		- **path**:	Open Graph API interface path<br/>
-            type:	Object
-        - **method**:	HTTP method to send the request<br/>
-            type:	Number<br/>
-            possible values:
-            ```
-            plugin.FacebookAgent.HttpMethod.Get
-            plugin.FacebookAgent.HttpMethod.Post
-            plugin.FacebookAgent.HttpMethod.Delete
-            ```
+        	    type:	Object
+        	- **method**:	HTTP method to send the request<br/>
+        	    type:	Number<br/>
+        	    possible values:
+        	    ```
+        	    plugin.FacebookAgent.HttpMethod.Get
+        	    plugin.FacebookAgent.HttpMethod.Post
+        	    plugin.FacebookAgent.HttpMethod.Delete
+        	    ```
 		- **params**:	The parameter for the request, parameters vary greatly for different interface, please refer to [Graph API Reference](https://developers.facebook.com/docs/graph-api/reference/)<br/>
-            type:	Object
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-            type:	function(errorCode, message)
-        - return:	none
+        	    type:	Object
+        	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+        	    type:	function(errorCode, message)
+        	- return:	none
 
 ##Facebook SDK Features
 
 |API|Feature|iOS|Android|Web|
-|:-|:------|:-:|:-----:|:-:|
+|:-:|:-----:|:-:|:-----:|:-:|
 |login|Login to Facebook|√|√|√|
 |logout|Logout from Facebook|√|√|√|
 |isLoggedIn|Check whether user is logged in|√|√|√|
