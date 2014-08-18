@@ -2,177 +2,179 @@
 
 ##API list
 
-1. FacebookAgent class
+###1. FacebookAgent class
 
-	FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
+FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
 
+```
+var facebook = plugin.FacebookAgent.getInstance();
+```
+
+###2. User APIs
+
+- **.login(callback)**
+
+	Login user to Facebook, some APIs require user to login, like .getAccessToken, .request.
+
+	Parameters and return value:
+
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully<br/>
+	    type:	function(errorCode, message)
+	- return:	none
+	
+- **.logout(callback)**
+
+	Logout user from Facebook.
+
+	Parameters and return value:
+
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully<br/>
+	    type:	function(errorCode, message)
+	- return:	none
+
+- **.isLoggedIn(callback)**
+
+	Detect whether user have been logged in to Facebook.
+
+	Parameters and return value:
+
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	    type:	function(errorCode, message)
+	- return:	none
+
+- **.getAccessToken()**
+
+	Retrieve the user access token for Open Graph API, user must be logged in first.
+
+	Parameters and return value:
+
+	- **return**:	Access token<br/>
+	    type:	String
+
+- **.requestPermissions(permissions, callback)**
+
+	Ask user for Facebook permissions, you must have the correspondent permissions to invoke the Open Graph APIs.
+
+	Parameters and return value:
+
+	- **permissions**:	Permissions to acquire, use "," to seperate multiply permissions<br/>
+	    type:	String
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	    type:	function(errorCode, message)
+	- return:	none
+
+###3. Share APIs
+
+- **.share(info, callback)**
+
+	Share a message to your Facebook, on iOS or Android, if user have installed Facebook app on his device, this function will open Facebook app to finish the share process, otherwise it will open a web view dialog to share a message. If anything goes wrong, the callback will be invoked with error.
+
+	Parameters and return value:
+
+	- **info**:	The content to share<br/>
+	    type:	Object
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	    type:	function(errorCode, message)
+	- return:	none
+
+	Details of parameter:
+
+	- **info** sample:
+	
 	```
-	var facebook = plugin.FacebookAgent.getInstance();
+	{
+		"description": "Cocos2d-x is a great game engine",
+		"title": "Cocos2d-x",
+		"link": "http://www.cocos2d-x.org",
+		"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
+	}
 	```
-
-2. User APIs
-
-	- **.login(callback)**
-    
-        Login user to Facebook, some APIs require user to login, like .getAccessToken, .request.
-
-        Parameters and return value:
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully<br/>
-            type:	function(errorCode, message)
-        - return:	none
 	
-	- **.logout(callback)**
-    
-        Logout user from Facebook.
-
-        Parameters and return value:
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully<br/>
-            type:	function(errorCode, message)
-        - return:	none
-	
-	- **.isLoggedIn(callback)**
-    
-        Detect whether user have been logged in to Facebook.
-
-        Parameters and return value:
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-            type:	function(errorCode, message)
-        - return:	none
-	
-	- **.getAccessToken()**
-    
-        Retrieve the user access token for Open Graph API, user must be logged in first.
-
-        Parameters and return value:
-        - **return**:	Access token<br/>
-            type:	String
-	
-	- **.requestPermissions(permissions, callback)**
-    
-        Ask user for Facebook permissions, you must have the correspondent permissions to invoke the Open Graph APIs.
-
-        Parameters and return value:
-        - **permissions**:	Permissions to acquire, use "," to seperate multiply permissions<br/>
-            type:	String
-        - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-            type:	function(errorCode, message)
-        - return:	none
-
-3. Share APIs
-
-	- **.share(info, callback)**
-
-		Share a message to your Facebook, on iOS or Android, if user have installed Facebook app on his device, this function will open Facebook app to finish the share process, otherwise it will open a web view dialog to share a message. If anything goes wrong, the callback will be invoked with error.
-
-		Parameters and return value:
-
-		- **info**:	The content to share<br/>
-		    type:	Object
-		- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-		    type:	function(errorCode, message)
-		- return:	none
-
-		Details of parameter:
-
-		- **info** sample:
-			
-		```
-		{
-			"description": "Cocos2d-x is a great game engine",
-			"title": "Cocos2d-x",
-			"link": "http://www.cocos2d-x.org",
-			"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
-		}
-		```
-		
-		- **info** contents:
+	- **info** contents:
 
 		1. description: The description of the link
 		2. title:       The title of the link
 		3. link:        The url of the link
 		4. imageUrl:    The image of the link
 
-	- **.dialog(info, callback)**
+- **.dialog(info, callback)**
 
-		Share something or send something as message to your friend, if user have installed Facebook app or Facebook Messenger app on his device, this function will open the application to finish the share process, otherwise it will try to open a web view dialog to share or send the message. If anything goes wrong, the callback will be invoked with error.
+	Share something or send something as message to your friend, if user have installed Facebook app or Facebook Messenger app on his device, this function will open the application to finish the share process, otherwise it will try to open a web view dialog to share or send the message. If anything goes wrong, the callback will be invoked with error.
 
-		Parameters and return value:
+	Parameters and return value:
 
-		- **info**:	The content to share or to send<br/>
-		    type:	Object
-		- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-		    type:	function(errorCode, message)
-		- return:	none
+	- **info**:	The content to share or to send<br/>
+	    type:	Object
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	    type:	function(errorCode, message)
+	- return:	none
 
-		Details of the parameter:
+	Details of the parameter:
 
-		- **info** sample:
+	- **info** sample:
 
-		```
-		{
-			// dialog代表分享的类型
-			"dialog": "share_link",	
-			"description": "Cocos2d-x is a great game engine",
-			"title": "Cocos2d-x",
-			"link": "http://www.cocos2d-x.org",
-			"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
-		}
-		```
+	```
+	{
+		// dialog代表分享的类型
+		"dialog": "share_link",	
+		"description": "Cocos2d-x is a great game engine",
+		"title": "Cocos2d-x",
+		"link": "http://www.cocos2d-x.org",
+		"imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
+	}
+	```
 
-		- **dialog** type:
-		
-			1. share_link:			Share a link to Facebook using Facebook app
-			2. share_open_graph:		Share Open Graph story to Facebook using Facebook app
-			3. share_photo:			Share an image to Facebook using Facebook app
-			4. message_link:		Send a link to a friend using Facebook Messenger app
-			5. share_open_graph:		Send a Open Graph story to a friend using Facebook Messenger app
-			6. share_photo:			Send an image to a friend using Facebook Messenger app
-
-		- Link type parameters:
-		
-			1. description: Link description
-			2. title:       Link title
-			3. link:        Link url
-			4. imageUrl:    Image for the link
-
-		- Open Graph type parameters:
-		
-			1. action_type:         Open Graph Action type
-			2. preview_property:    Open Graph Object type
-			3. other parameters:    Other parameters for this Open Graph story
-
-		- Photo type parameters:
-
-			1. photo:   The path or url for the photo
-
-4. Open Graph APIs
-
-	- **.request(path, method, params, callback)**
-
-		Send an Open Graph API request, more details about Open Graph API can be found in [Facebook Official Open Graph Document](https://developers.facebook.com/docs/opengraph)
-
-		Parameters and return value:
-
-		- **path**:	Open Graph API interface path<br/>
-		    type:	Object
-
-		- **method**:	HTTP method to send the request<br/>
-		    type:	Number<br/>
-		    possible values:
-
-		    ```
-		    plugin.FacebookAgent.HttpMethod.Get
-		    plugin.FacebookAgent.HttpMethod.Post
-		    plugin.FacebookAgent.HttpMethod.Delete
-		    ```
+	- **dialog** type:
 	
-		- **params**:	The parameter for the request, parameters vary greatly for different interface, please refer to [Graph API Reference](https://developers.facebook.com/docs/graph-api/reference/)<br/>
-		    type:	Object
+		1. share_link:			Share a link to Facebook using Facebook app
+		2. share_open_graph:		Share Open Graph story to Facebook using Facebook app
+		3. share_photo:			Share an image to Facebook using Facebook app
+		4. message_link:		Send a link to a friend using Facebook Messenger app
+		5. share_open_graph:		Send a Open Graph story to a friend using Facebook Messenger app
+		6. share_photo:			Send an image to a friend using Facebook Messenger app
 
-		- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-		    type:	function(errorCode, message)
+	- Link type parameters:
+	
+		1. description: Link description
+		2. title:       Link title
+		3. link:        Link url
+		4. imageUrl:    Image for the link
 
-		- return:	none
+	- Open Graph type parameters:
+	
+		1. action_type:         Open Graph Action type
+		2. preview_property:    Open Graph Object type
+		3. other parameters:    Other parameters for this Open Graph story
+
+	- Photo type parameters:
+
+		1. photo:   The path or url for the photo
+
+###4. Open Graph APIs
+
+- **.request(path, method, params, callback)**
+
+	Send an Open Graph API request, more details about Open Graph API can be found in [Facebook Official Open Graph Document](https://developers.facebook.com/docs/opengraph)
+
+	Parameters and return value:
+
+	- **path**:	Open Graph API interface path<br/>
+	    type:	Object
+	- **method**:	HTTP method to send the request<br/>
+	    type:	Number<br/>
+	    possible values:
+
+	    ```
+	    plugin.FacebookAgent.HttpMethod.Get
+	    plugin.FacebookAgent.HttpMethod.Post
+	    plugin.FacebookAgent.HttpMethod.Delete
+	    ```
+
+	- **params**:	The parameter for the request, parameters vary greatly for different interface, please refer to [Graph API Reference](https://developers.facebook.com/docs/graph-api/reference/)<br/>
+	    type:	Object
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	    type:	function(errorCode, message)
+	- return:	none
 
 ##Facebook SDK Features
 
