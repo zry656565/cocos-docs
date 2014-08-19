@@ -112,3 +112,8 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
     - [Plugin-x的框架](./jsb/plugin-x/plugin-x-architecture/zh.md)
     - [如何为Android开发自己的Plugin](./jsb/plugin-x/how-to-write-your-own-plugin-for-android/zh.md)
     - [使用iOS支付插件](./jsb/plugin-x/ios-iap/zh.md)
+    - Facebook SDK for Cocos2d-JS
+        - [Facebook SDK API Reference](./facebook-sdk/api-reference/zh.md)
+        - [Android平台上如何集成Facebook SDK for Cocos2d-JS](./facebook-sdk/facebook-sdk-on-android/zh.md)
+        - [iOS平台上如何集成Facebook SDK for Cocos2d-JS](./facebook-sdk/facebook-sdk-on-ios/zh.md)
+        - [Web平台上如何集成Facebook SDK for Cocos2d-JS](./facebook-sdk/facebook-sdk-on-web/zh.md)
