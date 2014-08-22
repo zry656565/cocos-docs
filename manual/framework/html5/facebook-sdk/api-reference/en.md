@@ -185,6 +185,55 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	none
 
+###5. AppEvent APIs
+
+- **.publishInstall()**
+
+	Send an install message to Facebook
+
+- **.logEvent(eventName, valueToSum, parameters)**
+
+	Log an app event with the specified name, supplied value, and set of parameters.
+	
+	- **eventName** EventName used to denote the event.<br/>
+		type: String
+		possible values:
+
+	    ```
+	    plugin.FacebookAgent.AppEvent.ACTIVATED_APP
+		plugin.FacebookAgent.AppEvent.COMPLETED_REGISTRATION
+		plugin.FacebookAgent.AppEvent.VIEWED_CONTENT
+		plugin.FacebookAgent.AppEvent.SEARCHED
+		plugin.FacebookAgent.AppEvent.RATED
+		plugin.FacebookAgent.AppEvent.COMPLETED_TUTORIAL
+		plugin.FacebookAgent.AppEvent.ADDED_TO_CART
+		plugin.FacebookAgent.AppEvent.ADDED_TO_WISHLIST
+		plugin.FacebookAgent.AppEvent.INITIATED_CHECKOUT
+		plugin.FacebookAgent.AppEvent.ADDED_PAYMENT_INFO
+		plugin.FacebookAgent.AppEvent.PURCHASED
+		plugin.FacebookAgent.AppEvent.ACHIEVED_LEVEL
+		plugin.FacebookAgent.AppEvent.UNLOCKED_ACHIEVEMENT
+		plugin.FacebookAgent.AppEvent.SPENT_CREDITS
+	    ```
+	- **valueToSum** (optional) A value to associate with the event which will be summed up in Insights for across all instances of the event, so that average values can be determined, etc.<br/>
+		type: Number
+	- **parameters** (optional) A Bundle of parameters to log with the event.<br/>
+		type: Object
+		possible parameter name constants:
+		
+		```
+		plugin.FacebookAgent.AppEventParam.CURRENCY
+		plugin.FacebookAgent.AppEventParam.REGISTRATION_METHOD
+		plugin.FacebookAgent.AppEventParam.CONTENT_TYPE
+		plugin.FacebookAgent.AppEventParam.CONTENT_ID
+		plugin.FacebookAgent.AppEventParam.SEARCH_STRING
+		plugin.FacebookAgent.AppEventParam.SUCCESS
+		plugin.FacebookAgent.AppEventParam.MAX_RATING_VALUE
+		plugin.FacebookAgent.AppEventParam.PAYMENT_INFO_AVAILABLE
+		plugin.FacebookAgent.AppEventParam.NUM_ITEMS
+		plugin.FacebookAgent.AppEventParam.DESCRIPTION
+		```
+
 ##Facebook SDK Features
 
 |API|Feature|iOS|Android|Web|
