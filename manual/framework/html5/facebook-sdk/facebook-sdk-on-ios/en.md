@@ -21,13 +21,13 @@ Open your project's Xcode project file (assuming the project is named `myProject
 
 4. Find `ios/AppController.mm`, add necessary code for Facebook iOS SDK:
 
-	- Add header of Facebook iOS SDK `FacebookSDK/FacebookSDK.h`:
+- Add header of Facebook iOS SDK `FacebookSDK/FacebookSDK.h`:
 
 	```
 	#import <FacebookSDK/FacebookSDK.h>
 	```
 
-	- Add the following method in `AppController.mm`: 
+- Add the following method in `AppController.mm`: 
 
 	```
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
@@ -36,7 +36,7 @@ Open your project's Xcode project file (assuming the project is named `myProject
 	}
 	```
 
-	- Add `[FBAppCall handleDidBecomeActive];` in `applicationDidBecomeActive:` function: 
+- Add `[FBAppCall handleDidBecomeActive];` in `applicationDidBecomeActive:` function: 
 
 	```
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -83,4 +83,4 @@ Our PluginFacebook project is now ready for use in C++, if you want to know more
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)

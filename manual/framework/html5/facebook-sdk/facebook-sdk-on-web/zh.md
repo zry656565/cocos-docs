@@ -9,18 +9,18 @@ Web端除了直接使用Facebook提供的Javascript SDK外，Cocos2d-JS也提供
 
 可以有两种方式引入Facebook SDK的依赖：
 
-    - 开发者可以在`frameworks/cocos2d-html5/extenrnal`文件夹下找到所有的Facebook SDK的依赖文件，使用下面的代码完成手动加载Facebook SDK（注意JS文件顺序）：
-    
-    ```
-    cc.loader.loadJs("", [
-        "external/pluginx/platform/facebook_sdk.js",
-        "external/pluginx/platform/facebook.js"
-    ], function(){
-        //do something
-    });
-    ```
-    
-    - 或者也直接在project.json文件内modules字段里增加`plugin-facebook`，引擎将会自动加载文件，但是这样可能会造成游戏初始化速度变慢，大家根据自己实际情况做取舍吧。
+- 开发者可以在`frameworks/cocos2d-html5/extenrnal`文件夹下找到所有的Facebook SDK的依赖文件，使用下面的代码完成手动加载Facebook SDK（注意JS文件顺序）：
+
+```
+cc.loader.loadJs("", [
+    "external/pluginx/platform/facebook_sdk.js",
+    "external/pluginx/platform/facebook.js"
+], function(){
+    //do something
+});
+```
+
+- 或者也直接在project.json文件内modules字段里增加`plugin-facebook`，引擎将会自动加载文件，但是这样可能会造成游戏初始化速度变慢，大家根据自己实际情况做取舍吧。
 
 ## 2. 加载完成之后，还必须要配置Facebook传入的参数
 
@@ -41,4 +41,4 @@ Web端除了直接使用Facebook提供的Javascript SDK外，Cocos2d-JS也提供
 
 ## 3. 如何使用FacebookSDK
 
-关于如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)
+关于如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)

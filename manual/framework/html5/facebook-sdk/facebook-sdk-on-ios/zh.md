@@ -21,13 +21,13 @@ Facebook SDK for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础�
 
 4. 找到`ios/AppController.mm`，并在当中加入Facebook iOS SDK需要的代码：
 
-	- 引入Facebook的头文件 `FacebookSDK/FacebookSDK.h`，
+- 引入Facebook的头文件 `FacebookSDK/FacebookSDK.h`，
 
 	```
 	#import <FacebookSDK/FacebookSDK.h>
 	```
 
-	- 在`AppController.mm`添加如下方法
+- 在`AppController.mm`添加如下方法
 
 	```
 	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
@@ -36,7 +36,7 @@ Facebook SDK for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础�
 	}
 	```
 
-	- 在`applicationDidBecomeActive:`方法中添加入 `[FBAppCall handleDidBecomeActive];`
+- 在`applicationDidBecomeActive:`方法中添加入 `[FBAppCall handleDidBecomeActive];`
 
 	```
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -83,4 +83,4 @@ Facebook SDK for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础�
 
 ## 如何使用FacebookSDK
 
-- 如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)
+- 如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)

@@ -9,7 +9,7 @@ This document will walk you through the integration of Facebook SDK for Cocos2d-
 
 Click Apps->Create a New app at [Facebook Developers Page](https://developers.facebook.com/), enter the app name and create your own app.
 
-![](./1.PNG)
+![](./1_en.png)
 
 Now we can see its App ID at the dashboard page.
 
@@ -173,7 +173,7 @@ And now we are finished with the project configuration and ready to use the Face
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)
 
 ## Package your project into apk
 

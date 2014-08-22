@@ -19,7 +19,7 @@
 - 使用Cocos2d-JS开发后期和第三方集成方式
 - Facebook SDK for Cocos2d-JS集成和使用方式
 
-[点此进入](framework/html5/zh.md)
+[点此进入](../manual/framework/html5/zh.md)
 
 ## 3. Quick
 暂无内容
