@@ -10,18 +10,18 @@ For integrating Facebook SDK for Cocos2d-JS, please follow the steps below:
 
 There are two ways for doing this:
 
-    - Developers can found all dependencies files in `frameworks/cocos2d-html5/extenrnal` folder, You can load all dependencies manually like this：
+- Developers can found all dependencies files in `frameworks/cocos2d-html5/extenrnal` folder, You can load all dependencies manually like this：
     
-    ```
-    cc.loader.loadJs("", [
-        "external/pluginx/platform/facebook_sdk.js",
-        "external/pluginx/platform/facebook.js"
-    ], function(){
-        //do something
-    });
-    ```
+```
+cc.loader.loadJs("", [
+    "external/pluginx/platform/facebook_sdk.js",
+    "external/pluginx/platform/facebook.js"
+], function(){
+    //do something
+});
+```
     
-    - There is another easy option, you can directly include Facebook SDK module in `project.json`, the name for this module is `plugin-facebook`. In this way, the engine will load the dependency files in engine loading process, but this will extend loading time. So, the choice is yours.
+- There is another easy option, you can directly include Facebook SDK module in `project.json`, the name for this module is `plugin-facebook`. In this way, the engine will load the dependency files in engine loading process, but this will extend loading time. So, the choice is yours.
 
 ## 2. Config Facebook parameters in project.json
 
@@ -42,4 +42,4 @@ You need to add all Facebook App related information in `project.json`:
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../../api-reference/zh.md)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)
