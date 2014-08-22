@@ -252,6 +252,8 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - message_photo|Send a photo with Facebook built in messenger dialog|√|√|×|
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
+|publishInstall|Send an install message to Facebook|√|√|×|
+|logEvent|Log an app event|√|√|×|
 
 ##Sample code of Facebook SDK
 
