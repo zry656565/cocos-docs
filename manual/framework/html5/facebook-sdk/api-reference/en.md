@@ -191,12 +191,18 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	Send an install message to Facebook
 
+	Parameters and return value:
+
+	- return:	none
+
 - **.logEvent(eventName, valueToSum, parameters)**
 
 	Log an app event with the specified name, supplied value, and set of parameters.
 	
+	Parameters and return value:
+
 	- **eventName** EventName used to denote the event.<br/>
-		type: String
+		type: String <br/>
 		possible values:
 
 	    ```
@@ -218,7 +224,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **valueToSum** (optional) A value to associate with the event which will be summed up in Insights for across all instances of the event, so that average values can be determined, etc.<br/>
 		type: Number
 	- **parameters** (optional) A Bundle of parameters to log with the event.<br/>
-		type: Object
+		type: Object <br/>
 		possible parameter name constants:
 		
 		```
@@ -233,6 +239,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		plugin.FacebookAgent.AppEventParam.NUM_ITEMS
 		plugin.FacebookAgent.AppEventParam.DESCRIPTION
 		```
+	- return:	none
 
 ##Facebook SDK Features
 

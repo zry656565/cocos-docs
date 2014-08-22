@@ -191,12 +191,18 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	向Facebook发送一个安装消息。
 
+	参数和返回值:
+
+	- return:	none
+
 - **.logEvent(eventName, valueToSum, parameters)**
 
 	记录一个app事件，参数是事件名，累加的值，和一组参数。
+
+	参数和返回值:
 	
 	- **eventName** 事件名<br/>
-		类型: String
+		类型: String <br/>
 		可选值:
 
 	    ```
@@ -218,7 +224,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **valueToSum** (optional) 一个和事件相关联的的数值，会在Insights累加来计算平均值。<br/>
 		type: Number
 	- **parameters** (optional) 事件的参数<br/>
-		类型: Object
+		类型: Object <br/>
 		可选的参数名:
 		
 		```
@@ -233,6 +239,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		plugin.FacebookAgent.AppEventParam.NUM_ITEMS
 		plugin.FacebookAgent.AppEventParam.DESCRIPTION
 		```
+	- return: none
 
 ##Facebook SDK跨平台特性
 
