@@ -140,7 +140,7 @@ public class AppActivity extends Cocos2dxActivity {
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
         PluginWrapper.init(this);
         PluginWrapper.setGLSurfaceView(glSurfaceView);
-		FacebookWrapper.onCreate(this);
+        FacebookWrapper.onCreate(this);
         return glSurfaceView;
     }
 	
