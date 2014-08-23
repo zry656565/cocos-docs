@@ -83,4 +83,4 @@ Our PluginFacebook project is now ready for use in C++, if you want to know more
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/en.md)

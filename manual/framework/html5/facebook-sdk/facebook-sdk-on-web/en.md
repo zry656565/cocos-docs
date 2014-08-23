@@ -42,4 +42,4 @@ You need to add all Facebook App related information in `project.json`:
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/en.md)
