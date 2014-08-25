@@ -185,22 +185,33 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	none
 	
-###5. Payments APIs
+###5. Payments APIs (RC3 NEW)
     
-- **.facebook.pay(params, callback)**
+- **.pay(params, callback)**
 
-    Send an Pay request, more details about Payments API can be found in[Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    Send an pay request, more details about Payments API can be found in [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
     
     Parameters and return value:
     
-    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog)<br />
+    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
         type:   Object
-        Note: method default is "pay"，action default is "purchaseitem"。
     - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-        type:	function(errorCode, message)
-        After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
-    -return:    无
+        type:	function(errorCode, message)<br />
+        Note:	After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    - return:	none
+        
+    Details of parameter:
     
+    - **params** contents:
+    
+    	1. product       : The URL of your og:product object that the user is looking to purchase. 
+    	2. quantity      : [Optional]The amount of this item the user is looking to purchase.
+    	3. quantity_min  : [Optional]The minimum quantity of the item the user is able to purchase.
+    	4. quantity_max  : [Optional]The maximum quantity of the item the user is able to purchase.
+    	5. request_id    : [Optional]The developer defined unique identifier for this transaction.
+    	6. pricepoint_id : [Optional]Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.
+    	7. test_currency : [Optional]This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency.
+ 
     Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
 
 ###5. AppEvent APIs (added in Cocos2d-js 3.0rc3)
