@@ -185,6 +185,62 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	无
 
+###5. AppEvent APIs
+
+- **.publishInstall()**
+
+	向Facebook发送一个安装消息。
+
+	参数和返回值:
+
+	- return:	none
+
+- **.logEvent(eventName, valueToSum, parameters)**
+
+	记录一个app事件，参数是事件名，累加的值，和一组参数。
+
+	参数和返回值:
+	
+	- **eventName** 事件名<br/>
+		类型: String <br/>
+		可选值:
+
+	    ```
+	    plugin.FacebookAgent.AppEvent.ACTIVATED_APP
+		plugin.FacebookAgent.AppEvent.COMPLETED_REGISTRATION
+		plugin.FacebookAgent.AppEvent.VIEWED_CONTENT
+		plugin.FacebookAgent.AppEvent.SEARCHED
+		plugin.FacebookAgent.AppEvent.RATED
+		plugin.FacebookAgent.AppEvent.COMPLETED_TUTORIAL
+		plugin.FacebookAgent.AppEvent.ADDED_TO_CART
+		plugin.FacebookAgent.AppEvent.ADDED_TO_WISHLIST
+		plugin.FacebookAgent.AppEvent.INITIATED_CHECKOUT
+		plugin.FacebookAgent.AppEvent.ADDED_PAYMENT_INFO
+		plugin.FacebookAgent.AppEvent.PURCHASED
+		plugin.FacebookAgent.AppEvent.ACHIEVED_LEVEL
+		plugin.FacebookAgent.AppEvent.UNLOCKED_ACHIEVEMENT
+		plugin.FacebookAgent.AppEvent.SPENT_CREDITS
+	    ```
+	- **valueToSum** (optional) 一个和事件相关联的的数值，会在Insights累加来计算平均值。<br/>
+		type: Number
+	- **parameters** (optional) 事件的参数<br/>
+		类型: Object <br/>
+		可选的参数名:
+		
+		```
+		plugin.FacebookAgent.AppEventParam.CURRENCY
+		plugin.FacebookAgent.AppEventParam.REGISTRATION_METHOD
+		plugin.FacebookAgent.AppEventParam.CONTENT_TYPE
+		plugin.FacebookAgent.AppEventParam.CONTENT_ID
+		plugin.FacebookAgent.AppEventParam.SEARCH_STRING
+		plugin.FacebookAgent.AppEventParam.SUCCESS
+		plugin.FacebookAgent.AppEventParam.MAX_RATING_VALUE
+		plugin.FacebookAgent.AppEventParam.PAYMENT_INFO_AVAILABLE
+		plugin.FacebookAgent.AppEventParam.NUM_ITEMS
+		plugin.FacebookAgent.AppEventParam.DESCRIPTION
+		```
+	- return: none
+
 ##Facebook SDK跨平台特性
 
 |API|Feature|iOS|Android|Web|
@@ -203,6 +259,8 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - message_photo|Send a photo with Facebook built in messenger dialog|√|√|×|
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
+|publishInstall|Send an install message to Facebook|√|√|×|
+|logEvent|Log an app event|√|√|×|
 
 ##Facebook SDK使用示例 (based on Cocos2d-JS v3.0 RC2) 
 

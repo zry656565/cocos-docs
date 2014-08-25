@@ -49,18 +49,11 @@ keytool -exportcert -alias <RELEASE_KEY_ALIAS> -keystore <RELEASE_KEY_PATH> | op
 
 ```
 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
-<meta-data android:name="PluginUser" android:value="UserFacebook" />
-<meta-data android:name="PluginShare" android:value="ShareFacebook" />
 
 <activity android:name="com.facebook.LoginActivity" />
 <provider android:authorities="com.facebook.app.NativeAppCallContentProvider1450063488603945"
           android:name="com.facebook.NativeAppCallContentProvider"
           android:exported="true"/>
-<receiver android:name="org.cocos2dx.plugin.ShareFacebookBroadcastReceiver">
-    <intent-filter>
-        <action android:name="com.facebook.platform.AppCallResultBroadcast" />
-    </intent-filter>
-</receiver>
 ```
 
 **step3**:在frameworks/runtime-src/proj.android/jni/Android.mk中添加Plugin-x链接库：
@@ -133,7 +126,7 @@ android.library.reference.2=../../js-bindings/cocos2d-x/plugin/plugins/facebook/
 
 ```
 import org.cocos2dx.plugin.PluginWrapper;
-import com.facebook.Session;
+import org.cocos2dx.plugin.FacebookWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -147,20 +140,21 @@ public class AppActivity extends Cocos2dxActivity {
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
         PluginWrapper.init(this);
         PluginWrapper.setGLSurfaceView(glSurfaceView);
+        FacebookWrapper.onCreate(this);
         return glSurfaceView;
     }
 	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	    super.onActivityResult(requestCode, resultCode, data);
-	    Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
+	    FacebookWrapper.onAcitivityResult(requestCode, resultCode, data);
 	}
 	
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 	    super.onSaveInstanceState(outState);
 	    Session session = Session.getActiveSession();
-	    Session.saveSession(session, outState);
+	    FacebookWrapper.onSaveInstanceState(outState);
 	}
 
 	//...
