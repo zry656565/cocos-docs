@@ -31,13 +31,13 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)    
 	- return:	无
 	
-- **.logout()**
+- **.logout(callback)**
     
 	从Facebook登出用户。
 
 	参数和返回值:
-	
-	- 清除本地token达到退出登录的目的，无回调和返回值
+	- **callback**:	接收登出结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功<br/>
+	    type:	function(errorCode, message)
 	- return:	无
 
 - **.isLoggedIn(callback)**
@@ -281,7 +281,8 @@ facebook.isLoggedIn(function(errCode, msg){
 }); 
 
 // 登出
-facebook.logout();
+facebook.logout(function(errorCode,message){
+});
 
 // 请求高级权限，第一个参数是权限的数组，第二个参数是回调
 var permissions = ["create_event", "create_note"];

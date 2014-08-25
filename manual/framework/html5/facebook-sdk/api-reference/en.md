@@ -31,12 +31,13 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	none
 	
-- **.logout()**
+- **.logout(callback)**
 
 	Clear the user Token logout user from Facebook.
-
-	Parameters and return value:
 	
+	Parameters and return value:
+	- **callback**:	接收登出结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功<br/>
+	    type:	function(errorCode, message)
 	- return:	none
 
 - **.isLoggedIn(callback)**
@@ -123,7 +124,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	```
 	{
-		// dialog代表分享的类型
+		// dialog is the sahre type
 		"dialog": "share_link",	
 		"description": "Cocos2d-x is a great game engine",
 		"title": "Cocos2d-x",
@@ -282,7 +283,8 @@ facebook.isLoggedIn(function(errCode, msg){
 }); 
 
 // Logout
-facebook.logout();
+facebook.logout(function(errCode, msg){
+});
 
 // Request permissions
 // @param array : Permissions to request
