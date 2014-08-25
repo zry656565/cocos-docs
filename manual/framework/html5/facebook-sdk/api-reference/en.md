@@ -214,7 +214,7 @@ var facebook = plugin.FacebookAgent.getInstance();
     	7. test_currency : [Optional]This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency.
     ```
     
-        Parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)
+        Parameters vary greatly for different interface, please refer to [Facebook Pay Dialog Document](https://developers.facebook.com/docs/payments/reference/paydialog#properties)
  
     Please note that payment API is only supported on Web and can only be tested with Facebook Canvas Applications. if you want to use this feature, you must deploy your game to a Facebook Canvas Application.
 

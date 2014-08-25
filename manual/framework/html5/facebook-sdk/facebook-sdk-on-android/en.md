@@ -172,7 +172,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 And now we are finished with the project configuration and ready to use the Facebook SDK to write Facebook-supportive apps.
 
-## How to Use FacebookSDK
+## How to Use Facebook SDK
 
 About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/en.md)
 
