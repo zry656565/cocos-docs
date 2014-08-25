@@ -198,6 +198,7 @@ var facebook = plugin.FacebookAgent.getInstance();
     - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
         type:	function(errorCode, message)<br />
         Note:	After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    - return:	none
         
     Details of parameter:
     
