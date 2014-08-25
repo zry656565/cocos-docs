@@ -185,7 +185,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	none
 	
-###5. Payments APIs
+###5. Payments APIs (RC3 NEW)
     
 - **.pay(params, callback)**
 
