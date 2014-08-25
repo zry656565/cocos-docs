@@ -184,6 +184,24 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
+	
+###5. Payments APIs
+    
+- **.facebook.pay(params, callback)**
+
+    Send an Pay request, more details about Payments API can be found in[Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    
+    Parameters and return value:
+    
+    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog)<br />
+        type:   Object
+        Note: method default is "pay"，action default is "purchaseitem"。
+    - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+        type:	function(errorCode, message)
+        After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    -return:    无
+    
+    Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
 
 ###5. AppEvent APIs
 

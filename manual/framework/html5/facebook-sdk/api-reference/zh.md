@@ -184,6 +184,24 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
 	    type:	function(errorCode, message)
 	- return:	无
+	
+###5. Payments APIs
+    
+- **.facebook.pay(params, callback)**
+
+    发起一条支付请求，关于支付更详细的信息，请参考[Facebook官方Payments文档](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    
+    参数和返回值:
+    
+    - **params**:   请求所包含的参数，该参数根据不同的支付请求会有比较大的差别，请参考[Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog)<br />
+        type:   Object
+        注：method不传入则默认为"pay"，action不传入则默认为"purchaseitem"。
+    - **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+        type:	function(errorCode, message)
+        关于成功后的message回传的参数，请参考[Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    -return:    无
+    
+    需要注意的是，支付功能只支持web端。并且只能够在Facebook canvas中测试流程，如果您在开发过程中碰到error 1151，请尝试部署Canvas程序到facebook中测试，因为支付流程必须要使用facebook链接打开您的canvas程序。
 
 ###5. AppEvent APIs
 
