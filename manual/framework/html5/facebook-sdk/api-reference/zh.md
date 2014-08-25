@@ -187,20 +187,33 @@ var facebook = plugin.FacebookAgent.getInstance();
 	
 ###5. Payments APIs
     
-- **.facebook.pay(params, callback)**
+- **.pay(params, callback)**
 
     发起一条支付请求，关于支付更详细的信息，请参考[Facebook官方Payments文档](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
     
     参数和返回值:
     
-    - **params**:   请求所包含的参数，该参数根据不同的支付请求会有比较大的差别，请参考[Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog)<br />
+    - **params**:   请求所包含的参数，该参数根据不同的支付请求会有比较大的差别，请参考[Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
         type:   Object
-        注：method不传入则默认为"pay"，action不传入则默认为"purchaseitem"。
     - **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
-        type:	function(errorCode, message)
+        type:	function(errorCode, message)<br />
         关于成功后的message回传的参数，请参考[Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
-    -return:    无
+    - return:    无
     
+    参数细节:
+    
+    - **params**参数详解:
+    
+        1. method        : 如果要完成支付，必须是‘pay’。 (可选, 不填入默认为‘pay’)
+        2. action        : 支付必须为‘purchaseitem’。(可选, 不填入则默认为‘purchaseitem’)
+        3. product       : 用户即将购买的产品对象URL. 
+        4. quantity      : 用户即将购买的金额。(可选)
+        5. quantity_min  : 用户购买的最低数量。(可选)
+        6. quantity_max  : 用户购买的最高数量. (可选)
+        7. request_id    : 开发人员定义的交易唯一标识符。(可选)
+        8. pricepoint_id : 用于设置快捷的移动支付流程。(可选)
+        9. test_currency : 此参数可调试和测试你的执行力的对话框。(可选)
+
     需要注意的是，支付功能只支持web端。并且只能够在Facebook canvas中测试流程，如果您在开发过程中碰到error 1151，请尝试部署Canvas程序到facebook中测试，因为支付流程必须要使用facebook链接打开您的canvas程序。
 
 ##Facebook SDK跨平台特性

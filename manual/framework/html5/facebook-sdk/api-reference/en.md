@@ -187,20 +187,32 @@ var facebook = plugin.FacebookAgent.getInstance();
 	
 ###5. Payments APIs
     
-- **.facebook.pay(params, callback)**
+- **.pay(params, callback)**
 
-    Send an Pay request, more details about Payments API can be found in[Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    Send an Pay request, more details about Payments API can be found in [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
     
     Parameters and return value:
     
-    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog)<br />
+    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
         type:   Object
-        Note: method default is "pay"，action default is "purchaseitem"。
     - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
-        type:	function(errorCode, message)
-        After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
-    -return:    无
+        type:	function(errorCode, message)<br />
+        Note:	After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+        
+    Details of parameter:
     
+    - **params** contents:
+    
+    	1. method        : Should always be 'pay'. (Optional, default is pay)
+    	2. action        : Should always be 'purchaseitem'.(Optional, default is purchaseitem)
+    	3. product       : The URL of your og:product object that the user is looking to purchase. 
+    	4. quantity      : The amount of this item the user is looking to purchase.(Optional)
+    	5. quantity_min  : The minimum quantity of the item the user is able to purchase.(Optional)
+    	6. quantity_max  : The maximum quantity of the item the user is able to purchase. (Optional)
+    	7. request_id    : The developer defined unique identifier for this transaction.(Optional)
+    	8. pricepoint_id : Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.(Optional)
+    	9. test_currency : This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency. (Optional)
+ 
     Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
 
 ##Facebook SDK Features
