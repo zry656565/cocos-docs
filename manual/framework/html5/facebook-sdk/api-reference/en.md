@@ -36,7 +36,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	Clear the user Token logout user from Facebook.
 	
 	Parameters and return value:
-	- **callback**:	接收登出结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功<br/>
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully<br/>
 	    type:	function(errorCode, message)
 	- return:	none
 
