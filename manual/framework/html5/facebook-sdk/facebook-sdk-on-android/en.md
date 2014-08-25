@@ -155,7 +155,6 @@ public class AppActivity extends Cocos2dxActivity {
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 	    super.onSaveInstanceState(outState);
-	    Session session = Session.getActiveSession();
 	    FacebookWrapper.onSaveInstanceState(outState);
 	}
 
