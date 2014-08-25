@@ -184,6 +184,91 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
 	    type:	function(errorCode, message)
 	- return:	无
+	
+###5. Payments APIs (在Cocos2d-js 3.0rc3版本新增)
+    
+- **.pay(params, callback)**
+
+    发起一条支付请求，关于支付更详细的信息，请参考[Facebook官方Payments文档](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    
+    参数和返回值:
+    
+    - **params**:   请求所包含的参数，该参数根据不同的支付请求会有比较大的差别，请参考[Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
+        type:   Object
+    - **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+        type:	function(errorCode, message)<br />
+        关于成功后的message回传的参数，请参考[Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    - return:    无
+    
+    参数细节:
+    
+    - **params**参数详解:
+    
+        1. product       : 用户即将购买的产品对象URL. 
+        2. quantity      : [可选]用户即将购买的金额。
+        3. quantity_min  : [可选]用户购买的最低数量。
+        4. quantity_max  : [可选]用户购买的最高数量。
+        5. request_id    : [可选]开发人员定义的交易唯一标识符。
+        6. pricepoint_id : [可选]用于设置快捷的移动支付流程。
+        7. test_currency : [可选]此参数可调试和测试你的执行力的对话框。
+
+    需要注意的是，支付功能只支持web端。并且只能够在Facebook canvas中测试流程，如果您在开发过程中碰到error 1151，请尝试部署Canvas程序到facebook中测试，因为支付流程必须要使用facebook链接打开您的canvas程序。
+
+###6. AppEvent APIs (在Cocos2d-js 3.0rc3版本新增)
+
+- **.publishInstall()**
+
+	向Facebook发送一个安装消息。
+
+	参数和返回值:
+
+	- return:	none
+
+- **.logEvent(eventName, valueToSum, parameters)**
+
+	记录一个app事件，参数是事件名，累加的值，和一组参数。
+
+	参数和返回值:
+	
+	- **eventName** 事件名<br/>
+		类型: String <br/>
+		可选值:
+
+	    ```
+	    plugin.FacebookAgent.AppEvent.ACTIVATED_APP
+		plugin.FacebookAgent.AppEvent.COMPLETED_REGISTRATION
+		plugin.FacebookAgent.AppEvent.VIEWED_CONTENT
+		plugin.FacebookAgent.AppEvent.SEARCHED
+		plugin.FacebookAgent.AppEvent.RATED
+		plugin.FacebookAgent.AppEvent.COMPLETED_TUTORIAL
+		plugin.FacebookAgent.AppEvent.ADDED_TO_CART
+		plugin.FacebookAgent.AppEvent.ADDED_TO_WISHLIST
+		plugin.FacebookAgent.AppEvent.INITIATED_CHECKOUT
+		plugin.FacebookAgent.AppEvent.ADDED_PAYMENT_INFO
+		plugin.FacebookAgent.AppEvent.PURCHASED
+		plugin.FacebookAgent.AppEvent.ACHIEVED_LEVEL
+		plugin.FacebookAgent.AppEvent.UNLOCKED_ACHIEVEMENT
+		plugin.FacebookAgent.AppEvent.SPENT_CREDITS
+	    ```
+	- **valueToSum** (optional) 一个和事件相关联的的数值，会在Insights累加来计算平均值。<br/>
+		type: Number
+	- **parameters** (optional) 事件的参数<br/>
+		类型: Object <br/>
+		可选的参数名:
+		
+		```
+		plugin.FacebookAgent.AppEventParam.CURRENCY
+		plugin.FacebookAgent.AppEventParam.REGISTRATION_METHOD
+		plugin.FacebookAgent.AppEventParam.CONTENT_TYPE
+		plugin.FacebookAgent.AppEventParam.CONTENT_ID
+		plugin.FacebookAgent.AppEventParam.SEARCH_STRING
+		plugin.FacebookAgent.AppEventParam.SUCCESS
+		plugin.FacebookAgent.AppEventParam.MAX_RATING_VALUE
+		plugin.FacebookAgent.AppEventParam.PAYMENT_INFO_AVAILABLE
+		plugin.FacebookAgent.AppEventParam.NUM_ITEMS
+		plugin.FacebookAgent.AppEventParam.DESCRIPTION
+		```
+	- return: none
 
 ##Facebook SDK跨平台特性
 
@@ -203,6 +288,9 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - message_photo|Send a photo with Facebook built in messenger dialog|√|√|×|
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
+|publishInstall|Send an install message to Facebook|√|√|×|
+|payments|Send an pay request|×|×|√|
+|logEvent|Log an app event|√|√|×|
 
 ##Facebook SDK使用示例 (based on Cocos2d-JS v3.0 RC2) 
 

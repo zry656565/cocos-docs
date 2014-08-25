@@ -184,6 +184,91 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
+	
+###5. Payments APIs (added in Cocos2d-js 3.0rc3)
+    
+- **.pay(params, callback)**
+
+    Send an pay request, more details about Payments API can be found in [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    
+    Parameters and return value:
+    
+    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
+        type:   Object
+    - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+        type:	function(errorCode, message)<br />
+        Note:	After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    - return:	none
+        
+    Details of parameter:
+    
+    - **params** contents:
+    
+    	1. product       : The URL of your og:product object that the user is looking to purchase. 
+    	2. quantity      : [Optional]The amount of this item the user is looking to purchase.
+    	3. quantity_min  : [Optional]The minimum quantity of the item the user is able to purchase.
+    	4. quantity_max  : [Optional]The maximum quantity of the item the user is able to purchase.
+    	5. request_id    : [Optional]The developer defined unique identifier for this transaction.
+    	6. pricepoint_id : [Optional]Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.
+    	7. test_currency : [Optional]This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency.
+ 
+    Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
+
+###6. AppEvent APIs (added in Cocos2d-js 3.0rc3)
+
+- **.publishInstall()**
+
+	Send an install message to Facebook
+
+	Parameters and return value:
+
+	- return:	none
+
+- **.logEvent(eventName, valueToSum, parameters)**
+
+	Log an app event with the specified name, supplied value, and set of parameters.
+	
+	Parameters and return value:
+
+	- **eventName** EventName used to denote the event.<br/>
+		type: String <br/>
+		possible values:
+
+	    ```
+	    plugin.FacebookAgent.AppEvent.ACTIVATED_APP
+		plugin.FacebookAgent.AppEvent.COMPLETED_REGISTRATION
+		plugin.FacebookAgent.AppEvent.VIEWED_CONTENT
+		plugin.FacebookAgent.AppEvent.SEARCHED
+		plugin.FacebookAgent.AppEvent.RATED
+		plugin.FacebookAgent.AppEvent.COMPLETED_TUTORIAL
+		plugin.FacebookAgent.AppEvent.ADDED_TO_CART
+		plugin.FacebookAgent.AppEvent.ADDED_TO_WISHLIST
+		plugin.FacebookAgent.AppEvent.INITIATED_CHECKOUT
+		plugin.FacebookAgent.AppEvent.ADDED_PAYMENT_INFO
+		plugin.FacebookAgent.AppEvent.PURCHASED
+		plugin.FacebookAgent.AppEvent.ACHIEVED_LEVEL
+		plugin.FacebookAgent.AppEvent.UNLOCKED_ACHIEVEMENT
+		plugin.FacebookAgent.AppEvent.SPENT_CREDITS
+	    ```
+	- **valueToSum** (optional) A value to associate with the event which will be summed up in Insights for across all instances of the event, so that average values can be determined, etc.<br/>
+		type: Number
+	- **parameters** (optional) A Bundle of parameters to log with the event.<br/>
+		type: Object <br/>
+		possible parameter name constants:
+		
+		```
+		plugin.FacebookAgent.AppEventParam.CURRENCY
+		plugin.FacebookAgent.AppEventParam.REGISTRATION_METHOD
+		plugin.FacebookAgent.AppEventParam.CONTENT_TYPE
+		plugin.FacebookAgent.AppEventParam.CONTENT_ID
+		plugin.FacebookAgent.AppEventParam.SEARCH_STRING
+		plugin.FacebookAgent.AppEventParam.SUCCESS
+		plugin.FacebookAgent.AppEventParam.MAX_RATING_VALUE
+		plugin.FacebookAgent.AppEventParam.PAYMENT_INFO_AVAILABLE
+		plugin.FacebookAgent.AppEventParam.NUM_ITEMS
+		plugin.FacebookAgent.AppEventParam.DESCRIPTION
+		```
+	- return:	none
 
 ##Facebook SDK Features
 
@@ -203,6 +288,9 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - message_photo|Send a photo with Facebook built in messenger dialog|√|√|×|
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
+|publishInstall|Send an install message to Facebook|√|√|×|
+|payments|Send an pay request|×|×|√|
+|logEvent|Log an app event|√|√|×|
 
 ##Sample code of Facebook SDK
 
