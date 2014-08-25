@@ -122,7 +122,7 @@ var mySprite = new MySprite();
 | scaleX | Number | R&W | getScaleX, setScaleX | YES |
 | scaleY | Number | R&W | getScaleY, setScaleY | YES |
 | opacity | Number | R&W | getOpacity, setOpacity | YES |
-| opacityModifyRGB | Boolean | readonly | isOpacityModifyRGB | YES |
+| opacityModifyRGB | Boolean | R&W | isOpacityModifyRGB, setOpacityModifyRGB | YES |
 | cascadeOpacity | Boolean | R&W | isCascadeOpacityEnabled, setCascadeOpacityEnabled | YES |
 | color | cc.Color | R&W | getColor, setColor | YES |
 | cascadeColor | Boolean | R&W | isCascadeColorEnabled, setCascadeColorEnabled | YES |
@@ -140,7 +140,6 @@ var mySprite = new MySprite();
 | scheduler | cc.Scheduler | R&W | getScheduler, setScheduler | YES |
 | grid | cc.GridBase | R&W | None | NO |
 | shaderProgram | cc.GLProgram | R&W | getShaderProgram, setShaderProgram | YES |
-| glServerState | Number | R&W | getGLServerState, setGLServerState | YES |
 
 
 ### cc.Texture2D
