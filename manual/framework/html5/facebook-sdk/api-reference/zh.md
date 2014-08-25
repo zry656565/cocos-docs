@@ -289,7 +289,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
 |publishInstall|Send an install message to Facebook|√|√|×|
-|payments|Send an pay request|×|√|√|
+|payments|Send an pay request|×|×|√|
 |logEvent|Log an app event|√|√|×|
 
 ##Facebook SDK使用示例 (based on Cocos2d-JS v3.0 RC2) 
