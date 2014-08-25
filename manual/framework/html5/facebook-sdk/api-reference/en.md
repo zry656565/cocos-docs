@@ -189,7 +189,7 @@ var facebook = plugin.FacebookAgent.getInstance();
     
 - **.pay(params, callback)**
 
-    Send an Pay request, more details about Payments API can be found in [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    Send an pay request, more details about Payments API can be found in [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
     
     Parameters and return value:
     
@@ -204,15 +204,13 @@ var facebook = plugin.FacebookAgent.getInstance();
     
     - **params** contents:
     
-    	1. method        : Should always be 'pay'. (Optional, default is pay)
-    	2. action        : Should always be 'purchaseitem'.(Optional, default is purchaseitem)
-    	3. product       : The URL of your og:product object that the user is looking to purchase. 
-    	4. quantity      : The amount of this item the user is looking to purchase.(Optional)
-    	5. quantity_min  : The minimum quantity of the item the user is able to purchase.(Optional)
-    	6. quantity_max  : The maximum quantity of the item the user is able to purchase. (Optional)
-    	7. request_id    : The developer defined unique identifier for this transaction.(Optional)
-    	8. pricepoint_id : Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.(Optional)
-    	9. test_currency : This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency. (Optional)
+    	1. product       : The URL of your og:product object that the user is looking to purchase. 
+    	2. quantity      : [Optional]The amount of this item the user is looking to purchase.
+    	3. quantity_min  : [Optional]The minimum quantity of the item the user is able to purchase.
+    	4. quantity_max  : [Optional]The maximum quantity of the item the user is able to purchase.
+    	5. request_id    : [Optional]The developer defined unique identifier for this transaction.
+    	6. pricepoint_id : [Optional]Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.
+    	7. test_currency : [Optional]This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency.
  
     Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
 

@@ -204,15 +204,13 @@ var facebook = plugin.FacebookAgent.getInstance();
     
     - **params**参数详解:
     
-        1. method        : 如果要完成支付，必须是‘pay’。 (可选, 不填入默认为‘pay’)
-        2. action        : 支付必须为‘purchaseitem’。(可选, 不填入则默认为‘purchaseitem’)
-        3. product       : 用户即将购买的产品对象URL. 
-        4. quantity      : 用户即将购买的金额。(可选)
-        5. quantity_min  : 用户购买的最低数量。(可选)
-        6. quantity_max  : 用户购买的最高数量. (可选)
-        7. request_id    : 开发人员定义的交易唯一标识符。(可选)
-        8. pricepoint_id : 用于设置快捷的移动支付流程。(可选)
-        9. test_currency : 此参数可调试和测试你的执行力的对话框。(可选)
+        1. product       : 用户即将购买的产品对象URL. 
+        2. quantity      : [可选]用户即将购买的金额。
+        3. quantity_min  : [可选]用户购买的最低数量。
+        4. quantity_max  : [可选]用户购买的最高数量。
+        5. request_id    : [可选]开发人员定义的交易唯一标识符。
+        6. pricepoint_id : [可选]用于设置快捷的移动支付流程。
+        7. test_currency : [可选]此参数可调试和测试你的执行力的对话框。
 
     需要注意的是，支付功能只支持web端。并且只能够在Facebook canvas中测试流程，如果您在开发过程中碰到error 1151，请尝试部署Canvas程序到facebook中测试，因为支付流程必须要使用facebook链接打开您的canvas程序。
 
