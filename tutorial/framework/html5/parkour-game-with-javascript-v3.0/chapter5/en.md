@@ -81,6 +81,7 @@ Then we should replace the player creation method to:
 ```
 this.sprite = cc.Sprite.create("#runner0.png");
 ```
+<em>The dash ("#") character at the beginning of the sprite's filename is a convention, and that means it will create a sprite from the sprite frame's name. In our case "runner0.png" is part of the sprite sheet.</em>
 
 We can easily create a animation with the following code:
 
