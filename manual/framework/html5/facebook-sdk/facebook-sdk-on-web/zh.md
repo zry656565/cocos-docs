@@ -39,6 +39,6 @@ cc.loader.loadJs("", [
 }
 ```
 
-## 3. 如何使用FacebookSDK
+## 3. 如何使用Facebook SDK
 
 关于如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)

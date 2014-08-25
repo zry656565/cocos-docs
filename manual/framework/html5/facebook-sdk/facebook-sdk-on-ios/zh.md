@@ -81,6 +81,6 @@ Facebook SDK for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础�
 
 自此，我们的Plugin-x工程引入就做完了，如果你想了解更多Plugin-x的配置，请参考[Plugin-x架构](http://www.cocos2d-x.org/docs/manual/framework/html5/jsb/plugin-x/plugin-x-architecture/zh)和[如何使用Plugin-x iOS篇](link)。
 
-## 如何使用FacebookSDK
+## 如何使用Facebook SDK
 
 - 如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)

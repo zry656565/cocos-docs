@@ -6,7 +6,7 @@ This document will walk you through the integration of Facebook SDK for Cocos2d-
 
 ## Create your Facebook application
 
-Facebook SDK for Cocos2d-JS is based on the official Facebook iOS SDK on iOS, first of all, you need to refer to the [Facebook iOS startup guide](https://developers.facebook.com/docs/ios/getting-started/) to create a Facebook application.
+Facebook SDK for Cocos2d-JS is based on the official Facebook iOS SDK on iOS, first of all, you need to refer to the [Facebook iOS Startup Guide](https://developers.facebook.com/docs/ios/getting-started/) to create a Facebook application.
 
 ## Integrate Facebook iOS SDK into your project
 
@@ -81,6 +81,6 @@ After previous steps, we can use FacebookAgent class which encapsulated all Face
 
 Our PluginFacebook project is now ready for use in C++, if you want to know more details about Plugin-x, please refer to [Plugin-x Architecture](http://www.cocos2d-x.org/docs/manual/framework/html5/jsb/plugin-x/plugin-x-architecture/en) and [Integrate Plugin-x on iOS]().
 
-## How to Use FacebookSDK
+## How to Use Facebook SDK
 
 About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/en.md)
