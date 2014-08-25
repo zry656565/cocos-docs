@@ -174,7 +174,7 @@ And now we are finished with the project configuration and ready to use the Face
 
 ## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)
+About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/en.md)
 
 ## Package your project into apk
 
@@ -184,4 +184,4 @@ You can use Cocos2d-JS built in tool: Cocos Console to package your project to a
 cocos compile -p android
 ```
 
-You can have more details in [Cocos Console Document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)
+You can have more details in [Cocos Console Document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/en)

@@ -189,11 +189,11 @@ var facebook = plugin.FacebookAgent.getInstance();
     
 - **.pay(params, callback)**
 
-    Send an pay request, more details about Payments API can be found in [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    Send a payment request, more details about Payments API can be found in the [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
     
     Parameters and return value:
     
-    - **params**:   The parameter for the request, parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
+    - **params**:   The parameter for the request<br />
         type:   Object
     - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
         type:	function(errorCode, message)<br />
@@ -204,15 +204,19 @@ var facebook = plugin.FacebookAgent.getInstance();
     
     - **params** contents:
     
+    ```
     	1. product       : The URL of your og:product object that the user is looking to purchase. 
-    	2. quantity      : [Optional]The amount of this item the user is looking to purchase.
-    	3. quantity_min  : [Optional]The minimum quantity of the item the user is able to purchase.
-    	4. quantity_max  : [Optional]The maximum quantity of the item the user is able to purchase.
+    	2. quantity      : [Optional]The amount of this item that user is looking to purchase.
+    	3. quantity_min  : [Optional]The minimum quantity of the item that user is able to purchase.
+    	4. quantity_max  : [Optional]The maximum quantity of the item that user is able to purchase.
     	5. request_id    : [Optional]The developer defined unique identifier for this transaction.
     	6. pricepoint_id : [Optional]Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.
     	7. test_currency : [Optional]This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency.
+    ```
+    
+        Parameters vary greatly for different interface, please refer to [Pay Dialog](https://developers.facebook.com/docs/payments/reference/paydialog#properties)
  
-    Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
+    Please note that payment API is only supported on Web and can only be tested with Facebook Canvas Applications. if you want to use this feature, you must deploy your game to a Facebook Canvas Application.
 
 ###6. AppEvent APIs (added in Cocos2d-js 3.0rc3)
 
@@ -288,8 +292,8 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - message_photo|Send a photo with Facebook built in messenger dialog|√|√|×|
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
-|publishInstall|Send an install message to Facebook|√|√|×|
 |payments|Send an pay request|×|×|√|
+|publishInstall|Send an install message to Facebook|√|√|×|
 |logEvent|Log an app event|√|√|×|
 
 ##Sample code of Facebook SDK

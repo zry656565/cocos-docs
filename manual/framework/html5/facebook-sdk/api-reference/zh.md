@@ -204,6 +204,7 @@ var facebook = plugin.FacebookAgent.getInstance();
     
     - **params**参数详解:
     
+    ```
         1. product       : 用户即将购买的产品对象URL. 
         2. quantity      : [可选]用户即将购买的金额。
         3. quantity_min  : [可选]用户购买的最低数量。
@@ -211,7 +212,8 @@ var facebook = plugin.FacebookAgent.getInstance();
         5. request_id    : [可选]开发人员定义的交易唯一标识符。
         6. pricepoint_id : [可选]用于设置快捷的移动支付流程。
         7. test_currency : [可选]此参数可调试和测试你的执行力的对话框。
-
+    ```
+    
     需要注意的是，支付功能只支持web端。并且只能够在Facebook canvas中测试流程，如果您在开发过程中碰到error 1151，请尝试部署Canvas程序到facebook中测试，因为支付流程必须要使用facebook链接打开您的canvas程序。
 
 ###6. AppEvent APIs (在Cocos2d-js 3.0rc3版本新增)

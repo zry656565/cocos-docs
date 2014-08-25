@@ -172,7 +172,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 ## 如何使用FacebookSDK
 
-如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../api-reference/en.md)
+如何使用Facebook API 请参考 [Facebook SDK for Cocos2d-JS](../api-reference/zh.md)
 
 ## 将项目打包成APK
 

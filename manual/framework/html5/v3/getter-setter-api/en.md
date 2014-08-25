@@ -127,6 +127,11 @@ Then `mySprite.x = x;` will invoke your custom `setPositionX` function, same for
 | scale | Number | R&W | getScale, setScale | YES |
 | scaleX | Number | R&W | getScaleX, setScaleX | YES |
 | scaleY | Number | R&W | getScaleY, setScaleY | YES |
+| opacity | Number | R&W | getOpacity, setOpacity | YES |
+| opacityModifyRGB | Boolean | R&W | isOpacityModifyRGB, setOpacityModifyRGB | YES |
+| cascadeOpacity | Boolean | R&W | isCascadeOpacityEnabled, setCascadeOpacityEnabled | YES |
+| color | cc.Color | R&W | getColor, setColor | YES |
+| cascadeColor | Boolean | R&W | isCascadeColorEnabled, setCascadeColorEnabled | YES |
 | children | Array | readonly | getChildren | YES |
 | childrenCount | Number | readonly | getChildrenCount | YES |
 | parent | cc.Node | R&W | getParent, setParent | YES |
@@ -141,7 +146,6 @@ Then `mySprite.x = x;` will invoke your custom `setPositionX` function, same for
 | scheduler | cc.Scheduler | R&W | getScheduler, setScheduler | YES |
 | grid | cc.GridBase | R&W | None | NO |
 | shaderProgram | cc.GLProgram | R&W | getShaderProgram, setShaderProgram | YES |
-| glServerState | Number | R&W | getGLServerState, setGLServerState | YES |
 
 
 ### cc.Texture2D
@@ -157,19 +161,6 @@ Then `mySprite.x = x;` will invoke your custom `setPositionX` function, same for
 | shaderProgram | cc.GLProgram | R&W | None | NO |
 | maxS | Number | R&W | None | NO |
 | maxT | Number | R&W | None | NO |
-
-
-### cc.NodeRGBA
-
-Extend from cc.Node
-
-| Property | Type | Accessibility | Getter/Setter function | Advanced Compress Ready |
-|:------:|:------:|:-------:|:-------:|:------:|
-| opacity | Number | R&W | getOpacity, setOpacity | YES |
-| opacityModifyRGB | Boolean | R&W | isOpacityModifyRGB, setOpacityModifyRGB | YES |
-| cascadeOpacity | Boolean | R&W | isCascadeOpacityEnabled, setCascadeOpacityEnabled | YES |
-| color | cc.Color | R&W | getColor, setColor | YES |
-| cascadeColor | Boolean | R&W | isCascadeColorEnabled, setCascadeColorEnabled | YES |
 
 
 ### cc.Sprite
