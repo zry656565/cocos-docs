@@ -185,7 +185,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	none
 
-###5. AppEvent APIs
+###5. AppEvent APIs (added in Cocos2d-js 3.0rc3)
 
 - **.publishInstall()**
 

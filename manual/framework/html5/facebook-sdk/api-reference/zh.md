@@ -185,7 +185,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	无
 
-###5. AppEvent APIs
+###5. AppEvent APIs (在Cocos2d-js 3.0rc3版本增加)
 
 - **.publishInstall()**
 
