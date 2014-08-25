@@ -185,7 +185,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	无
 	
-###5. Payments APIs (RC3新增)
+###5. Payments APIs (在Cocos2d-js 3.0rc3版本新增)
     
 - **.pay(params, callback)**
 
@@ -214,7 +214,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
     需要注意的是，支付功能只支持web端。并且只能够在Facebook canvas中测试流程，如果您在开发过程中碰到error 1151，请尝试部署Canvas程序到facebook中测试，因为支付流程必须要使用facebook链接打开您的canvas程序。
 
-###5. AppEvent APIs (在Cocos2d-js 3.0rc3版本增加)
+###6. AppEvent APIs (在Cocos2d-js 3.0rc3版本新增)
 
 - **.publishInstall()**
 
@@ -289,6 +289,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
 |publishInstall|Send an install message to Facebook|√|√|×|
+|payments|Send an pay request|×|√|√|
 |logEvent|Log an app event|√|√|×|
 
 ##Facebook SDK使用示例 (based on Cocos2d-JS v3.0 RC2) 
