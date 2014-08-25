@@ -203,7 +203,7 @@ var facebook = plugin.FacebookAgent.getInstance();
     
     Of note, payment function only supports Web. And can only test flow in Facebook canvas. if you are in the process of development with error 1151, please try to deploy the Canvas program to the Facebook. because the payment process must use the Facebook link to open your canvas program.
 
-###5. AppEvent APIs
+###5. AppEvent APIs (added in Cocos2d-js 3.0rc3)
 
 - **.publishInstall()**
 
