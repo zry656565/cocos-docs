@@ -36,12 +36,12 @@ Cocos Code IDE 提供了一键调试的功能。
 ### Mac 平台下调试
 在 Mac 平台，支持 Mac、iOS 真机设备、iOS 模拟器和 Android 设备
 
-![](http://files.cocos2d-x.org/images/orgsite/codeide-p7.jpg)
+![](http://files.cocos2d-x.org/images/orgsite/codeide-p7.png?1405683192)
 
 ### Windows 平台下调试
 在 Windows 平台，支持 Windows、Android 设备
 
-![](http://files.cocos2d-x.org/images/orgsite/codeide-p6.jpg)
+![](http://files.cocos2d-x.org/images/orgsite/codeide-p6.png?1405683192)
 
 强大的调试工具
 ------------
