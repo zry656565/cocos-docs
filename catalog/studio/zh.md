@@ -6,15 +6,16 @@
 - [CocoStudio UI编辑器的使用](../../tutorial/studio/how-to-use-ui-editor/zh.md)
 - [如何使用 CocoStudio UI 编辑器实现《乱斗堂》设置界面](../../tutorial/studio/how-to-use-cocostudio-to-make-chaosfighter/zh.md)
 - [使用CocoStudio创建Cocos2d-x序列帧和骨骼动画](../../tutorial/studio/how-to-use-animation-editor/zh.md)
-- 用CocoStudio来快速建立一个游戏(v2.2)
-	- CocoStudio简介
-	- 准备开发环境
-	- 建立一个跑酷游戏
 
 # Cocos Code IDE
+
+- [Code IDE 简介](../../manual/code-ide/zh.md)
 - [Cocos Code IDE入门指南](../../manual/code-ide/getting-started/zh.md)
+- [工程根目录文件说明](../../manual/code-ide/runtime-config/zh.md)
 - [使用Code IDE调试Cocos2d-x Lua游戏](../../manual/code-ide/debug-lua/zh.md)
 - [使用Code IDE调试Cocos2d-x JavaScript游戏](../../manual/code-ide/debug-js/zh.md)
+- [使用Code IDE制作可发布的ipa](../../manual/code-ide/package-ios-publish/zh.md)
+- [使用Code IDE制作可以真机调试的ipa](../../manual/code-ide/package-ios-runtime/zh.md)
 - [Lua Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-lua/en.md)
 - [Js Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-js/en.md)
 
