@@ -17,7 +17,7 @@
 - Cocos2d-JS的演变过程
 - Cocos2d-JS制作游戏教程
 - 使用Cocos2d-JS开发后期和第三方集成方式
-- Facebook SDK for Cocos2d-JS集成和使用方式
+- Facebook SDK Alpha for Cocos2d-JS集成和使用方式
 
 [点此进入](../manual/framework/html5/zh.md)
 

@@ -100,11 +100,11 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [About cc.log](./v3/cc-log/en.md)
     - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
     
-- Facebook SDK for Cocos2d-JS
-    - [Facebook SDK API Reference](./facebook-sdk/api-reference/en.md)
-    - [Integrate the Facebook SDK for Cocos2d-JS on Android](./facebook-sdk/facebook-sdk-on-android/en.md)
-    - [Integrate the Facebook SDK for Cocos2d-JS on iOS](./facebook-sdk/facebook-sdk-on-ios/en.md)
-    - [Integrate the Facebook SDK for Cocos2d-JS on Web](./facebook-sdk/facebook-sdk-on-web/en.md)
+- Facebook SDK Alpha for Cocos2d-JS
+    - [Facebook SDK Alpha API Reference](./facebook-sdk/api-reference/en.md)
+    - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](./facebook-sdk/facebook-sdk-on-android/en.md)
+    - [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](./facebook-sdk/facebook-sdk-on-ios/en.md)
+    - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](./facebook-sdk/facebook-sdk-on-web/en.md)
     
 - Advanced topics
     - [How to use extensions in JSB(Chinese version)](./jsb/jsb-extension/zh.md)

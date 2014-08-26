@@ -1,12 +1,12 @@
-#Integrate Facebook SDK for Cocos2d-JS on iOS
+#Integrate Facebook SDK Alpha for Cocos2d-JS on iOS
 
-This document will walk you through the integration of Facebook SDK for Cocos2d-JS.
+This document will walk you through the integration of Facebook SDK Alpha for Cocos2d-JS.
  
-**Notice**: Facebook SDK for Cocos2d-JS can only work with Cocos2d-JS v3.0 RC2 and later versions. 
+**Notice**: Facebook SDK Alpha for Cocos2d-JS can only work with Cocos2d-JS v3.0 RC2 and later versions. 
 
 ## Create your Facebook application
 
-Facebook SDK for Cocos2d-JS is based on the official Facebook iOS SDK on iOS, first of all, you need to refer to the [Facebook iOS Startup Guide](https://developers.facebook.com/docs/ios/getting-started/) to create a Facebook application.
+Facebook SDK Alpha for Cocos2d-JS is based on the official Facebook iOS SDK on iOS, first of all, you need to refer to the [Facebook iOS Startup Guide](https://developers.facebook.com/docs/ios/getting-started/) to create a Facebook application.
 
 ## Integrate Facebook iOS SDK into your project
 
@@ -47,7 +47,7 @@ Open your project's Xcode project file (assuming the project is named `myProject
 
 ## Add Plugin-x and PluginFacebook into your project
 
-As `Facebook SDK for Cocos2d-JS` is based on Plugin-x, we need to add Plugin-x project to your project first.
+As `Facebook SDK Alpha for Cocos2d-JS` is based on Plugin-x, we need to add Plugin-x project to your project first.
 
 1. Add PluginProtocol's Xcode project (under `myProject/frameworks/js-bindings/cocos2d-x/plugin/protocols/proj.ios`) into your Xcode project as a sub project: right click on `myProject`, then choose `addFiles to "myProject"` to add it or drag the PluginProtocol project directly under `myProject`.
 
@@ -57,7 +57,7 @@ As `Facebook SDK for Cocos2d-JS` is based on Plugin-x, we need to add Plugin-x p
 
 ## Add Plugin-x for JSB
 
-After previous steps, we can use FacebookAgent class which encapsulated all Facebook SDK's C++ level APIs. But there are some more steps to make it available for Javascript code, we need to include and register the Javascript bindings code in SpiderMonkey.
+After previous steps, we can use FacebookAgent class which encapsulated all Facebook SDK Alpha's C++ level APIs. But there are some more steps to make it available for Javascript code, we need to include and register the Javascript bindings code in SpiderMonkey.
 
 1. Add jsb_pluginx.js (under `myProject/frameworks/js-bindings/cocos2d-x/plugin/jsbindings/script`) into `myProject`, and make sure it's listed in `Build Phases`'s `Copy Bundle Resources`.
 
@@ -81,6 +81,6 @@ After previous steps, we can use FacebookAgent class which encapsulated all Face
 
 Our PluginFacebook project is now ready for use in C++, if you want to know more details about Plugin-x, please refer to [Plugin-x Architecture](http://www.cocos2d-x.org/docs/manual/framework/html5/jsb/plugin-x/plugin-x-architecture/en) and [Integrate Plugin-x on iOS]().
 
-## How to Use Facebook SDK
+## How to Use Facebook SDK Alpha
 
-About how to use Facebook API please reference to [Facebook SDK for Cocos2d-JS](../api-reference/en.md)
+About how to use Facebook API please reference to [Facebook SDK Alpha for Cocos2d-JS](../api-reference/en.md)
