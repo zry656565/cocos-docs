@@ -1,11 +1,38 @@
 # CocoStudio
-- [CocoStudio介绍](../../manual/studio/about-cocostudio/zh.md)
-- 安装 
-	- [Win版本](../../manual/studio/start/win_install/zh.md)
-	- [Mac版本](../../manual/studio/start/mac_install/zh.md)
-- [CocoStudio UI编辑器的使用](../../tutorial/studio/how-to-use-ui-editor/zh.md)
-- [如何使用 CocoStudio UI 编辑器实现《乱斗堂》设置界面](../../tutorial/studio/how-to-use-cocostudio-to-make-chaosfighter/zh.md)
-- [使用CocoStudio创建Cocos2d-x序列帧和骨骼动画](../../tutorial/studio/how-to-use-animation-editor/zh.md)
+
+- 开始
+   - [CocoStudio介绍](../../manual/studio/start/about_cocostudio/zh.md)
+   - [Mac 安装](../../manual/studio/start/mac_install/zh.md)
+   - [版本特性](../../manual/studio/start/version_feature/zh.md)
+- 界面
+   - [界面布局](../../manual/studio/window/interface_layout/zh.md)
+   - [起始页面](../../manual/studio/window/start_page_panel/zh.md)
+   - [快捷工具栏](../../manual/studio/window/express_tools_bar/zh.md)
+   - [渲染区](../../manual/studio/window/render_panel/zh.md)
+   - [动画帧面板](../../manual/studio/window/animation_frame_panel/zh.md)
+   - [属性面板](../../manual/studio/window/properties_panel/zh.md)
+   - [资源面板](../../manual/studio/window/resource_panel/zh.md)
+   - [菜单栏](../../manual/studio/window/menu_bar/zh.md)
+- UI控件
+   - [按钮](../../manual/studio/widget/button/zh.md)
+   - [复选框](../../manual/studio/widget/checkbox/zh.md)
+   - [精灵](../../manual/studio/widget/sprite/zh.md)
+   - [图片](../../manual/studio/widget/imageview/zh.md)
+   - [数字标签](../../manual/studio/widget/labelatlas/zh.md)
+   - [自定义字体](../../manual/studio/widget/labelnmfont/zh.md)
+   - [进度条](../../manual/studio/widget/loadingbar/zh.md)
+   - [滑动条](../../manual/studio/widget/slider/zh.md)
+   - [文本框](../../manual/studio/widget/text/zh.md)
+   - [输入框](../../manual/studio/widget/textfield/zh.md)
+   - [层容器](../../manual/studio/widget/layout/zh.md)
+   - [滚动层容器](../../manual/studio/widget/scrollview/zh.md)
+   - [列表层容器](../../manual/studio/widget/listview/zh.md)
+   - [分页层容器](../../manual/studio/widget/pageview/zh.md)
+   - [通用属性](../../manual/studio/widget/general_property/zh.md)
+- 其他
+   - [获取帮助](../../manual/studio/other/contact_support/zh.md)
+   - [版本](../../manual/studio/other/version/zh.md)
+   - [系统差异](../../manual/studio/other/operating_system_differences/zh.md)
 
 # Cocos Code IDE
 
