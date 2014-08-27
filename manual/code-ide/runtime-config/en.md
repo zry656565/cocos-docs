@@ -1,11 +1,12 @@
 Instructions of project root directory config.json file
 ===
 ---
-The file presents essential information about your game project,complete config before it run.
+This file represents essential information about your game project, it must be configured before running your application.
+
 Structure of the config.json file
 ===
 ---
-The below shows the general structure of the config.json file and every element that it can contain.Each element,along with all of its attributes,is documented in full in a separate file.
+Here shows the general structure with an example of the config.json file.
 
 	{
 	
@@ -36,74 +37,85 @@ The below shows the general structure of the config.json file and every element 
     ]
 	}
 ---	
+
 ##"init_cfg"##
 
 ####"isLandscape"####
-bool
 
-Screen orientation,if true，orientation is "landscape" else is "portrait"
+boolean
+
+Screen orientation, if true，the application orientation will be "landscape", otherwise it will be "portrait"
 
 ####"entry"####
+
 string
 
-entry script file relative to the project root directory,such as:"src/main.lua"
+The entry script file, the path is relative to the project root directory, e.g.: "src/main.lua"
 
 ####"name"####
 string
 
-project name，show at window's tile
+Project name which will be shown as the application window's title
 
-**Note:This argument valid only in desktop system**
+**Note: This configuration is only valid for desktop system**
+
 ####"width"####
+
 unsigned int
 
-window's width
+Application window's width
 
-**Note:This argument valid only in desktop system**
+**Note: This configuration is only valid for desktop system**
 
 ####"height"####
+
 unsigned int
 
-window's height
+Application window's height
 
-**Note:This argument valid only in desktop system**
+**Note: This configuration is only valid for desktop system**
 
 ####"consolePort"####
+
 unsigned int
 
-console's port
+Console's port number
 
-**Note:This argument valid only in desktop system**
+**Note: This configuration is only valid for desktop system**
 
 ####"debugPort"####
+
 unsigned int
 
-port for debug
+The port number for debugging
 
-**Note:This argument valid only in desktop system**
+**Note: This configuration is only valid for desktop system**
 
-###Note: All port configurations are only available for desktop systems###
+###Note: All port configurations are only valid for desktop systems###
 
 ---
 ##simulator_screen_size##
-Configure multiple resolution size, you can add or delete item by yourself，those items show in runtime view’s menu
 
-**Note:This section valid only in desktop system**
+Configure multiple resolution sizes for different simulators, you can add or delete items in runtime's view menu
+
+**Note: This configuration is only valid for desktop system**
 
 ####"title"####
+
 string
 
-menu tile. such as: "iPhone 3Gs (480x320)", 
+The simulator title, e.g.: "iPhone 3Gs (480x320)"
 
 ####"width"####
+
 unsigned int
 
-window's width
+The designed resolution width
 
 ####"height"####
+
 unsigned int
 
-window's height
-
+The designed resolution height
 
 ---
