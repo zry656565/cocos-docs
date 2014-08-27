@@ -1,4 +1,4 @@
-# CocoStudio
+# Cocos Studio
 
 - 开始
    - [CocoStudio介绍](../../manual/studio/start/about_cocostudio/zh.md)
