@@ -44,6 +44,7 @@
 - [瓦片地图](../../../manual/framework/native/v3/tiled-map/zh.md)
 - [Fast TileMap](../../../manual/framework/native/v3/fast-tilemap/zh.md)
 - [多分辨率支持策略和原理](../../../manual/framework/native/v3/multi-resolution/zh.md)
+- [节点剪裁](../../../manual/framework/native/v3/ClippingNode/zh.md)
 
 ## 数据结构
 - 3.0数据结构
