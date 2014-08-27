@@ -10,7 +10,7 @@
 ## 开发环境
 - Mac环境搭建 
 	- [如何在iPhone模拟器上运行Cocos2d-x HelloWorld项目-v2.x](../../../manual/framework/native/v2/getting-started/setting-up-development-environments/mac-osx-environment-setup/how-to-run-helloworld-of-cocos2d-x-on-iphone-emulator/zh.md)
-	- [Mac OSX平台搭建Android开发环境-v2.x](../../../manual/framework/native/v2/getting-started/setting-up-development-environments/mac-osx-environment-setup/setting-up-android-development-environment-on-mac-osx/zh.md)
+	- [Mac OS X平台搭建Android开发环境-v2.x](../../../manual/framework/native/v2/getting-started/setting-up-development-environments/mac-osx-environment-setup/setting-up-android-development-environment-on-mac-osx/zh.md)
 	- [如何在Mac下搭建Cocos2d-x iPhone开发环境-v3.x](../../../manual/framework/native/v3/getting-started/setting-up-development-environments-on-mac-with-xcode/zh.md)
 	- [如何在Mac下搭建Android开发环境-v3.x](../../../manual/framework/native/v3/getting-started/setting-up-development-environments-on-mac-with-eclipse/zh.md )
 - windows环境搭建
