@@ -16,7 +16,7 @@
 - [使用Code IDE调试Cocos2d-x JavaScript游戏](../../manual/code-ide/debug-js/zh.md)
 - [使用Code IDE制作可发布的ipa](../../manual/code-ide/package-ios-publish/zh.md)
 - [使用Code IDE制作可以真机调试的ipa](../../manual/code-ide/package-ios-runtime/zh.md)
-- [Lua Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-lua/en.md)
+- [Lua Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-lua/zh.md)
 - [Js Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-js/en.md)
 
 # 其他工具

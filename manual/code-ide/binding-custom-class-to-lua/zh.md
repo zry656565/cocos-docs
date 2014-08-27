@@ -1,6 +1,6 @@
 #如何绑定一个自定义类到Lua Runtime
 
-这个文档主要展示如何在Runtime绑定一个自定义类到Lua。**而不是Lua绑定的细节**.
+这个文档主要展示如何绑定一个自定义类到Lua Runtime。**而不是Lua绑定的细节**.
 
 所有平台的进程都是相似的，为了简化步骤。我们将以Mac Runtime为例阐述。
 
@@ -171,7 +171,7 @@ add .h/.cpp in Xcode project:
 
 ![](./res/addScriptToXcode.png)
 
-### Register it to lua
+### 注册到lua
 
 打开 `lua_cocos2dx_custom.h`, 里面有个全局函数声明 --> `register_all_cocos2dx_custom(lua_State* tolua_S);`
 
