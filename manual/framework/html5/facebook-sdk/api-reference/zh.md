@@ -1,19 +1,19 @@
-#Facebook SDK for Cocos2d-JS API Reference
+#Facebook SDK Alpha for Cocos2d-JS API Reference
 
-##集成Facebook SDK
+##集成Facebook SDK Alpha
 
-开始使用Facebook SDK for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK for Cocos2d-JS集成到你的项目中：
+开始使用Facebook SDK Alpha for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Alpha for Cocos2d-JS集成到你的项目中：
 
 - [Cocos Console使用文档](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)
-- [Android平台上如何集成Facebook SDK for Cocos2d-JS](../facebook-sdk-on-android/zh.md)
-- [iOS平台上如何集成Facebook SDK for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
-- [Web平台上如何集成Facebook SDK for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
+- [Android平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-android/zh.md)
+- [iOS平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
+- [Web平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
 
-##Facebook SDK API列表
+##Facebook SDK Alpha API列表
 
 ###1. FacebookAgent类
 
-FacebookAgent类包装了所有Facebook SDK的API，在Cocos2d-JS中使用Facebook SDK，需要首先获得这个类的实例：
+FacebookAgent类包装了所有Facebook SDK Alpha的API，在Cocos2d-JS中使用Facebook SDK Alpha，需要首先获得这个类的实例：
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -185,7 +185,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 	    type:	function(errorCode, message)
 	- return:	无
 	
-###5. Payments APIs (在Cocos2d-js 3.0rc3版本新增)
+###5. Payments APIs [Beta特性，即将发布]
     
 - **.pay(params, callback)**
 
@@ -216,7 +216,7 @@ var facebook = plugin.FacebookAgent.getInstance();
     
     需要注意的是，支付功能只支持web端。并且只能够在Facebook Canvas应用中测试流程，如果你在开发过程中碰到error 1151，请尝试部署你的游戏到Facebook Canvas应用中测试，因为支付API必须要使用Facebook链接才能生效。
 
-###6. AppEvent APIs (在Cocos2d-js 3.0rc3版本新增)
+###6. AppEvent APIs [Beta特性，即将发布]
 
 - **.publishInstall()**
 
@@ -272,7 +272,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return: none
 
-##Facebook SDK跨平台特性
+##Facebook SDK Alpha跨平台特性
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -294,7 +294,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |payments|Send an pay request|×|×|√|
 |logEvent|Log an app event|√|√|×|
 
-##Facebook SDK使用示例 (based on Cocos2d-JS v3.0 RC2) 
+##Facebook SDK Alpha使用示例 (based on Cocos2d-JS v3.0 RC2) 
 
 ```
 // 获取插件
