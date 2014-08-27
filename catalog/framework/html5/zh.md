@@ -48,5 +48,9 @@
 
 
 ### 打包
+
+- [Cocos2d-JS打包](../../../manual/framework/html5/cocos2d-js-package/zh.md)
+
 ### 发布
+
 ### 第三方库集成

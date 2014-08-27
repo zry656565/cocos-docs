@@ -66,14 +66,13 @@
 		- [Cocos2d-JS v3.0 RC2 릴리스 노트](../manual/framework/html5/release-notes/v3.0rc2/release-note/ko.md)
         - [Cocos2d-JS v3.0 RC2 체인지 로그](../manual/framework/html5/release-notes/v3.0rc2/changelog/ko.md)
         - [Cocos2d-JS v3.0 RC0 업그레이드 가이드](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/ko.md)
-	- 시작하기
-		- [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
-		- [왜 Cocos2d-html5로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/ko.md)
-		- [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/ko.md)
-		- [릴리스 노트 히스토리](../manual/framework/html5/release-notes/en.md)
-		- [Plugin-x 구조](../manual/framework/html5/v3/plugin-x/plugin-x-architecture/en.md)
-		- [안드로이드에서 plugin-x 사용하기](../manual/framework/html5/v3/plugin-x/how-to-use-plugin-x-on-android/en.md)
-		- [안드로이드에서 당신만의 플러그인을 만들어보세요](../manual/framework/html5/v3/plugin-x/how-to-write-your-own-plugin-for-android/en.md)
+        
+	    - 시작하기
+		    - [Cocos2d-JS에 대해서](../manual/framework/html5/ko.md)
+		    - [왜 Cocos2d-html5로 게임을 만들어야 하는가](../manual/framework/html5/v2/cocosh5-advantages/ko.md)
+		    - [Cocos2d-html5 2.2.2의 화면 해상도 지원 정책](../manual/framework/html5/v2/resolution-policy-design/ko.md)
+		    - [릴리스 노트 히스토리](../manual/framework/html5/release-notes/en.md)
+		
         - 버전 3.0에서의 새로운 기능과 API 변화:
             - [New Actions API](../manual/framework/html5/v3/cc-actions/en.md)
             - [New workflow with cocos console](../manual/framework/html5/v2/cocos-console/en.md)
@@ -97,7 +96,21 @@
             - [About cc.log](../manual/framework/html5/v3/cc-log/en.md)
             - [Other change from v2.2.2 to v3.0](../manual/framework/html5/v3/more-change-from-v2-to-v3/en.md)
             - [Bake Layer](../manual/framework/html5/v3/bake-layer/en.md)
-            - [Simplified action APIs](http://cocos2d-x.org/docs/manual/framework/html5/v3/cc-actions/en)		
+            - [Simplified action APIs](http://cocos2d-x.org/docs/manual/framework/html5/v3/cc-actions/en)
+            
+        - Cocos2d-JS의 페이스북 SDK
+            - [페이스북 SDK API 레퍼런스](../manual/framework/html5/facebook-sdk/api-reference/en.md)
+            - [안드로이드에서 Cocos2d-JS의 페이스북 SDK 사용하기](../manual/framework/html5/facebook-sdk/facebook-sdk-on-android/en.md)
+            - [iOS에서 Cocos2d-JS의 페이스북 SDK 사용하기](../manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/en.md)
+            - [웹에서 Cocos2d-JS의 페이스북 SDK 사용하기](../manual/framework/html5/facebook-sdk/facebook-sdk-on-web/en.md)
+                        
+        - 기타 문서
+            - [JSB에서 익스텐션 사용하기(Chinese version)](../manual/framework/html5/jsb/jsb-extension/zh.md)
+            - [안드로이드에서 Plugin-x 사용하기](../manual/framework/html5/jsb/plugin-x/how-to-use-plugin-x-on-android/ko.md)
+            - [Plugin-x 구조](../manual/framework/html5/jsb/plugin-x/plugin-x-architecture/ko.md)
+            - [안드로이드에서 당신만의 플러그인을 만들어보세요](../manual/framework/html5/jsb/plugin-x/how-to-write-your-own-plugin-for-android/ko.md)
+            - [iOS에서 IAP 플러그인 사용하기](../manual/framework/html5/jsb/plugin-x/ios-iap/ko.md)
+
 - Studio
 - 튜토리얼
 	- [CocoStudio로 게임 만들기](../tutorial/studio/parkour-game-with-cocostudio/ko.md)
@@ -128,6 +141,6 @@
 		- [게임오버 로직 및 기타등등](../tutorial/framework/html5/parkour-game-with-javascript/chapter9/en.md)
         - [오디오 효과 추가하기](../tutorial/framework/html5/parkour-game-with-javascript/chapter10/en.md)
 - Cocos Code IDE
-    - Custom runtime
-        - [How to bind a custom class to lua runtime](../manual/code-ide/binding-custom-class-to-lua/en.md)
-        - [How to bind a custom class to js runtime](../manual/code-ide/binding-custom-class-to-js/en.md)		
+    - 커스텀 클래스 바인딩
+        - [LUA 런타임에 C++ 커스텀 클래스를 바인딩하는 법](../manual/code-ide/binding-custom-class-to-lua/ko.md)
+        - [자바스크립트 런타임에 C++ 커스텀 클래스를 바인딩하는 법](../manual/code-ide/binding-custom-class-to-js/ko.md)		
