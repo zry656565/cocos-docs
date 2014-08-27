@@ -23,6 +23,6 @@ iOS SDK：4.1 & 3.2
 如果有什么问题，欢迎在论坛中发帖告知。
 ## 酷！整个测试样例很快就会出现！
 
-恭喜选择C++！很快你就能在iPhone中用C++编写cocos2d游戏了。
+恭喜选择C++！很快你就能在iPhone中用C++编写Cocos2d游戏了。
 
 ![](./res/helloworld-cocos2d-iphone-cpp.png)

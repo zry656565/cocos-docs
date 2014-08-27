@@ -13,7 +13,7 @@ git clone https://github.com/cocos2d/cocos2d-x.git
 ```
 
 b) 从以下网站下载发行版源代码（稳定）：     
-[http://www.cocos2d-x.org/projects/cocos2d-x/wiki/Download](http://www.cocos2d-x.org/projects/cocos2d-x/wiki/Download)
+[http://cn.cocos2d-x.org/download](http://cn.cocos2d-x.org/download)
 
 ### 1.2 安装Android SDK，使用Eclipse作为集成开发环境
 

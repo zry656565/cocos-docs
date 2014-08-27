@@ -2,7 +2,7 @@
 
 ## 搭建QNX及Cocos2d-x开发环境
 
-1. 从[https://github.com/cocos2d/cocos2d-x](https://github.com/cocos2d/cocos2d-x)下载最新Cocos2d-x引擎，解压至你的文件夹如C:\cocos2d-x。
+1. 从[http://cn.cocos2d-x.org/download](http://cn.cocos2d-x.org/download)下载最新Cocos2d-x引擎，解压至你的文件夹如C:\cocos2d-x。
 2. 从[https://bdsc.webapps.blackberry.com/native/download/](https://github.com/cocos2d/cocos2d-x)下载黑莓NDK及模拟器并安装。
 3. 点击桌面名为“BlackBerry Native SDK for Tablet OS 1.0”的图标启动QNX集成开发环境。
 4. 导入Cocos2d-x项目     
