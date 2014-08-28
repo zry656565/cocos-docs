@@ -1,6 +1,6 @@
-#如何开始一个新的cocos2d-x游戏
+#如何开始一个新的Cocos2d-x游戏
 
-本文档将会向你展示如何使用 [cocos console](https://github.com/cocos2d/cocos2d-console) 创建并运行一个新项目。
+本文档将会向你展示如何使用 [Cocos Console](../../v3/CCConsole/zh.md) 创建并运行一个新项目。
 
 ## 运行时要求
 - Android 2.3+

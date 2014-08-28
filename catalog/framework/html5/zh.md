@@ -7,7 +7,7 @@
 	- [关于Cocos2d-html5](../../../manual/framework/html5/zh.md)
 	- [供NPM使用的Cocos-utils](../../../manual/framework/html5/v2/cocos-utils/zh.md)
 	- [Cocos2d-html5新手入门](../../../manual/framework/html5/v2/getting-started_with-cocos2d-html5/zh.md)
-    - [如何在jsb项目中使用extension](../../../manual/framework/html5/v2/jsb/jsb-extension/zh.md)
+    - [如何在jsb项目中使用extension](../../../manual/framework/html5/jsb/jsb-extension/zh.md)
 	- [历史发布说明](../../../manual/framework/html5/release-notes/zh.md)
 - 初步了解Cocos2d-html5
     - [如何搭建Cocos2d-html5开发调试环境](../../../manual/framework/html5/v2/setup-devenv/zh.md)
@@ -50,7 +50,3 @@
 ### 打包
 
 - [Cocos2d-JS打包](../../../manual/framework/html5/cocos2d-js-package/zh.md)
-
-### 发布
-
-### 第三方库集成

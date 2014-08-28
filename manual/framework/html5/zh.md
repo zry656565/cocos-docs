@@ -11,7 +11,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 ## 下载与API索引
 
 - [Cocos2d-JS github仓库](http://github.com/cocos2d/cocos2d-js/)
-- [Cocos2d-JS官方下载链接](http://www.cocos2d-x.org/download)
+- [Cocos2d-JS官方下载链接](http://cn.cocos2d-x.org/download)
 - [在线API索引](http://www.cocos2d-x.org/wiki/Reference)
 - [下载API索引](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3rc2-API.zip)
 - [在线测试例](http://cocos2d-x.org/js-tests/)
@@ -80,7 +80,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 	- [10. 添加游戏音频](../../../tutorial/framework/html5/parkour-game-with-javascript-v3.0/chapter10/en.md)
 
 - Cocos2d-html5 v3.0的新功能
-    - [使用cocos console管理工程](./v2/cocos-console/zh.md)
+    - [使用Cocos Console管理工程](./v2/cocos-console/zh.md)
     - [资源管理器](./v3/assets-manager/zh.md)
     - [事件管理器](./v3/eventManager/zh.md)
     - [属性风格API](./v3/getter-setter-api/zh.md)

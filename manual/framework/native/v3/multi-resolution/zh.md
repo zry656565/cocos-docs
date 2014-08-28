@@ -26,7 +26,7 @@
 
 从Cocos2d-x 2.1.3开始，新加入了两种ResolutionPolicy（kResolutionFixedHeight， kResolutionFixedWidth），共5中模式。
 
-官方分别在[Multi_resolution_support](http://www.cocos2d-x.org/projects/Cocos2d-x/wiki/Multi_resolution_support) 和 [Mechanism_of_loading_resources](http://www.cocos2d-x.org/projects/Cocos2d-x/wiki/Mechanism_of_loading_resources)有介绍。
+官方分别在[Multi_resolution_support](../../v2/graphic/multi-resolution/zh.md) 和 [Mechanism_of_loading_resources](http://www.cocos2d-x.org/projects/Cocos2d-x/wiki/Mechanism_of_loading_resources)有介绍。
 
 本文从引擎使用者角度分析Cocos2d-x的多分辨率适配技术。
 
