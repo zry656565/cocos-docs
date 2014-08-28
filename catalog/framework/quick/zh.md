@@ -15,12 +15,12 @@
 ###创建和导入项目
 
 - [创建新项目](../../../manual/framework/quick/how-to/get_started_create_new_project/zh.md)
-- [使用mac工程和win32工程](../../../manual/framework/quick/how-to/use-project-mac-and-win/zh.md)
+- [使用Mac工程和win32工程](../../../manual/framework/quick/how-to/use-project-mac-and-win/zh.md)
 
 ###后期开发和第三方集成
-- [在QUICK中集成第三方SDK](../../../manual/framework/quick/how-to/integration_third_party_sdk/zh.md)
+- [在Quick中集成第三方SDK](../../../manual/framework/quick/how-to/integration_third_party_sdk/zh.md)
 - [升级到 2.2.3](../../../manual/framework/quick/how-to/upgrade-to-2_2_3/zh.md)
-- [quick 事件参考](../../../manual/framework/quick/reference/events-in-quick/zh.md)
+- [Quick事件参考](../../../manual/framework/quick/reference/events-in-quick/zh.md)
 - [用 Eclipse LDT 调试 Quick-Cocos2d-x 游戏](../../../manual/framework/quick/how-to/debug_with_eclipse_ldt/zh.md)
 
 ### 引擎分析

@@ -22,7 +22,13 @@
 [点此进入](../manual/framework/html5/zh.md)
 
 ## 3. Quick
-暂无内容
+本章适合使用Quick-Cocos2d-x开发游戏的程序员参考和学习。包含以下内容：
+
+- 开发环境
+- 编译方式
+- 创建和导入项目
+- 后期开发和第三方集成
+- 引擎分析
 
 [点此进入](framework/quick/zh.md)
 
@@ -35,7 +41,18 @@
 
 [点此进入](studio/zh.md)
 
-## 5. wiki中文文档
+## 5. Code IDE
+
+本章适用于需要使用Code IDE开发游戏的开发者参考和学习。本章包括以下内容：
+
+- Code IDE 简介
+- Cocos Code IDE入门指南
+- 使用Code IDE调试Cocos2d-x Lua游戏
+- 使用Code IDE调试Cocos2d-x JavaScript游戏
+
+[点此进入](code-ide/zh.md)
+
+## 6. wiki中文文档
 
 Cocos2d-x 英文[wiki](http://cocos2d-x.org/wiki)的中文翻译，官方wiki是Cocos2d-x开发人员在开发过程中积累的开发文档，系统性较弱，但更全面。
 

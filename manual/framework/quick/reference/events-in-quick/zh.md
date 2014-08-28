@@ -1,6 +1,6 @@
-# quick 事件参考
+# Quick 事件参考
 
-quick 修改后的 Cocos2d-x 提供一些底层事件支持。这些事件按照功能和用途分为：
+Quick 修改后的 Cocos2d-x 提供一些底层事件支持。这些事件按照功能和用途分为：
 
 -   节点事件 (cc.NODE_EVENT)
 -   帧事件 (cc.NODE_ENTER_FRAME_EVENT)
@@ -8,9 +8,6 @@ quick 修改后的 Cocos2d-x 提供一些底层事件支持。这些事件按照
 -   键盘事件
 -   重力感应事件
 -   应用程序事件
-
-~
-
 
 ### 节点事件 (cc.NODE_EVENT)
 
@@ -37,7 +34,6 @@ event 属性：
     -   **exitTransitionStart**: 退出一个现有场景时的特效开始
     -   **cleanup**: Node 被完全清理并从内存删除时
 
-<br />
 
 下面的示例代码演示了 5 种事件类型的出现时机：
 
@@ -119,7 +115,7 @@ Cocos2d: [3.1754] node in scene [scene1] NODE_EVENT: cleanup
 
 <br />
 
-为了简化使用，quick 为 cc.Node 封装了几个现成的方法，开发者如果从 Node（或继承类）创建自己的 Lua 类，那么可以直接覆盖这几个方法：
+为了简化使用，Quick 为 cc.Node 封装了几个现成的方法，开发者如果从 Node（或继承类）创建自己的 Lua 类，那么可以直接覆盖这几个方法：
 
 ```lua
 

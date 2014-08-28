@@ -3,9 +3,9 @@
 
 ## 写在前面的话
 
-对于cocos2d-x开发者而言，游戏对多平台的支持是一个刚需，一般而言需要支持Android和iOS。然而，在开发过程中，android平台遇到的一系列问题着实让人头疼，本文以集成新浪微博分享SDK为例，从3个方面讲解Cocos2d-x在Android平台开发遇到的问题和解决方法。
+对于cocos2d-x开发者而言，游戏对多平台的支持是一个刚需，一般而言需要支持Android和iOS。然而，在开发过程中，Android平台遇到的一系列问题着实让人头疼，本文以集成新浪微博分享SDK为例，从3个方面讲解Cocos2d-x在Android平台开发遇到的问题和解决方法。
 
-ps. 如果你是新手，请先阅读[Cocos2d-x的Android环境搭建]()
+ps. 如果你是新手，请先阅读[Cocos2d-x的Android环境搭建](../../getting-started/setting-up-development-environments/windows-7-environment-setup/how-to-set-up-the-android-cocos2d-x-development-environment-on-windows7/zh.md)
 
 ## 关于新浪SDK
 

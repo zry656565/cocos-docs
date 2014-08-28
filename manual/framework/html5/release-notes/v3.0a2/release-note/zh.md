@@ -26,4 +26,4 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 
 ### 详细更改 ###
 
-更详细的API改动可以参见[Cocos2d-JS v3.0 alpha2改动说明](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0a2/changelog/en)以及[Cocos2d-JS v3.0 alpha2升级指南](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0a/upgrade-guide/zh)。
+更详细的API改动可以参见[Cocos2d-JS v3.0 alpha2改动说明](../changelog/en.md)以及[Cocos2d-JS v3.0 alpha2升级指南](../../v3.0a/upgrade-guide/zh.md)。
