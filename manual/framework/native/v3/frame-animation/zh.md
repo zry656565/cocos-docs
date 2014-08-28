@@ -89,4 +89,4 @@ void releaseCaches()
 }
 ```
 
-值得注意的是清理的顺序，我们推荐先清理动画缓存，然后清理精[灵帧缓存](https://github.com/chukong/cocos-docs/blob/master/manual/framework/native/v3/spriteframe-cache/zh.md)，最后是[纹理缓存](https://github.com/chukong/cocos-docs/blob/master/manual/framework/native/v3/texture-cache/zh.md)。按照引用层级由高到低，以保证释放引用有效。
+值得注意的是清理的顺序，我们推荐先清理动画缓存，然后清理精[灵帧缓存](../spriteframe-cache/zh.md)，最后是[纹理缓存](../texture-cache/zh.md)。按照引用层级由高到低，以保证释放引用有效。

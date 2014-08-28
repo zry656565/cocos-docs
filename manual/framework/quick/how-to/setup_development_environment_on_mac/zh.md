@@ -12,7 +12,7 @@
 
 ## Step 1: 下载 Quick-Cocos2d-x 源代码 ##
 
-访问 [https://github.com/chukong/quick-cocos2d-x/releases](https://github.com/chukong/quick-cocos2d-x/releases) 下载最新版 quick 源代码。
+访问 [https://github.com/chukong/quick-cocos2d-x/releases](https://github.com/chukong/quick-cocos2d-x/releases) 下载最新版 Quick 源代码。
 
 Quick-Cocos2d-x 目录的放置有一定要求 ** ：
 
