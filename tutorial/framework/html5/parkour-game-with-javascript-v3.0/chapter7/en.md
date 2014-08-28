@@ -158,13 +158,6 @@ We should move the same *delta* movement of *this.gameLayer* which contains back
         // chipmunk step
         this.space.step(dt);
 
-        // Simulation cpSpaceAddPostStepCallback
-        for(var i = 0; i < this.shapesToRemove.length; i++) {
-            var shape = this.shapesToRemove[i];
-            this.gameLayer.getChildByTag(TagOfLayer.background).removeObjectByShape(shape);
-        }
-        this.shapesToRemove = [];
-
         var animationLayer = this.gameLayer.getChildByTag(TagOfLayer.Animation);
         var eyeX = animationLayer.getEyeX();
 

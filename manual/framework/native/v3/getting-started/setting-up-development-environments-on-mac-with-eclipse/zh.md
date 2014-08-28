@@ -2,7 +2,7 @@
 
 #准备工作
 
-到Cocos2d-x官方网站下载最新版本[v3.2alpha0](http://cocos2d-x.org/download)
+到Cocos2d-x官方网站下载最新版本[v3.2alpha0](http://cn.cocos2d-x.org/download)
 
 到Android官方网站下载[Android SDK](http://developer.android.com/sdk/index.html)
 

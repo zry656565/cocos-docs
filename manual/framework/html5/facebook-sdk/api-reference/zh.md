@@ -1,19 +1,19 @@
-#Facebook SDK for Cocos2d-JS API Reference
+#Facebook SDK Alpha for Cocos2d-JS API Reference
 
-##集成Facebook SDK
+##集成Facebook SDK Alpha
 
-开始使用Facebook SDK for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK for Cocos2d-JS集成到你的项目中：
+开始使用Facebook SDK Alpha for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Alpha for Cocos2d-JS集成到你的项目中：
 
 - [Cocos Console使用文档](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)
-- [Android平台上如何集成Facebook SDK for Cocos2d-JS](../facebook-sdk-on-android/zh.md)
-- [iOS平台上如何集成Facebook SDK for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
-- [Web平台上如何集成Facebook SDK for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
+- [Android平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-android/zh.md)
+- [iOS平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
+- [Web平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
 
-##Facebook SDK API列表
+##Facebook SDK Alpha API列表
 
 ###1. FacebookAgent类
 
-FacebookAgent类包装了所有Facebook SDK的API，在Cocos2d-JS中使用Facebook SDK，需要首先获得这个类的实例：
+FacebookAgent类包装了所有Facebook SDK Alpha的API，在Cocos2d-JS中使用Facebook SDK Alpha，需要首先获得这个类的实例：
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -183,8 +183,39 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json对象<br/>
 	    type:	function(errorCode, message)
 	- return:	无
+	
+###5. Payments APIs [Beta特性，即将发布]
+    
+- **.pay(params, callback)**
 
-###5. AppEvent APIs
+    发起一条支付请求，关于支付更详细的信息，请参考[Facebook官方Payments文档](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    
+    参数和返回值:
+    
+    - **params**:   请求所包含的参数，该参数根据不同的支付请求会有比较大的差别，请参考[Facebook Pay Dialog文档](https://developers.facebook.com/docs/payments/reference/paydialog#properties)<br />
+        type:   Object
+    - **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+        type:	function(errorCode, message)<br />
+        关于成功后的message回传的参数，请参考[Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    - return:    无
+    
+    参数细节:
+    
+    - **params**参数详解:
+    
+    ```
+        1. product       : 用户即将购买的产品对象URL. 
+        2. quantity      : [可选]用户即将购买的金额。
+        3. quantity_min  : [可选]用户购买的最低数量。
+        4. quantity_max  : [可选]用户购买的最高数量。
+        5. request_id    : [可选]开发人员定义的交易唯一标识符。
+        6. pricepoint_id : [可选]用于设置快捷的移动支付流程。
+        7. test_currency : [可选]此参数可调试和测试你的执行力的对话框。
+    ```
+    
+    需要注意的是，支付功能只支持web端。并且只能够在Facebook Canvas应用中测试流程，如果你在开发过程中碰到error 1151，请尝试部署你的游戏到Facebook Canvas应用中测试，因为支付API必须要使用Facebook链接才能生效。
+
+###6. AppEvent APIs [Beta特性，即将发布]
 
 - **.publishInstall()**
 
@@ -240,7 +271,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return: none
 
-##Facebook SDK跨平台特性
+##Facebook SDK Alpha跨平台特性
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -259,9 +290,10 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
 |publishInstall|Send an install message to Facebook|√|√|×|
+|payments|Send an pay request|×|×|√|
 |logEvent|Log an app event|√|√|×|
 
-##Facebook SDK使用示例 (based on Cocos2d-JS v3.0 RC2) 
+##Facebook SDK Alpha使用示例 (based on Cocos2d-JS v3.0 RC2) 
 
 ```
 // 获取插件

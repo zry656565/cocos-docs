@@ -45,4 +45,6 @@ Cocos2d-JS是一个开源的2D游戏框架，根据[MIT](http://en.wikipedia.org
 - [水果攻击](http://www.cocos2d-x.org/html5-samples/samples/games/FruitAttack/index.html)
 - [测试案例](http://www.cocos2d-x.org/html5-samples/samples/tests/index.html)
 - [电视盒子 UI 例子](http://cocos2d-x.org/tvbox/OttDemo/index.html)
-- [Facebook的朋友粉碎例子](https://apps.facebook.com/cocossmashfriend/) testID： sijie.fu@chukong-inc.com Passward： chukong1302cocos
+- [Facebook的朋友粉碎例子](https://apps.facebook.com/cocossmashfriend/) 
+
+testID： sijie.fu@chukong-inc.com Passward： chukong1302cocos

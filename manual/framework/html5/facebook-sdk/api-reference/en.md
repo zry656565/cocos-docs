@@ -1,19 +1,19 @@
-#Facebook SDK for Cocos2d-JS API Reference
+#Facebook SDK Alpha for Cocos2d-JS API Reference
 
 ##Getting start
 
-Before using Facebook SDK, you may need to integrate Facebook SDK for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
+Before using Facebook SDK Alpha, you may need to integrate Facebook SDK Alpha for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
 
 - [Cocos Console usage document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/en)
-- [Integrate the Facebook SDK for Cocos2d-JS on Android](../facebook-sdk-on-android/en.md)
-- [Integrate the Facebook SDK for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
-- [Integrate the Facebook SDK for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
+- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](../facebook-sdk-on-android/en.md)
+- [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
+- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
 
 ##API list
 
 ###1. FacebookAgent class
 
-FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
+FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK Alpha for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -184,8 +184,41 @@ var facebook = plugin.FacebookAgent.getInstance();
 	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
+	
+###5. Payments APIs [Beta feature, comming soon]
+    
+- **.pay(params, callback)**
 
-###5. AppEvent APIs
+    Send a payment request, more details about Payments API can be found in the [Facebook Official Payments Document](https://developers.facebook.com/docs/payments/local-currency-payments-guide)
+    
+    Parameters and return value:
+    
+    - **params**:   The parameter for the request<br />
+        type:   Object
+    - **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+        type:	function(errorCode, message)<br />
+        Note:	After the success of the callback parameter, Please refer to [Pay Dialog Return Data](https://developers.facebook.com/docs/payments/reference/paydialog#return-data)
+    - return:	none
+        
+    Details of parameter:
+    
+    - **params** contents:
+    
+    ```
+    	1. product       : The URL of your og:product object that the user is looking to purchase. 
+    	2. quantity      : [Optional]The amount of this item that user is looking to purchase.
+    	3. quantity_min  : [Optional]The minimum quantity of the item that user is able to purchase.
+    	4. quantity_max  : [Optional]The maximum quantity of the item that user is able to purchase.
+    	5. request_id    : [Optional]The developer defined unique identifier for this transaction.
+    	6. pricepoint_id : [Optional]Used to shortcut a mobile payer directly to the mobile purchase flow at a given price point.
+    	7. test_currency : [Optional]This parameter can be used during debugging and testing your implementation to force the dialog to use a specific currency rather than the current user's preferred currency.
+    ```
+    
+        Parameters vary greatly for different interface, please refer to [Facebook Pay Dialog Document](https://developers.facebook.com/docs/payments/reference/paydialog#properties)
+ 
+    Please note that payment API is only supported on Web and can only be tested with Facebook Canvas Applications. if you want to use this feature, you must deploy your game to a Facebook Canvas Application.
+
+###6. AppEvent APIs [Beta feature, comming soon]
 
 - **.publishInstall()**
 
@@ -241,7 +274,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return:	none
 
-##Facebook SDK Features
+##Facebook SDK Alpha Features
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -259,10 +292,11 @@ var facebook = plugin.FacebookAgent.getInstance();
 |dialog - message_photo|Send a photo with Facebook built in messenger dialog|√|√|×|
 |dialog - apprequests|Send a app request with Facebook built in dialog|√|√|√|
 |request|Request a open graph API|√|√|√|
+|payments|Send an pay request|×|×|√|
 |publishInstall|Send an install message to Facebook|√|√|×|
 |logEvent|Log an app event|√|√|×|
 
-##Sample code of Facebook SDK
+##Sample code of Facebook SDK Alpha
 
 ```
 // Get FacebookAgent

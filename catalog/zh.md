@@ -17,12 +17,18 @@
 - Cocos2d-JS的演变过程
 - Cocos2d-JS制作游戏教程
 - 使用Cocos2d-JS开发后期和第三方集成方式
-- Facebook SDK for Cocos2d-JS集成和使用方式
+- Facebook SDK Alpha for Cocos2d-JS集成和使用方式
 
 [点此进入](../manual/framework/html5/zh.md)
 
 ## 3. Quick
-暂无内容
+本章适合使用Quick-Cocos2d-x开发游戏的程序员参考和学习。包含以下内容：
+
+- 开发环境
+- 编译方式
+- 创建和导入项目
+- 后期开发和第三方集成
+- 引擎分析
 
 [点此进入](framework/quick/zh.md)
 

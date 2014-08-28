@@ -10,7 +10,7 @@ session机制是一种服务器端的机制，服务器使用一种类似于散�
 
 session，简而言之就是在服务器上保存用户操作的历史信息。服务器使用session id来标识session，session id由服务器负责产生，保证随机性与唯一性，相当于一个随机密钥，避免在握手或传输中暴露用户真实密码。但该方式下，仍然需要将发送请求的客户端与session进行对应，所以可以借助cookie机制来获取客户端的标识（即session id），也可以通过GET方式将id提交给服务器。
 
-* session的原理图
+* session的原理图：
 
 	![](res/session.png)
 
