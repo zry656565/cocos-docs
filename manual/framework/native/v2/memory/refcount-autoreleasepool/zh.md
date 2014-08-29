@@ -6,7 +6,7 @@
 
 引用计数是c/c++项目中一种古老的内存管理方式。当我8年前在研究一款名叫TCPMP的开源项目的时候，引用计数就已经有了。 
 
-IOS SDK把这项计数封装到了NSAutoreleasePool中。所以我们也在Cocos2d-x中克隆了一套CCAutoreleasePool。两者的用法基本上一样，所以假如你没有涉及过ios开发，你可以看看苹果官方文档NSAutoreleasePool Class Reference。 
+iOS SDK把这项计数封装到了NSAutoreleasePool中。所以我们也在Cocos2d-x中克隆了一套CCAutoreleasePool。两者的用法基本上一样，所以假如你没有涉及过ios开发，你可以看看苹果官方文档NSAutoreleasePool Class Reference。 
 
 ## CCAutoreleasePool
 

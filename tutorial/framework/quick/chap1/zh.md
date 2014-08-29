@@ -7,7 +7,7 @@ Quick-Coco2d-x是Cocos2d-x在Lua上的增强和扩展版本，廖宇雷廖大觉
 Quick-Coco2d-x的底层基本是沿袭Cocos2d-x的那套，所以可移植性也差不多，常用的Mac,iOS,Windows,Android也是支持的，如果原来开发过Android或者iOS游戏的开发者可以无视`2.2`和`2.3`两节。而如果第一次来做Android或者iOS游戏开发的话，咱们还是一步一步来，毕竟东西也不是太多，如果我写的不是太清楚的地方，也欢迎各位批评和指正。
 
 ## 2.1 获取Quick-Coco2d-x的代码
-首先，自然是要获取Quick-Coco2d-x(以下简称quick)的代码，quick的代码被廖大分别托管在github和osc上，osc的代码貌似现在是已经停止更新了，github在quick被触控收购后已经转移到触控的仓库中，地址是：
+首先，自然是要获取Quick-Coco2d-x(以下简称Quick)的代码，Quick的代码被廖大分别托管在github和osc上，osc的代码貌似现在是已经停止更新了，github在quick被触控收购后已经转移到触控的仓库中，地址是：
 
 	https://github.com/chukong/Quick-Coco2d-x
 

@@ -92,7 +92,7 @@ cocos new HelloWorld -p com.your_company.HelloWorld -l cpp
 按照上面的操作，我们新建了一个Cocos2d-x v3.x的HelloWorld工程。
 
 工程创建好后，让我们来完成httpClient的post请求玩家登陆，和每日登陆领取金币奖励的客户端网络处理。
- 在上一节[如何使用httpClient](http://cn.cocos2d-x.org/tutorial/show?id=777)中已经介绍了httpClient的用法。 下面我们直接进入正题，开始编写代码
+ 在上一节[如何使用httpClient](../httpclient/zh.md)中已经介绍了httpClient的用法。 下面我们直接进入正题，开始编写代码
 
 首先，在HelloWorldScene.cpp文件中加入下面的实现。
 引入头文件和命名空间

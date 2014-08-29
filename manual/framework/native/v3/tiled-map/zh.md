@@ -14,7 +14,7 @@ Cocos2d-x支持由瓦片地图编辑器Tiled Map Editor制作并保存为TMX格�
 
 如何使用Tiled工具建立地图可以参考以下文章：
 
-[如何使用cocos2dx3.0制作基于tilemap的游戏](https://github.com/chukong/cocos-docs/blob/master/tutorial/framework/native/how-to-make-a-tile-based-game-with-cocos2d/part1/zh.md)
+[如何使用Cocos2dx3.0制作基于tilemap的游戏](http://cn.cocos2d-x.org/tutorial/show?id=1205)
 
 ###地图方向
 

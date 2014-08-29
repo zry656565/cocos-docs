@@ -4,8 +4,8 @@
 
 ##### 使用 QtCreator 编译
 
-1. mac: 建议使用 [Qt 5.3.0 ][1] 版本, Qt 5.0, 5.1, 5.2 版本的 QTextBrowser 初始化很慢.
-2. windows: 推荐使用 [Qt 5.3.0 msvc2010 opengl 32bit][2] 或者 Qt 5.2 版本,
+1. Mac: 建议使用 [Qt 5.3.0 ][1] 版本, Qt 5.0, 5.1, 5.2 版本的 QTextBrowser 初始化很慢.
+2. Windows: 推荐使用 [Qt 5.3.0 msvc2010 opengl 32bit][2] 或者 Qt 5.2 版本,
 
 
 打开 $QUICK_COCOS2DX_ROOT/player/quick-x.pro & 编译 (ctrl+b / command+b)
