@@ -45,7 +45,7 @@ When you have a class whose instance requires frequent creation and deletion, th
     }
     MySprite.reCreate = function (f1, f2, f3) {
         var pool = cc.pool;
-        if (pool.hasObj(MySprite)) return pool.getFromPool(MySprite, f1, f2, f3);
+        if (pool.hasObject(MySprite)) return pool.getFromPool(MySprite, f1, f2, f3);
         return  MySprite.create(f1, f2, f3);
     }
     ```
@@ -69,13 +69,13 @@ When you have a class whose instance requires frequent creation and deletion, th
 4. **Check whether there is an object available**
 
     ```
-    var exist = cc.pool.hasObj("MySprite");
+    var exist = cc.pool.hasObject("MySprite");
     ```
 
 5. **Remove an object from `cc.pool`**
 
     ```
-    cc.pool.removeObj(object);
+    cc.pool.removeObject(object);
     ```
 
 6. **Drain the pool**

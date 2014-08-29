@@ -39,4 +39,4 @@
 - [Cocos2d-x纹理动作及关数等编辑器](../../manual/framework/native/v2/tools-and-editors/editors-for-cocos2d-x-texturetilemapparticleactionlevel-etc/zh.md)
 - [TexturePacker](../../manual/framework/native/v2/tools-and-editors/texturepacker/zh.md)
 	- [Cocos2d-x里如何用TexturePacker和像素格式来优化spritesheet](../../tutorial/framework/native/how-to-use-texturepacker-to-optimize-the-spritesheet/zh.md)
-	- [如何在cocos2d里面使用动画和spritesheet](../../tutorial/framework/native/how-to-use-animations-and-spritesheets/zh.md)
+	- [如何在Cocos2d里面使用动画和spritesheet](../../tutorial/framework/native/how-to-use-animations-and-spritesheets/zh.md)
