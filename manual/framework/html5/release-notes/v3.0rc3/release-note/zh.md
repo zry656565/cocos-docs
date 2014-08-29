@@ -29,6 +29,13 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 
 Cocos2d-JS v3.0 RC3是为了v3.0 Final版的发布所做的备选版本，全部功能和代码已经合拢。
 
+## 其他信息
+
+关于JSB编译环境，还有一些限制条件需要满足：
+
+- [Android编译] NDK版本必须使用r9d
+- [iOS编译] Xcode版本必须在5.1以上
+
 ## 详细更改
 
 更详细的API改动可以参见:
@@ -49,14 +56,7 @@ Cocos2d-JS v3.0 RC3是为了v3.0 Final版的发布所做的备选版本，全部
 - Cocos2d-JS v3.0 RC3兼容Cocos Code IDE v1.0.0 RC1
 - Cocos2d-JS v3.0 RC3兼容Cocos Studio v1.2 - v1.5.0.1
 
-## 其他信息
-
 如果遇到任何问题，你都可以向Cocos2d-JS开发者社区寻求帮助： 
 
 - [官方论坛](http://discuss.cocos2d-x.org/category/javascript)
 - [文档目录](http://cocos2d-x.org/docs/manual/framework/html5/zh)
-
-关于JSB编译环境，还有一些限制条件需要满足：
-
-- [Android编译] NDK版本必须使用r9d
-- [iOS编译] Xcode版本必须在5.1以上

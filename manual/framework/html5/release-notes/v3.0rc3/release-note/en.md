@@ -28,6 +28,13 @@ For more informations please see [Cocos2d-JS github site](https://github.com/coc
 
 Cocos2d-JS v3.0 RC3 is a candidate release version for v3.0 Final, all features have been added and all known important issues have been fixed.
 
+## Notice
+
+For JSB build, there are some restrictions :
+
+- [Android build] NDK version must be between r9d
+- [iOS build] Xcode version must be 5.1 +
+
 ## More information
 
 Read more about all the features and bug fixes
@@ -48,14 +55,7 @@ Read more about all the features and bug fixes
 - Cocos2d-JS v3.0 RC3 is compatible with Cocos Code IDE v1.0.0 RC1
 - Cocos2d-JS v3.0 RC3 is compatible with Cocos Studio v1.2 - v1.5.0.1
 
-## Notice
-
 If you met any problems, please ask for help from the community : 
 
 - [Online forum](http://discuss.cocos2d-x.org/category/javascript)
 - [Document root](http://cocos2d-x.org/docs/manual/framework/html5/en)
-
-For JSB build, there are some restrictions :
-
-- [Android build] NDK version must be between r9d
-- [iOS build] Xcode version must be 5.1 +
