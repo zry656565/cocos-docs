@@ -23,7 +23,7 @@ For more informations please see [Cocos2d-JS github site](https://github.com/coc
 * Facebook SDK Beta version is released with Cocos2d-JS v3.0 RC3, the parameters for callback functions are unified for all platform. New payment API, AppEvent APIs have also been added to complete the Facebook SDK.
 * Greatly improved inline comments for API reference documents.
 * Fixed all important known issues for preparing the final release.
-* Unified all know incompatible issue between JSB and Html5 engine.
+* Unified all know incompatible issue between JSB and html5 engine.
 * Unified SpiderMonkey's 32bit and 64bit library to support Xcode 6.
 
 Cocos2d-JS v3.0 RC3 is a candidate release version for v3.0 Final, all features have been added and all known important issues have been fixed.
