@@ -44,7 +44,7 @@
     }
     MySprite.reCreate = function (f1, f2, f3) {
         var pool = cc.pool;
-        if (pool.hasObj(MySprite)) return pool.getFromPool(MySprite, f1, f2, f3);
+        if (pool.hasObject(MySprite)) return pool.getFromPool(MySprite, f1, f2, f3);
         return  MySprite.create(f1, f2, f3);
     }
     ```
@@ -68,7 +68,7 @@
 4. **判断回收池中是否有可用对象**
 
     ```
-    var exist = cc.pool.hasObj("MySprite");
+    var exist = cc.pool.hasObject("MySprite");
     ```
 
     该方法用于查找回收池中是否存在`MySprite`类的可回收对象。
@@ -76,7 +76,7 @@
 5. **删除回收池中的某个对象**
 
     ```
-    cc.pool.removeObj(object);
+    cc.pool.removeObject(object);
     ```
 
     将你要删除的对象传入，该对象将会从回收池删除。
