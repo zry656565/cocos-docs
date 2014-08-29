@@ -5,7 +5,7 @@
 Before using Facebook SDK Alpha, you may need to integrate Facebook SDK Alpha for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
 
 - [Cocos Console usage document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/en)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](../facebook-sdk-on-android/rc3_en.md) | [ver. 3.0RC2](../facebook-sdk-on-android/en.md)
+- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](../facebook-sdk-on-android/rc3_en.md)
 - [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
 - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
 
