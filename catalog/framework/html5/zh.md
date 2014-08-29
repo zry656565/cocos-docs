@@ -34,15 +34,10 @@
     - [cc.FileUtils的移除](../../../manual/framework/html5/v3/cc-fileutils/zh.md)
     - [cc.log的改造](../../../manual/framework/html5/v3/cc-log/zh.md)
     - [其他3.0版的API改动](../../../manual/framework/html5/v3/more-change-from-v2-to-v3/zh.md)
-    - Bake Node（进行中）
-    - 简化action的使用（进行中）
 
 ## 开发后期和第三方集成
 ### 绑定
 
-- 如何实现Javascript和C++的相互调用
-- 如何通过自动绑定把C++接口批量导到Javascript
-- Javascript绑定的远程调试
 - [如何使用iOS游戏内付费IAP(C++篇)](../../../tutorial/framework/html5/jsb-ios-iap/ios-storekit-integration-in-c++/zh.md)
 - [如何使用iOS游戏内付费IAP(JSB篇)](../../../tutorial/framework//html5/jsb-ios-iap/ios-storekit-integration-in-jsb/zh.md)
 
