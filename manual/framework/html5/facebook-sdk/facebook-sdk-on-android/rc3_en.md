@@ -2,7 +2,7 @@
 
 This document will walk you through the integration of Facebook SDK for Cocos2d-JS, from creating app, configuring SDK to the apk packing. 
 
-**Notice**: Facebook SDK for Cocos2d-JS can only work with Cocos2d-JS v3.0 RC2 and later versions. 
+**Notice**: This document can only work with Cocos2d-JS v3.0 RC3 and later versions. 
 
 ##Create an application on Facebook
 

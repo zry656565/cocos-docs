@@ -2,7 +2,7 @@
 
 这篇文档展示如何在Android平台快速地开始使用Facebook SDK for Cocos2d-JS，从创建app，配置SDK到最后的打包成apk。
 
-**注意**: Facebook SDK for Cocos2d-JS需要配合Cocos2d-JS v3.0 RC2及以上版本使用。
+**注意**: 这篇文档适用于Cocos2d-JS v3.0 RC3及以上版本。
 
 ##在Facebook上创建应用
 
