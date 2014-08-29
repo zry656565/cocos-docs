@@ -23,7 +23,7 @@ Cocos2d-JS为不同平台提供了统一的开发体验，无论你为web还是�
 
 * 发布Facebook SDK Beta版，统一了Facbeook SDK在不同平台上的回调函数参数，添加了支付，App是事件等接口，详细文档请参见文后链接。
 * 极大提升API文档的可读性和完整性，降低开发者学习成本。
-* 修复所有遗留的已知bug。
+* 修复遗留的重要bug。
 * 统一所有已知的JSB与Html5引擎不兼容的API。
 * 统一SpiderMonkey的iOS平台32位库和64位库以支持Xcode 6。
 
@@ -38,10 +38,10 @@ Cocos2d-JS v3.0 RC3是为了v3.0 Final版的发布所做的备选版本，全部
 
 ## 新发布文档
 
-- [Facebook SDK Alpha API Reference](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/api-reference/zh.md)
-- [Android平台上如何集成Facebook SDK Alpha for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-android/zh.md)
-- [iOS平台上如何集成Facebook SDK Alpha for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/zh.md)
-- [Web平台上如何集成Facebook SDK Alpha for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-web/zh.md)
+- [Facebook SDK Beta API Reference](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/api-reference/zh.md)
+- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-android/zh.md)
+- [iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/zh.md)
+- [Web平台上如何集成Facebook SDK Beta for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-web/zh.md)
 
 ## 关于Cocos2d家族
 
@@ -58,5 +58,5 @@ Cocos2d-JS v3.0 RC3是为了v3.0 Final版的发布所做的备选版本，全部
 
 关于JSB编译环境，还有一些限制条件需要满足：
 
-- [Android编译] NDK版本必须使用r9b - r9d
+- [Android编译] NDK版本必须使用r9d
 - [iOS编译] Xcode版本必须在5.1以上

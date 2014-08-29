@@ -159,3 +159,20 @@ cc.RenderTexture.beginWithClear(r, g, b, a, depthValue, stencilValue)
 ### 6.7 [JSB]console.log **[RC2新改动]**
 
 绑定`console.log`。
+
+### 6.8 cc.formatStr **[RC3新改动]**
+
+增加格式化字符串函数`cc.formatStr`，使用方法： 
+
+```
+cc.formatStr("a: %d, b: %b", a, b);
+```
+
+### 6.9 修改部分函数名以适应引擎命名风格 **[RC3新改动]**
+
+```
+cc.pool.hasObj                  -> cc.pool.hasObject
+cc.pool.removeObj               -> cc.pool.removeObject
+cc.textureCache.textureForKey   -> cc.textureCache.getTextureForKey
+cc.TMXTilemap#propertiesForGID  -> cc.TMXTilemap#getPropertiesForGID
+```
