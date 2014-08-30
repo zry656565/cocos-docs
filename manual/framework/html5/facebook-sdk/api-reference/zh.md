@@ -1,19 +1,19 @@
-#Facebook SDK Alpha for Cocos2d-JS API Reference
+#Facebook SDK Beta for Cocos2d-JS API Reference
 
-##集成Facebook SDK Alpha
+##集成Facebook SDK Beta
 
-开始使用Facebook SDK Alpha for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Alpha for Cocos2d-JS集成到你的项目中：
+开始使用Facebook SDK Beta for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Beta for Cocos2d-JS集成到你的项目中：
 
 - [Cocos Console使用文档](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)
-- [Android平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-android/rc3_zh.md)
-- [iOS平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
-- [Web平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
+- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-android/rc3_zh.md)
+- [iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
+- [Web平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
 
-##Facebook SDK Alpha API列表
+##Facebook SDK Beta API列表
 
 ###1. FacebookAgent类
 
-FacebookAgent类包装了所有Facebook SDK Alpha的API，在Cocos2d-JS中使用Facebook SDK Alpha，需要首先获得这个类的实例：
+FacebookAgent类包装了所有Facebook SDK Beta的API，在Cocos2d-JS中使用Facebook SDK Beta，需要首先获得这个类的实例：
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -271,7 +271,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return: none
 
-##Facebook SDK Alpha跨平台特性
+##Facebook SDK Beta跨平台特性
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -293,7 +293,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |payments|Send an pay request|×|×|√|
 |logEvent|Log an app event|√|√|×|
 
-##Facebook SDK Alpha使用示例 (based on Cocos2d-JS v3.0 RC2) 
+##Facebook SDK Beta使用示例 (based on Cocos2d-JS v3.0 RC2) 
 
 ```
 // 获取插件

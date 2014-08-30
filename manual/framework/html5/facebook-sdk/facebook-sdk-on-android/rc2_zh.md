@@ -1,8 +1,8 @@
-#Android平台上如何集成Facebook SDK Beta for Cocos2d-JS
+#Android平台上如何集成Facebook SDK Alpha for Cocos2d-JS
 
-这篇文档展示如何在Android平台快速地开始使用Facebook SDK Beta for Cocos2d-JS，从创建app，配置SDK到最后的打包成apk。
+这篇文档展示如何在Android平台快速地开始使用Facebook SDK Alpha for Cocos2d-JS，从创建app，配置SDK到最后的打包成apk。
 
-**注意**: 这篇文档适用于Facebook SDK Beta及以上版本。如果你使用的是Alpha版（随v3.0 RC2发布）请参见[Alpha版集成文档](../facebook-sdk-on-android/rc2_zh.md)
+**注意**: Facebook SDK Alpha for Cocos2d-JS需要配合Cocos2d-JS v3.0 RC2及以上版本使用。
 
 ##在Facebook上创建应用
 
@@ -34,9 +34,9 @@ keytool -exportcert -alias <RELEASE_KEY_ALIAS> -keystore <RELEASE_KEY_PATH> | op
 
 这样就完成了Facebook App的创建。
 
-##添加Facebook SDK Beta到我们的Cocos2d-JS工程
+##添加Facebook SDK Alpha到我们的Cocos2d-JS工程
 
-使用cocos命名行工具创建js工程。然后需要对Android工程做一些修改才可以在js代码中使用Facebook SDK Beta。
+使用cocos命名行工具创建js工程。然后需要对Android工程做一些修改才可以在js代码中使用Facebook SDK Alpha。
 
 **step1**：在frameworks/runtime-src/proj.android/res/values/strings.xml添加app name和app id：
 
@@ -49,11 +49,18 @@ keytool -exportcert -alias <RELEASE_KEY_ALIAS> -keystore <RELEASE_KEY_PATH> | op
 
 ```
 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+<meta-data android:name="PluginUser" android:value="UserFacebook" />
+<meta-data android:name="PluginShare" android:value="ShareFacebook" />
 
 <activity android:name="com.facebook.LoginActivity" />
 <provider android:authorities="com.facebook.app.NativeAppCallContentProvider1450063488603945"
           android:name="com.facebook.NativeAppCallContentProvider"
           android:exported="true"/>
+<receiver android:name="org.cocos2dx.plugin.ShareFacebookBroadcastReceiver">
+    <intent-filter>
+        <action android:name="com.facebook.platform.AppCallResultBroadcast" />
+    </intent-filter>
+</receiver>
 ```
 
 **step3**:在frameworks/runtime-src/proj.android/jni/Android.mk中添加Plugin-x链接库：
@@ -126,7 +133,7 @@ android.library.reference.2=../../js-bindings/cocos2d-x/plugin/plugins/facebook/
 
 ```
 import org.cocos2dx.plugin.PluginWrapper;
-import org.cocos2dx.plugin.FacebookWrapper;
+import com.facebook.Session;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -140,31 +147,32 @@ public class AppActivity extends Cocos2dxActivity {
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
         PluginWrapper.init(this);
         PluginWrapper.setGLSurfaceView(glSurfaceView);
-        FacebookWrapper.onCreate(this);
+
         return glSurfaceView;
     }
 	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	    super.onActivityResult(requestCode, resultCode, data);
-	    FacebookWrapper.onAcitivityResult(requestCode, resultCode, data);
+	    Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
 	}
 	
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 	    super.onSaveInstanceState(outState);
-	    FacebookWrapper.onSaveInstanceState(outState);
+	    Session session = Session.getActiveSession();
+	    Session.saveSession(session, outState);
 	}
 
 	//...
 }
 ```
 
-这样就完成了工程的配置，可以开始使用我们的Facebook SDK Beta来编写支持Facebook的应用了
+这样就完成了工程的配置，可以开始使用我们的Facebook SDK Alpha来编写支持Facebook的应用了
 
-## 如何使用FacebookSDK
+## 如何使用Facebook SDK Alpha
 
-如何使用Facebook API 请参考 [Facebook SDK Beta for Cocos2d-JS](../api-reference/en.md)
+如何使用Facebook API 请参考 [Facebook SDK Alpha for Cocos2d-JS](../api-reference/zh.md)
 
 ## 将项目打包成APK
 
