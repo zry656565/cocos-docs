@@ -8,4 +8,4 @@
 - [使用Code IDE制作可发布的ipa](../../manual/code-ide/package-ios-publish/zh.md)
 - [使用Code IDE制作可以真机调试的ipa](../../manual/code-ide/package-ios-runtime/zh.md)
 - [Lua Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-lua/zh.md)
-- [Js Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-js/zh.md)
+- [JS Runtime 绑定自定义类](../../manual/code-ide/binding-custom-class-to-js/zh.md)
