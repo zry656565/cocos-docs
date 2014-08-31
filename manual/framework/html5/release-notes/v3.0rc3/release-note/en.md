@@ -44,10 +44,10 @@ Read more about all the features and bug fixes
 
 ## New documents
 
-- [Facebook SDK Beta API Reference](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/api-reference/en.md)
-- [Integrate the Facebook SDK Beta for Cocos2d-JS on Android](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-android/en.md)
-- [Integrate the Facebook SDK Beta for Cocos2d-JS on iOS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/en.md)
-- [Integrate the Facebook SDK Beta for Cocos2d-JS on Web](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-web/en.md)
+- [Facebook SDK Beta API Reference](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/api-reference/en)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on Android](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-android/en)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on iOS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/en)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on Web](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-web/en)
 
 ## About Cocos2d family
 

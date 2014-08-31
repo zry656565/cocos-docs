@@ -1,19 +1,19 @@
-#Facebook SDK Alpha for Cocos2d-JS API Reference
+#Facebook SDK Beta for Cocos2d-JS API Reference
 
 ##Getting start
 
-Before using Facebook SDK Alpha, you may need to integrate Facebook SDK Alpha for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
+Before using Facebook SDK Beta, you may need to integrate Facebook SDK Beta for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
 
 - [Cocos Console usage document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/en)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](../facebook-sdk-on-android/rc3_en.md)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on Android](../facebook-sdk-on-android/rc3_en.md)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
 
 ##API list
 
 ###1. FacebookAgent class
 
-FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK Alpha for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
+FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK Beta for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -274,7 +274,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return:	none
 
-##Facebook SDK Alpha Features
+##Facebook SDK Beta Features
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -296,7 +296,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |publishInstall|Send an install message to Facebook|√|√|×|
 |logEvent|Log an app event|√|√|×|
 
-##Sample code of Facebook SDK Alpha
+##Sample code of Facebook SDK Beta
 
 ```
 // Get FacebookAgent
