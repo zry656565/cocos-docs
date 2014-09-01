@@ -32,8 +32,8 @@ Cocos2d-JS v3.0 RC3 is a candidate release version for v3.0 Final, all features 
 
 For JSB build, there are some restrictions :
 
-- [Android build] NDK version must be between r9d
-- [iOS build] Xcode version must be 5.1 +
+- [Android build] NDK version must be r9d
+- [iOS build] Xcode version must be 5.1.1 +
 
 ## More information
 
