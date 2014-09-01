@@ -1,6 +1,6 @@
 # Cocos Code IDE
 
-- [Code IDE 简介](../../manual/code-ide/zh.md)
+- [Cocos Code IDE 简介](../../manual/code-ide/zh.md)
 - [Cocos Code IDE入门指南](../../manual/code-ide/getting-started/zh.md)
 - [工程根目录文件说明](../../manual/code-ide/runtime-config/zh.md)
 - [使用Code IDE调试Cocos2d-x Lua游戏](../../manual/code-ide/debug-lua/zh.md)

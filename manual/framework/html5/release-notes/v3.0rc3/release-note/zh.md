@@ -40,15 +40,15 @@ Cocos2d-JS v3.0 RC3是为了v3.0 Final版的发布所做的备选版本，全部
 
 更详细的API改动可以参见:
 
-- [Cocos2d-JS v3.0 RC3改动说明](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc3/changelog/en)
-- [Cocos2d-JS v3.0 RC3升级指南](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/zh)
+- [Cocos2d-JS v3.0 RC3改动说明](../../v3.0rc3/changelog/en.md)
+- [Cocos2d-JS v3.0 RC3升级指南](../../v3.0rc0/upgrade-guide/zh.md)
 
 ## 新发布文档
 
-- [Facebook SDK Beta API Reference](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/api-reference/zh)
-- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-android/zh)
-- [iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/zh)
-- [Web平台上如何集成Facebook SDK Beta for Cocos2d-JS](http://www.cocos2d-x.org/docs/manual/framework/html5/facebook-sdk/facebook-sdk-on-web/zh)
+- [Facebook SDK Beta API Reference](../../../facebook-sdk/api-reference/zh.md)
+- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](../../../facebook-sdk/facebook-sdk-on-android/zh.md)
+- [iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS](../../../facebook-sdk/facebook-sdk-on-ios/zh.md)
+- [Web平台上如何集成Facebook SDK Beta for Cocos2d-JS](../../../facebook-sdk/facebook-sdk-on-web/zh.md)
 
 ## 关于Cocos2d家族
 
@@ -58,5 +58,5 @@ Cocos2d-JS v3.0 RC3是为了v3.0 Final版的发布所做的备选版本，全部
 
 如果遇到任何问题，你都可以向Cocos2d-JS开发者社区寻求帮助： 
 
-- [官方论坛](http://discuss.cocos2d-x.org/category/javascript)
-- [文档目录](http://cocos2d-x.org/docs/manual/framework/html5/zh)
+- [官方论坛](http://www.cocoachina.com/bbs/thread.php?fid=59)
+- [文档目录](../../../zh.md)
