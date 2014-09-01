@@ -1,19 +1,19 @@
-#Facebook SDK Alpha for Cocos2d-JS API Reference
+#Facebook SDK Beta for Cocos2d-JS API Reference
 
-##集成Facebook SDK Alpha
+##集成Facebook SDK Beta
 
-开始使用Facebook SDK Alpha for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Alpha for Cocos2d-JS集成到你的项目中：
+开始使用Facebook SDK Beta for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Beta for Cocos2d-JS集成到你的项目中：
 
 - [Cocos Console使用文档](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)
-- [Android平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-android/zh.md)
-- [iOS平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
-- [Web平台上如何集成Facebook SDK Alpha for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
+- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-android/rc3_zh.md)
+- [iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
+- [Web平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
 
-##Facebook SDK Alpha API列表
+##Facebook SDK Beta API列表
 
 ###1. FacebookAgent类
 
-FacebookAgent类包装了所有Facebook SDK Alpha的API，在Cocos2d-JS中使用Facebook SDK Alpha，需要首先获得这个类的实例：
+FacebookAgent类包装了所有Facebook SDK Beta的API，在Cocos2d-JS中使用Facebook SDK Beta，需要首先获得这个类的实例：
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -27,8 +27,8 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	参数和返回值:
 	
-	- **callback**:	接收登录结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功<br/>
-	    type:	function(errorCode, message)
+	- **callback**:	接收登录结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功,开发者可以在message中获取到登录结果的Json对象<br/>
+	    type:	function(errorCode, message)    
 	- return:	无
 	
 - **.logout(callback)**
@@ -36,7 +36,6 @@ var facebook = plugin.FacebookAgent.getInstance();
 	从Facebook登出用户。
 
 	参数和返回值:
-	
 	- **callback**:	接收登出结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功<br/>
 	    type:	function(errorCode, message)
 	- return:	无
@@ -47,18 +46,18 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	参数和返回值:
 	
-	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json对象<br/>
 	    type:	function(errorCode, message)
 	- return:	无
 	
-- **.getAccessToken()**
+- **.requestAccessToken(callback)**
 
 	获取用来访问Open Graph API的access token，用户必须首先登录
 
 	参数和返回值:
-
-	- **return**:	Access token<br/>
-	    type:	String
+    - **callback**: 接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数回调成功，开发者可以从message中得到返回消息或者Json对象<br/>
+    type: function(errorCode,message)
+	- **return**:	无
 
 - **.requestPermissions(permissions, callback)**
 
@@ -66,8 +65,8 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	参数和返回值:
 
-	- **permissions**:	需要的权限列表，用","分隔<br/>
-	    type:	String
+	- **permissions**:	需要的权限列表，用数组存放例如：["manage_pages", "publish_actions"]<br/>
+	    type:	Array
 	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
 	    type:	function(errorCode, message)
 	- return:	无
@@ -82,7 +81,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **info**:	分享的内容<br/>
 	    type:	Object
-	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json对象<br/>
 	    type:	function(errorCode, message)
 	- return:	无
 
@@ -113,7 +112,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **info**:	分享的内容<br/>
 	    type:	Object
-	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json对象<br/>
 	    type:	function(errorCode, message)
 	- return:	无
 
@@ -181,7 +180,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **params**:	请求的参数，参数可能会根据开发者调用的接口有很大差别，请参考[Graph API Reference文档](https://developers.facebook.com/docs/graph-api/reference/)<br/>
 	    type:	Object
-	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json字符串<br/>
+	- **callback**:	接收结果的回调函数，如果errorCode等于plugin.FacebookAgent.CodeSucceed，那么表示函数调用成功，开发者可以从message中取得返回消息或Json对象<br/>
 	    type:	function(errorCode, message)
 	- return:	无
 	
@@ -272,7 +271,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return: none
 
-##Facebook SDK Alpha跨平台特性
+##Facebook SDK Beta跨平台特性
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -294,7 +293,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |payments|Send an pay request|×|×|√|
 |logEvent|Log an app event|√|√|×|
 
-##Facebook SDK Alpha使用示例 (based on Cocos2d-JS v3.0 RC2) 
+##Facebook SDK Beta使用示例 (based on Cocos2d-JS v3.0 RC2) 
 
 ```
 // 获取插件
@@ -305,7 +304,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 // msg: 插件返回的信息
 facebook.isLoggedIn(function(errCode, msg){
     if(errCode == plugin.FacebookAgent.CodeSucceed){  //已登录
-        cc.log(msg);
+    	cc.log(JSON.stringify(msg));
     }else{  //未登陆
 		//登陆，回调的参数同上
         facebook.login(function(errCode, msg){
@@ -314,7 +313,7 @@ facebook.isLoggedIn(function(errCode, msg){
 }); 
 
 // 登出
-facebook.logout(function(errCode, msg){
+facebook.logout(function(errorCode,message){
 });
 
 // 请求高级权限，第一个参数是权限的数组，第二个参数是回调
@@ -323,9 +322,9 @@ facebook.requestPermissions(permissions, function(errCode, msg){
 });
 
 // 获取AccessToken
-facebook.getAccessToken(function(errCode, token){
+facebook.requestAccessToken(function(errCode, token){
     if(errCode == plugin.FacebookAgent.CodeSucceed)
-    	cc.log("AccessToken : " + token);
+    	cc.log("AccessToken : " + JSON.stringify(token));
 });
 
 // 分享，会打开Facebook app的ui
@@ -336,7 +335,7 @@ var info = {
     "imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
 };
 facebook.share(info, function (errCode, result) {
-    cc.log(result);
+    cc.log(JSON.stringify(result));
 });
 
 
@@ -347,14 +346,13 @@ var info = {
     "photo": imgpath // 图片路径，可配合cocos的截屏功能使用
 };
 facebook.dialog(info, function (errCode, result) {
-    cc.log(result);
+	cc.log(JSON.stringify(result));
 });
 
 // 使用Facebook OpenGraph api，相当于Facebook js sdk中的FB.api(),参数形式也是一样的
 facebook.request("/me", plugin.FacebookAgent.HttpMethod.Get, {}, function(errCode, result){
     // msg目前还是字符串形式，request api返回的实际是一个json字符串，里面包含具体信息，需要手动解析
     if(errCode == plugin.FacebookAgent.CodeSucceed) {
-        var response = JSON.parse(result);
         cc.log("User ID : " + response["id"]);
     }
 });

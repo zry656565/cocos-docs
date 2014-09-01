@@ -62,9 +62,9 @@
 		- [use webbroswer to integrate Alipay on Windows Phone 8](../manual/framework/native/v2/sdk-integration/wp8-webbrowser/en.md)
 		- [integrate third SDK in Windows Phone 8](../manual/framework/native/v2/sdk-integration/wp8-thirdSDK/en.md)
 	- Cocos2d-html5
-        - [Highlighted release note of Cocos2d-JS v3.0 RC2](../manual/framework/html5/release-notes/v3.0rc2/release-note/en.md)
-        - [Changelog of Cocos2d-JS v3.0 RC2](../manual/framework/html5/release-notes/v3.0rc2/changelog/en.md)
-        - [Upgrade guide to Cocos2d-JS v3.0 RC2](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/en.md)
+        - [Highlighted release note of Cocos2d-JS v3.0 RC3](../manual/framework/html5/release-notes/v3.0rc3/release-note/en.md)
+        - [Changelog of Cocos2d-JS v3.0 RC3](../manual/framework/html5/release-notes/v3.0rc3/changelog/en.md)
+        - [Upgrade guide to Cocos2d-JS v3.0 RC3](../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/en.md)
         
 		- Startup
             - [About Cocos2d-JS](../manual/framework/html5/en.md)
@@ -99,11 +99,11 @@
             - [About cc.log](../manual/framework/html5/v3/cc-log/en.md)
             - [Other change from v2.2.2 to v3.0](../manual/framework/html5/v3/more-change-from-v2-to-v3/en.md)
         
-        - Facebook SDK Alpha for Cocos2d-JS
-            - [Facebook SDK Alpha API Reference](../manual/framework/html5/facebook-sdk/api-reference/en.md)
-            - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](../manual/framework/html5/facebook-sdk/facebook-sdk-on-android/en.md)
-            - [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](../manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/en.md)
-            - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](../manual/framework/html5/facebook-sdk/facebook-sdk-on-web/en.md)
+        - Facebook SDK Beta for Cocos2d-JS
+            - [Facebook SDK Beta API Reference](../manual/framework/html5/facebook-sdk/api-reference/en.md)
+            - [Integrate the Facebook SDK Beta for Cocos2d-JS on Android](../manual/framework/html5/facebook-sdk/facebook-sdk-on-android/en.md)
+            - [Integrate the Facebook SDK Beta for Cocos2d-JS on iOS](../manual/framework/html5/facebook-sdk/facebook-sdk-on-ios/en.md)
+            - [Integrate the Facebook SDK Beta for Cocos2d-JS on Web](../manual/framework/html5/facebook-sdk/facebook-sdk-on-web/en.md)
     
         - Advanced topics
             - [How to use extensions in JSB(Chinese version)](../manual/framework/html5/jsb/jsb-extension/zh.md)

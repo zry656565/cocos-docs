@@ -13,6 +13,7 @@
 - [Cocos2d-JS v3.0 RC0发布说明](v3.0rc0/release-note/zh.md)
 - [Cocos2d-JS v3.0 RC1发布说明](v3.0rc1/release-note/zh.md)
 - [Cocos2d-JS v3.0 RC2发布说明](v3.0rc2/release-note/zh.md)
+- [Cocos2d-JS v3.0 RC3发布说明](v3.0rc3/release-note/zh.md)
 
 #Cocos2d-JS 更新日志
 
@@ -23,6 +24,7 @@
 - [Cocos2d-JS v3.0 RC0更新日志](v3.0rc0/changelog/en.md)
 - [Cocos2d-JS v3.0 RC1更新日志](v3.0rc1/changelog/en.md)
 - [Cocos2d-JS v3.0 RC2更新日志](v3.0rc2/changelog/en.md)
+- [Cocos2d-JS v3.0 RC3更新日志](v3.0rc3/changelog/en.md)
 
 
 #Cocos2d-JS 升级指南
@@ -33,4 +35,4 @@
 - [Cocos2d-html5 v2.2.1版本升级为v2.2.2版本指南](v2.2.2/upgrade-guide-from-v221-to-v222/zh.md)
 - [Cocos2d-html5 v2.2.2版本升级为v2.2.3版本指南](v2.2.3/upgrade-guide/en.md)
 - [Cocos2d-JS v2.2.3版本升级为v3.0 beta版本指南](v3.0a/upgrade-guide/zh.md)
-- [Cocos2d-JS v3.0 beta版本升级为v3.0 RC2版本指南](v3.0rc0/upgrade-guide/zh.md)
+- [Cocos2d-JS v3.0 beta版本升级为v3.0 RC3版本指南](v3.0rc0/upgrade-guide/zh.md)

@@ -1,19 +1,19 @@
-#Facebook SDK Alpha for Cocos2d-JS API Reference
+#Facebook SDK Beta for Cocos2d-JS API Reference
 
 ##Getting start
 
-Before using Facebook SDK Alpha, you may need to integrate Facebook SDK Alpha for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
+Before using Facebook SDK Beta, you may need to integrate Facebook SDK Beta for Cocos2d-JS in your project. Firstly, please use Cocos Console to create a new project, then follow these documents for the integration:
 
 - [Cocos Console usage document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/en)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](../facebook-sdk-on-android/en.md)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
-- [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on Android](../facebook-sdk-on-android/rc3_en.md)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on iOS](../facebook-sdk-on-ios/en.md)
+- [Integrate the Facebook SDK Beta for Cocos2d-JS on Web](../facebook-sdk-on-web/en.md)
 
 ##API list
 
 ###1. FacebookAgent class
 
-FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK Alpha for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
+FacebookAgent is a singleton class which encapsulated all APIs of Facebook SDK Beta for Cocos2d-JS, if you want to use it, you need to retrieve its instance firstly:
 
 ```
 var facebook = plugin.FacebookAgent.getInstance();
@@ -33,10 +33,9 @@ var facebook = plugin.FacebookAgent.getInstance();
 	
 - **.logout(callback)**
 
-	Logout user from Facebook.
-
+	Clear the user Token logout user from Facebook.
+	
 	Parameters and return value:
-
 	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully<br/>
 	    type:	function(errorCode, message)
 	- return:	none
@@ -47,18 +46,19 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	Parameters and return value:
 
-	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
 
-- **.getAccessToken()**
+- **.requestAccessToken(callback)**
 
 	Retrieve the user access token for Open Graph API, user must be logged in first.
 
 	Parameters and return value:
-
-	- **return**:	Access token<br/>
-	    type:	String
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message
+	type: function(errorCode, message)
+	- return: none
+	
 
 - **.requestPermissions(permissions, callback)**
 
@@ -68,7 +68,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **permissions**:	Permissions to acquire, use "," to seperate multiply permissions<br/>
 	    type:	String
-	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
 
@@ -82,7 +82,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **info**:	The content to share<br/>
 	    type:	Object
-	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
 
@@ -114,7 +114,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **info**:	The content to share or to send<br/>
 	    type:	Object
-	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
 
@@ -124,7 +124,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	```
 	{
-		// dialog代表分享的类型
+		// dialog is the sahre type
 		"dialog": "share_link",	
 		"description": "Cocos2d-x is a great game engine",
 		"title": "Cocos2d-x",
@@ -181,7 +181,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 
 	- **params**:	The parameter for the request, parameters vary greatly for different interface, please refer to [Graph API Reference](https://developers.facebook.com/docs/graph-api/reference/)<br/>
 	    type:	Object
-	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json string from the message<br/>
+	- **callback**:	Callback for receiving the result, if errorCode equals plugin.FacebookAgent.CodeSucceed, then the function call is returned successfully, developer can retrieve the result message or json Object from the message<br/>
 	    type:	function(errorCode, message)
 	- return:	none
 	
@@ -274,7 +274,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 		```
 	- return:	none
 
-##Facebook SDK Alpha Features
+##Facebook SDK Beta Features
 
 |API|Feature|iOS|Android|Web|
 |:-:|:-----:|:-:|:-----:|:-:|
@@ -296,7 +296,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 |publishInstall|Send an install message to Facebook|√|√|×|
 |logEvent|Log an app event|√|√|×|
 
-##Sample code of Facebook SDK Alpha
+##Sample code of Facebook SDK Beta
 
 ```
 // Get FacebookAgent
@@ -307,7 +307,7 @@ var facebook = plugin.FacebookAgent.getInstance();
 // @param msg : Message returned
 facebook.isLoggedIn(function(errCode, msg){
     if(errCode == plugin.FacebookAgent.CodeSucceed){  // Already logged in
-        cc.log(msg);
+        cc.log(JSON.stringify(msg));
     } else{  //Not logged in
         // Login
         facebook.login(function(errCode, msg){
@@ -328,9 +328,9 @@ facebook.requestPermissions(permissions, function(errCode, msg){
 });
 
 // Get AccessToken
-facebook.getAccessToken(function(errCode, token){
+facebook.requestAccessToken(function(errCode, token){
     if(errCode == plugin.FacebookAgent.CodeSucceed)
-        cc.log("AccessToken : " + token);
+        cc.log("AccessToken : " + JSON.stringify(token));
 });
 
 // Share API
@@ -342,7 +342,7 @@ var info = {
     "imageUrl": "http://files.cocos2d-x.org/images/orgsite/logo.png"
 };
 facebook.share(info, function (errCode, result) {
-    cc.log(result);
+    cc.log(JSON.stringify(result));
 });
 
 // Dialog API
@@ -355,7 +355,7 @@ var info = {
     "photo": imgpath // The path of photo to share, can be used with screen caption feature
 };
 facebook.dialog(info, function (errCode, result) {
-    cc.log(result);
+    cc.log(JSON.stringify(result));
 });
 
 // Request API
@@ -366,7 +366,6 @@ facebook.request("/me", plugin.FacebookAgent.HttpMethod.Get, {}, function(errCod
     // User need to parse it manully, but it’s not fixed yet, 
     // we may parse it in Cocos2d-JS and return directly the object to user.
     if(errCode == plugin.FacebookAgent.CodeSucceed) {
-        var response = JSON.parse(result);
         cc.log("User ID : " + response["id"]);
     }
 });

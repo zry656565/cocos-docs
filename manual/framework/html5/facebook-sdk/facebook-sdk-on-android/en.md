@@ -1,11 +1,10 @@
-#Integrate the Facebook SDK Alpha for Cocos2d-JS on Android
+#Integrate the Facebook SDK Beta for Cocos2d-JS on Android
 
-This document will walk you through the integration of Facebook SDK Alpha for Cocos2d-JS, from creating app, configuring SDK to the apk packing. 
+This document will walk you through the integration of Facebook SDK Beta for Cocos2d-JS, from creating app, configuring SDK to the apk packing. 
 
-**Notice**: Facebook SDK Alpha for Cocos2d-JS can only work with Cocos2d-JS v3.0 RC2 and later versions. 
+**Notice**: This document can only work with Facebook SDK Beta and later versions. If you are using ther Facebook SDK Alpha (Released with Cocos2d-JS v3.0 RC2), Please refer to [Facebook SDK Alpha Integration Document](../facebook-sdk-on-android/rc2_en.md)
 
 ##Create an application on Facebook
-
 
 Click Apps->Create a New app at [Facebook Developers Page](https://developers.facebook.com/), enter the app name and create your own app.
 
@@ -36,9 +35,9 @@ You need to type in the password you create with key.
 Now you are finished creating Facebook App.
 
 
-##Add Facebook SDK Alpha to A Cocos2d-JS Project
+##Add Facebook SDK Beta to A Cocos2d-JS Project
 
-Use Cocos command line tool to great a js project, and you need to make a few modifications to the Android project before you can use Facebook SDK Alpha in js code.
+Use Cocos command line tool to great a js project, and you need to make a few modifications to the Android project before you can use Facebook SDK Beta in js code.
 
 **step1**: Add app name and app id to `frameworks/runtime-src/proj.android/res/values/strings.xml`:
 
@@ -51,18 +50,11 @@ Use Cocos command line tool to great a js project, and you need to make a few mo
 
 ```
 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
-<meta-data android:name="PluginUser" android:value="UserFacebook" />
-<meta-data android:name="PluginShare" android:value="ShareFacebook" />
 
 <activity android:name="com.facebook.LoginActivity" />
 <provider android:authorities="com.facebook.app.NativeAppCallContentProvider1450063488603945"
           android:name="com.facebook.NativeAppCallContentProvider"
           android:exported="true"/>
-<receiver android:name="org.cocos2dx.plugin.ShareFacebookBroadcastReceiver">
-    <intent-filter>
-        <action android:name="com.facebook.platform.AppCallResultBroadcast" />
-    </intent-filter>
-</receiver>
 ```
 
 **step3**: Add Plugin-x link lib to `frameworks/runtime-src/proj.android/jni/Android.mk`:
@@ -135,7 +127,7 @@ android.library.reference.2=../../js-bindings/cocos2d-x/plugin/plugins/facebook/
 
 ```
 import org.cocos2dx.plugin.PluginWrapper;
-import com.facebook.Session;
+import org.cocos2dx.plugin.FacebookWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -149,32 +141,31 @@ public class AppActivity extends Cocos2dxActivity {
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
         PluginWrapper.init(this);
         PluginWrapper.setGLSurfaceView(glSurfaceView);
-
+        FacebookWrapper.onCreate(this);
         return glSurfaceView;
     }
 	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	    super.onActivityResult(requestCode, resultCode, data);
-	    Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
+	    FacebookWrapper.onAcitivityResult(requestCode, resultCode, data);
 	}
 	
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 	    super.onSaveInstanceState(outState);
-	    Session session = Session.getActiveSession();
-	    Session.saveSession(session, outState);
+	    FacebookWrapper.onSaveInstanceState(outState);
 	}
 
 	//...
 }
 ```
 
-And now we are finished with the project configuration and ready to use the Facebook SDK Alpha to write Facebook-supportive apps.
+And now we are finished with the project configuration and ready to use the Facebook SDK Beta to write Facebook-supportive apps.
 
-## How to Use Facebook SDK Alpha
+## How to Use FacebookSDK
 
-About how to use Facebook API please reference to [Facebook SDK Alpha for Cocos2d-JS](../api-reference/en.md)
+About how to use Facebook API please reference to [Facebook SDK Beta for Cocos2d-JS](../api-reference/zh.md)
 
 ## Package your project into apk
 
@@ -184,4 +175,4 @@ You can use Cocos2d-JS built in tool: Cocos Console to package your project to a
 cocos compile -p android
 ```
 
-You can have more details in [Cocos Console Document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/en)
+You can have more details in [Cocos Console Document](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)

@@ -13,7 +13,7 @@ Furthermore, javascript friendly API makes your game development experience a br
 - [Cocos2d-JS github repo](http://github.com/cocos2d/cocos2d-js/)
 - [Cocos2d-JS release](http://www.cocos2d-x.org/download)
 - [Online API reference](http://www.cocos2d-x.org/wiki/Reference)
-- [Downloadable API reference](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3rc2-API.zip)
+- [Downloadable API reference](http://www.cocos2d-x.org/filedown/Cocos2d-JS-v3.0-rc3-API.zip)
 - [Online test cases](http://cocos2d-x.org/js-tests/)
 
 ## Main features
@@ -53,9 +53,9 @@ Furthermore, javascript friendly API makes your game development experience a br
    
 ## Documents
 
-- [Highlighted release note of Cocos2d-JS v3.0 RC2](./release-notes/v3.0rc2/release-note/en.md)
-- [Changelog of Cocos2d-JS v3.0 RC2](./release-notes/v3.0rc2/changelog/en.md)
-- [Upgrade guide to Cocos2d-JS v3.0 RC2](./release-notes/v3.0rc0/upgrade-guide/en.md)
+- [Highlighted release note of Cocos2d-JS v3.0 RC3](./release-notes/v3.0rc3/release-note/en.md)
+- [Changelog of Cocos2d-JS v3.0 RC3](./release-notes/v3.0rc3/changelog/en.md)
+- [Upgrade guide to Cocos2d-JS v3.0 RC3](./release-notes/v3.0rc0/upgrade-guide/en.md)
 
 - Startup
     - [Why use Cocos2d-html5 for Game Development](./v2/cocosh5-advantages/en.md)
@@ -100,11 +100,11 @@ Furthermore, javascript friendly API makes your game development experience a br
     - [About cc.log](./v3/cc-log/en.md)
     - [Other change from v2.2.2 to v3.0](./v3/more-change-from-v2-to-v3/en.md)
     
-- Facebook SDK Alpha for Cocos2d-JS
-    - [Facebook SDK Alpha API Reference](./facebook-sdk/api-reference/en.md)
-    - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Android](./facebook-sdk/facebook-sdk-on-android/en.md)
-    - [Integrate the Facebook SDK Alpha for Cocos2d-JS on iOS](./facebook-sdk/facebook-sdk-on-ios/en.md)
-    - [Integrate the Facebook SDK Alpha for Cocos2d-JS on Web](./facebook-sdk/facebook-sdk-on-web/en.md)
+- Facebook SDK Beta for Cocos2d-JS
+    - [Facebook SDK Beta API Reference](./facebook-sdk/api-reference/en.md)
+    - [Integrate the Facebook SDK Beta for Cocos2d-JS on Android](./facebook-sdk/facebook-sdk-on-android/en.md)
+    - [Integrate the Facebook SDK Beta for Cocos2d-JS on iOS](./facebook-sdk/facebook-sdk-on-ios/en.md)
+    - [Integrate the Facebook SDK Beta for Cocos2d-JS on Web](./facebook-sdk/facebook-sdk-on-web/en.md)
     
 - Advanced topics
     - [How to use extensions in JSB(Chinese version)](./jsb/jsb-extension/zh.md)

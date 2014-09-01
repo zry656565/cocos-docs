@@ -1,12 +1,12 @@
-#iOS平台上如何集成Facebook SDK Alpha for Cocos2d-JS
+#iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS
 
-这篇文当将展示如何在iOS中快速的使用Facebook SDK Alpha for Cocos2d-JS。
+这篇文当将展示如何在iOS中快速的使用Facebook SDK Beta for Cocos2d-JS。
  
-**注意**: Facebook SDK Alpha for Cocos2d-JS需要配合Cocos2d-JS v3.0 RC2及以上版本使用。
+**注意**: Facebook SDK Beta for Cocos2d-JS需要配合Cocos2d-JS v3.0 RC2及以上版本使用。
 
 ## 创建你的Facebook应用
 
-Facebook SDK Alpha for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础，你需要先参考[Facebook官方文档](https://developers.facebook.com/docs/ios/getting-started/)来创建应用并配置iOS开发环境。
+Facebook SDK Beta for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其基础，你需要先参考[Facebook官方文档](https://developers.facebook.com/docs/ios/getting-started/)来创建应用并配置iOS开发环境。
 
 ## 在工程中配置Facebook iOS SDK（同样参考Facebook官方文档）
 
@@ -47,7 +47,7 @@ Facebook SDK Alpha for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其�
 
 ## 在工程中添加Plugin-x和PluginFacebook的工程
 
-因为`Facebook SDK Alpha for Cocos2d-JS`对Plugin-x的依赖，我们首先需要添加Plugin-x的工程：
+因为`Facebook SDK Beta for Cocos2d-JS`对Plugin-x的依赖，我们首先需要添加Plugin-x的工程：
 
 1. 将PluginProtocol的Xcode工程（`myProject/frameworks/js-bindings/cocos2d-x/plugin/protocols/proj.ios`）添加到你的游戏工程中，右击myProject工程，点击`addFiles to "myProject"`或者直接拖拽PluginProtocol的工程到"myProject"下。
 
@@ -57,7 +57,7 @@ Facebook SDK Alpha for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其�
 
 ## 添加Plugin-x的JSB绑定代码
 
-在上面这些步骤之后，我们现在就可以使用FacebookAgent类了，它包装了所有Facebook SDK Alpha的C++层API。为了这些API能够在Javascript层暴露出来，还有几个步骤要做，我们需要在工程中包含Javascript绑定代码并将绑定代码注册到SpiderMonkey中。
+在上面这些步骤之后，我们现在就可以使用FacebookAgent类了，它包装了所有Facebook SDK Beta的C++层API。为了这些API能够在Javascript层暴露出来，还有几个步骤要做，我们需要在工程中包含Javascript绑定代码并将绑定代码注册到SpiderMonkey中。
 
 1. 添加jsb_pluginx.js (`myProject/frameworks/js-bindings/cocos2d-x/plugin/jsbindings/script`目录下) 到`myProject`工程中，并确保它在`Build Phases`的`Copy Bundle Resources`列表中.
 
@@ -81,6 +81,6 @@ Facebook SDK Alpha for Cocos2d-JS在iOS平台上使用Facebook iOS SDK作为其�
 
 自此，我们的Plugin-x工程引入就做完了，如果你想了解更多Plugin-x的配置，请参考[Plugin-x架构](http://www.cocos2d-x.org/docs/manual/framework/html5/jsb/plugin-x/plugin-x-architecture/zh)和[如何使用Plugin-x iOS篇](link)。
 
-## 如何使用Facebook SDK Alpha
+## 如何使用Facebook SDK Beta
 
-- 如何使用Facebook API 请参考 [Facebook SDK Alpha for Cocos2d-JS](../api-reference/zh.md)
+- 如何使用Facebook API 请参考 [Facebook SDK Beta for Cocos2d-JS](../api-reference/zh.md)
