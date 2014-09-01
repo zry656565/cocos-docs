@@ -1,6 +1,6 @@
-# [Cocos2d-x](./cocos2d-x/zh.md)
+# Cocos2d-x
 
-## [开始使用Cocos2d-x](./getting-started-cocos2d-x/zh.md)
+## 开始使用Cocos2d-x
 
 - [C++编程规范](./cpp-coding-style/zh.md)
 - [如何开始一个新的Cocos2d-x游戏](./how-to-start-a-new-cocos2d-x-game/zh.md)
@@ -125,7 +125,7 @@
 - [如何创建精灵(Sprites) ](./how-to-create-sprites/zh.md)
 - [如何创建一个指示器(HUD)](./how-to-create-a-hud/zh.md)
 
-# [Cocos2d-js](./cocos2d-js/zh.md)
+# Cocos2d-js
 
 - [Cocos2d-js的文件结构](./folder-structure-of-cocos2d-js/zh.md)
 - [Cocos2d-js特性](./features-of-cocos2d-js/zh.md)
