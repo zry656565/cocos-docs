@@ -5,7 +5,7 @@
 开始使用Facebook SDK Beta for Cocos2d-JS之前，你可能需要集成这个SDK到你的个人项目中。首先请使用Cocos Console创建一个新的个人项目，然后参考不同平台的集成指南将Facebook SDK Beta for Cocos2d-JS集成到你的项目中：
 
 - [Cocos Console使用文档](http://www.cocos2d-x.org/docs/manual/framework/html5/v2/cocos-console/zh)
-- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-android/rc3_zh.md)
+- [Android平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-android/zh.md)
 - [iOS平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-ios/zh.md)
 - [Web平台上如何集成Facebook SDK Beta for Cocos2d-JS](../facebook-sdk-on-web/zh.md)
 
