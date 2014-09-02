@@ -1,8 +1,8 @@
 # Cocos2d-html5
 
-- [Cocos2d-JS v3.0a2发布说明](../../../manual/framework/html5/release-notes/v3.0a2/release-note/zh.md)
-- [Cocos2d-JS v3.0a2改动列表](../../../manual/framework/html5/release-notes/v3.0a2/changelog/en.md)
-- [Cocos2d-JS v3.0a2升级指南](../../../manual/framework/html5/release-notes/v3.0a/upgrade-guide/zh.md)
+- [Cocos2d-JS v3.0RC3发布说明](../../../manual/framework/html5/release-notes/v3.0rc3/release-note/zh.md)
+- [Cocos2d-JS v3.0RC3改动列表](../../../manual/framework/html5/release-notes/v3.0rc3/changelog/en.md)
+- [Cocos2d-JS v3.0RC3升级指南](../../../manual/framework/html5/release-notes/v3.0rc0/upgrade-guide/zh.md)
 - 综述
 	- [关于Cocos2d-html5](../../../manual/framework/html5/zh.md)
 	- [供NPM使用的Cocos-utils](../../../manual/framework/html5/v2/cocos-utils/zh.md)
