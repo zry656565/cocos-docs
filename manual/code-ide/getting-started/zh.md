@@ -73,7 +73,7 @@ Cocos Code IDE入门指南
 [NDK link]: https://developer.android.com/tools/sdk/ndk/
 [ANT link]: http://ant.apache.org/
 [Python link]: http://www.python.org/download
-[engine download link]: http://www.cocos2d-x.org/download
+[engine download link]: http://cn.cocos2d-x.org/download
 [mac ide link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-mac64-1.0.0-rc1.dmg
 [windows ide 64 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win64-1.0.0-rc1.zip
 [windows ide 32 zip link]: http://www.cocos2d-x.org/filedown/cocos-code-ide-win32-1.0.0-rc1.zip
