@@ -4,7 +4,7 @@
 
 Cocos2d-console is a tool designed to greatly simplify the environment setup and project creation process for Cocos2d-html5 and Cocos2d-JSBinding.
 
-Accompagne with Cocos2d-JS v3.0 alpha release, Cocos2d-JSBinding now supports all new features of CH5 v3.0a, detailed informations can be found in [release notes](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0a/release-note/en). Since CH5 v3.0a have refactored many old APIs to provide Javascript user friendly APIs, the JSB APIs was also refactored to guarantee the single code base works for both. More importantly, we have merged CH5 and JSB together into one repository: [Cocos2d-JS](https://github.com/cocos2d/cocos2d-js). So no matter what platform you want to distribute, WEB or native, if you use javascript for your game code, you should use this repository to manager your project.
+Accompany with Cocos2d-JS v3.0 alpha release, Cocos2d-JSBinding now supports all new features of CH5 v3.0a, detailed informations can be found in [release notes](http://www.cocos2d-x.org/docs/manual/framework/html5/release-notes/v3.0a/release-note/en). Since CH5 v3.0a have refactored many old APIs to provide Javascript user friendly APIs, the JSB APIs was also refactored to guarantee the single code base works for both. More importantly, we have merged CH5 and JSB together into one repository: [Cocos2d-JS](https://github.com/cocos2d/cocos2d-js). So no matter what platform you want to distribute, WEB or native, if you use javascript for your game code, you should use this repository to manager your project.
 
 ##Console tool
 
